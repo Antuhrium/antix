@@ -1,0 +1,74 @@
+.tokenomicsWrapper {
+    position: relative;
+    width: 100%;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 112px 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.title {
+    color: #f0f0f0;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 94px;
+    line-height: 104px;
+    font-weight: normal;
+
+    z-index: 1;
+}
+
+.chart {
+    position: relative;
+    z-index: 1;
+    outline: none;
+
+    svg,
+    path, g {
+        outline: none;
+    }
+}
+
+.innerChartText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    color: #fff;
+    font-family: "Inter Tight", system-ui;
+    font-size: 30px;
+    font-weight: medium;
+
+    span {
+        font-size: 55px;
+        margin-bottom: -10px;
+    }
+}
+
+.rightBg {
+    position: absolute;
+    top: -358px;
+    right: -444px;
+    z-index: 0;
+}
+
+.leftBg {
+    position: absolute;
+    top: -30px;
+    bottom: -20px;
+    left: -700px;
+    z-index: 0;
+}
