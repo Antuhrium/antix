@@ -14,13 +14,13 @@ const Footer = () => {
                     <div className={styles.topItem}>
                         <span className={styles.smallTitle}>Follow us:</span>
                         <div className={styles.socials}>
-                            <a href="#" className={styles.socialLink}>
+                            <a href="https://x.com/antix_in" target="_blank" className={styles.socialLink}>
                                 <img src={socialX} alt="X" />
                             </a>
-                            <a href="#" className={styles.socialLink}>
+                            <a href="https://discord.com/invite/bKcMXChRRT" target="_blank" className={styles.socialLink}>
                                 <img src={socialDiscord} alt="Discord" />
                             </a>
-                            <a href="#" className={styles.socialLink}>
+                            <a href="https://t.me/antix_in" target="_blank" className={styles.socialLink}>
                                 <img src={socialTelegram} alt="Telegram" />
                             </a>
                         </div>
