@@ -21,7 +21,7 @@ const data: DataItem[] = [
 
 const COLORS: string[] = [
     "#0AD4C9",
-    "#0DFFF1",
+    "#FFFFFF",
     "#032A28",
     "#055550",
     "#0A8078",
@@ -38,7 +38,6 @@ const renderCustomizedLabel = ({
     midAngle,
     innerRadius,
     outerRadius,
-    index,
     name,
 }: {
     cx: number;
@@ -60,8 +59,8 @@ const renderCustomizedLabel = ({
         <text
             x={x}
             y={y}
-            //   fill="white"
-            fill={COLORS[index]}
+            fill="#575757"
+            // fill={COLORS[index]}
             textAnchor={textAnchor}
             dominantBaseline="central"
             className={styles.chartsLabel}
@@ -77,7 +76,6 @@ const renderCustomizedLabelLine = ({
     midAngle,
     innerRadius,
     outerRadius,
-    index,
 }: {
     cx: number;
     cy: number;
@@ -98,8 +96,8 @@ const renderCustomizedLabelLine = ({
             y1={y}
             x2={xEnd}
             y2={yEnd}
-            //   stroke="white"
-            stroke={COLORS[index]}
+            stroke="#575757"
+            // stroke={COLORS[index]}
             strokeWidth={2}
         />
     );

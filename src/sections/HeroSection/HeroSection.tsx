@@ -1,167 +1,85 @@
+import { useState } from "react";
 import styles from "./HeroSection.module.scss";
 
 import HeroTimer from "../../components/HeroTimer/HeroTimer";
+import HeroBg from "../../assets/svg/hero-bg.svg";
 
-import HeroImg from "../../assets/images/hero-img.png";
-import socialX from "../../assets/svg/social-x.svg";
-import socialTelegram from "../../assets/svg/social-telegram.svg";
-import socialDiscord from "../../assets/svg/social-discord.svg";
-import RefferalIcon from "../../assets/svg/hero-refferal-icon.svg";
-
-import BNB from "../../assets/svg/binance-icon.svg";
-import ETH from "../../assets/svg/etherium-icon.svg";
-import USDT from "../../assets/svg/tether-icon.svg";
-import CARD from "../../assets/svg/card-icon.svg";
-
-const socials = [
-    {
-        name: "@acronix",
-        amount: "44К",
-        img: socialX,
-    },
-    {
-        name: "@acronix",
-        amount: "12К",
-        img: socialTelegram,
-    },
-    {
-        name: "@acronix",
-        amount: "12К",
-        img: socialDiscord,
-    },
-];
-
-const payments = [
-    {
-        name: "BNB",
-        img: BNB,
-    },
-    {
-        name: "ETH",
-        img: ETH,
-    },
-    {
-        name: "USDT",
-        img: USDT,
-    },
-    {
-        name: "CARD",
-        img: CARD,
-    },
-    {
-        name: "USDC",
-        img: CARD,
-    },
-];
+const LoaderSvg = ({ percent }: { percent: number }) => {
+    return (
+        <svg
+            width="221"
+            height="226"
+            viewBox="0 0 221 226"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <defs>
+                <linearGradient id="Gradient2" x2="0" y2="1">
+                    <stop offset={`${percent}%`} stop-color="#494D54" />
+                    <stop offset={`${percent}%`} stop-color="#12FFF1" />
+                </linearGradient>
+            </defs>
+            <path
+                d="M20.8343 0.584944L21.6107 0C37.8085 19.5003 83.9537 72.466 110.492 72.466C130.99 72.466 142.794 41.4508 144.401 36.9698L145.336 37.2958C145.336 37.2958 130.613 78.4259 144.45 89.2624C158.058 99.9176 215.32 81.929 220.221 80.3792L220.5 81.3112C220.5 81.3112 154.698 101.302 150.517 120.355C147.527 133.973 164.665 153.203 169.24 158.136L168.551 158.798C168.551 158.798 148.636 136.496 133.815 142.73C111.776 152.005 99.1741 216.867 97.6487 226L96.6765 225.817C96.6765 225.817 110.503 152.727 75.8711 136.334C56.4164 127.119 8.39727 138.878 0.779249 140.781L0.5 139.827C0.5 139.827 67.6633 123.009 67.6633 86.0393C67.6633 56.1165 20.8343 0.584944 20.8343 0.584944Z"
+                fill="url(#Gradient2)"
+            />
+        </svg>
+    );
+};
 
 const HeroSection = () => {
-    const handleClick = () => {
-        console.log("Buy Antix Token clicked");
+    const [percents] = useState(30);
+
+    const goToRoadmap = () => {
+        document.querySelector("#roadmap")?.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+        });
     };
     return (
         <section className={styles.container}>
-            <img src={HeroImg} alt="Hero" className={styles.bgImg} />
+            <img src={HeroBg} alt="Hero" className={styles.bgImg} />
             <div className={styles.leftWrapper}>
                 <h1 className={styles.leftTitle}>
-                    Antix <br /> Digital Twins
+                    <span>Beyond Human</span> The Future of Digital You
                 </h1>
-                <h3 className={styles.leftSubtitle}>
-                    Where Digital Worlds Come Alive
-                </h3>
                 <p className={styles.leftText}>
-                    VAgen revolutionizes digital interaction with AI-driven
-                    avatars. Experience unparalleled customization and
-                    engagement for users, brands, and creators — <br /> reshape
-                    the future with us.
+                    Step in <span>$300 billion industry</span> with next-gen
+                    digital twins for film, content, and beyond
                 </p>
-                <div className={styles.socials}>
-                    {socials.map((social, index) => (
-                        <div key={index} className={styles.socialItem}>
-                            <div className={styles.socialIcon}>
-                                <img src={social.img} alt={social.name} />
-                            </div>
-                            <div className={styles.socialInfo}>
-                                <span>{social.name}</span>
-                                <span className={styles.socialsAmount}>
-                                    {social.amount}
-                                </span>
-                            </div>
-                        </div>
-                    ))}
+                <div className={styles.leftButtons}>
+                    <button className={styles.leftButton}>How it works?</button>
+                    <a onClick={goToRoadmap} className={styles.leftLink}>
+                        Roadmap
+                        <svg
+                            width="63"
+                            height="16"
+                            viewBox="0 0 63 16"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M62.7071 8.70711C63.0976 8.31658 63.0976 7.68342 62.7071 7.29289L56.3431 0.928932C55.9526 0.538408 55.3195 0.538408 54.9289 0.928932C54.5384 1.31946 54.5384 1.95262 54.9289 2.34315L60.5858 8L54.9289 13.6569C54.5384 14.0474 54.5384 14.6805 54.9289 15.0711C55.3195 15.4616 55.9526 15.4616 56.3431 15.0711L62.7071 8.70711ZM0 9H62V7H0V9Z"
+                                fill="#AFAFAF"
+                            />
+                        </svg>
+                    </a>
                 </div>
             </div>
             <div className={styles.rightWrapper}>
                 <div className={styles.rightTitle}>
                     <img src="/logo-small.svg" alt="Logo" />
-                    Buy Antix Token
+                    ANTIX Presale
                 </div>
                 <div className={styles.rightItem}>
+                    <span className={styles.timerTitle}>Coming Soon</span>
+                    <div className={styles.loader}>
+                        <LoaderSvg percent={percents} />
+                    </div>
                     <div className={styles.timerContainer}>
-                        <span className={styles.timerTitle}>
-                            The stage ends after:
-                        </span>
                         <HeroTimer
                             targetDate={new Date("2024-12-31T23:59:59")}
                         />
                     </div>
-                    <button
-                        className={styles.rightButton}
-                        onClick={handleClick}
-                    >
-                        Buy $Antix
-                    </button>
-                    <div className={styles.rightRefferal}>
-                        <img src={RefferalIcon} alt="Refferal" />
-                        <a href="#" className={styles.refferalLink}>
-                            Get referral links
-                        </a>
-                    </div>
-                    <div className={styles.rightPayments}>
-                        <span className={styles.paymentsTitle}>
-                            We accept payment in this:
-                        </span>
-                        <div className={styles.payments}>
-                            {payments.map((pay) => (
-                                <div key={pay.name} className={styles.payment}>
-                                    <img
-                                        src={pay.img}
-                                        alt={pay.name}
-                                        className={styles.paymentIcon}
-                                    />
-                                    <span>{pay.name}</span>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-                <div className={styles.rightItemBottom}>
-                    <span className={styles.raisedTitle}>USD raised</span>
-                    <div className={styles.raisedAmount}>
-                        $200,1003 <span>/ $500,104</span>
-                    </div>
-                    <span className={styles.raisedAll}>
-                        $500,104 of $5,000,610
-                    </span>
-                    <div className={styles.presale}>
-                        <span className={styles.presaleTitle}>Presale</span>
-                        <div className={styles.progressBar}>
-                            <span
-                                className={styles.progressValue}
-                                style={{ width: `${35}%` }}
-                            />
-                        </div>
-                    </div>
-                </div>
-                <div className={styles.rightInfo}>
-                    <a href="#" className={styles.rightInfoLink}>
-                        [ ? ] About the stages
-                    </a>
-                    <a href="#" className={styles.rightInfoLink}>
-                        [ ? ] Vesting & lockup conditions
-                    </a>
-                    <a href="#" className={styles.rightInfoLink}>
-                        [ ? ] About disconts
-                    </a>
                 </div>
             </div>
         </section>
