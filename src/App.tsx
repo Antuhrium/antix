@@ -5,6 +5,7 @@ import HeroSection from "./sections/HeroSection/HeroSection";
 import TokenomicsSection from "./sections/TokenomicsSection/TokenomicsSection";
 import RoadMap from "./sections/RoadMap/Roadmap";
 import UserFlow from "./sections/UserFlow/UserFlow";
+import Goal from "./sections/Goal/Goal";
 
 function App() {
     return (
@@ -12,6 +13,7 @@ function App() {
             <Header />
             <HeroSection />
             <TokenomicsSection />
+            <Goal />
             <RoadMap />
             <UserFlow />
             <Footer />
