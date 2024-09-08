@@ -4,7 +4,9 @@
     max-width: 100%;
     padding: 7rem;
     color: #fff;
-    background: url('../../assets/svg/faq/Gradient.svg') no-repeat center center;
+    background: 
+        radial-gradient(53.33% 53.33% at 50% 46.67%, rgba(0, 0, 0, 0.00) 0%, #000 99.72%),
+        url('../../assets/svg/faq/Gradient.svg') no-repeat center center;
     background-size: cover;
     display: flex;
     column-gap: 30px;
