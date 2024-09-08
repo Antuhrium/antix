@@ -6,6 +6,7 @@ import TokenomicsSection from "./sections/TokenomicsSection/TokenomicsSection";
 import RoadMap from "./sections/RoadMap/Roadmap";
 import UserFlow from "./sections/UserFlow/UserFlow";
 import Goal from "./sections/Goal/Goal";
+import FAQ from "./sections/Faq/Faq";
 
 function App() {
     return (
@@ -16,6 +17,7 @@ function App() {
             <Goal />
             <RoadMap />
             <UserFlow />
+            <FAQ />
             <Footer />
         </main>
     );
