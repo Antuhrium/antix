@@ -1,4 +1,5 @@
 import styles from "./App.module.scss";
+
 import Footer from "./sections/Footer/Footer";
 import Header from "./sections/Header/Header";
 import HeroSection from "./sections/HeroSection/HeroSection";

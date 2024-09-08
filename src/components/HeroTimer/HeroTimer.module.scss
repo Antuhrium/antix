@@ -1,31 +1,43 @@
 .container {
+    position: relative;
+    z-index: 2;
+    
     display: flex;
-    align-items: center;
-    gap: 14px;
+    justify-content: center;
+    gap: 10px;
+
+    width: 300px;
+    padding: 15px 30px;
+    border-radius: 10px;
+
+    background: rgb(87, 87, 87);
 }
 .timeSegment {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4px;
+
+    font-family: "Inter Tight", sans-serif;
+    color: #afafaf;
 }
 .time {
-    font-size: 30px;
-    font-weight: 600;
-    line-height: 33px;
+    font-size: 34.99px;
+    font-weight: 500;
+    line-height: 38.49px;
     text-align: center;
-    color: #e5e5e5;
 }
-.label {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 17.6px;
-    text-align: center;
-    color: #616060;
-}
+
 .separator {
-    font-size: 18px;
+    margin-top: 8px;
+
+    font-size: 20.99px;
     font-weight: 400;
-    line-height: 19.8px;
-    color: #7d7d7d;
+    line-height: 23.09px;
+}
+
+.label {
+    font-size: 14.82px;
+    font-weight: 400;
+    line-height: 16.3px;
+    text-align: center;
 }
