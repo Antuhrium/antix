@@ -1,0 +1,33 @@
+.container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    margin-top: 140px;
+}
+
+.title {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 33.6px;
+    letter-spacing: -0.01em;
+    text-align: center;
+    color: #f0f0f0;
+}
+
+.logosWrapper {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    width: 210px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
