@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import styles from './FAQ.module.scss';
+import styles from './Faq.module.scss';
 
 // SVG components for Plus and X icons
 const PlusIcon = () => (
