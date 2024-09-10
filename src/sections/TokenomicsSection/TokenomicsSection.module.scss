@@ -1,6 +1,7 @@
 .tokenomicsWrapper {
     position: relative;
     width: 100%;
+    background: var(--white-head-text, rgba(240, 240, 240, 1));
 }
 
 .container {
@@ -15,7 +16,7 @@
 }
 
 .title {
-    color: #f0f0f0;
+    color: rgba(87, 87, 87, 1);
     font-family: "Space Grotesk", sans-serif;
     font-size: 94px;
     line-height: 104px;
@@ -30,7 +31,8 @@
     outline: none;
 
     svg,
-    path, g {
+    path,
+    g {
         outline: none;
     }
 }
@@ -47,7 +49,7 @@
     align-items: center;
     text-align: center;
 
-    color: #fff;
+    color: var(--Dark-Grey, rgba(87, 87, 87, 1));
     font-family: "Inter Tight", system-ui;
     font-size: 30px;
     font-weight: medium;
@@ -69,6 +71,6 @@
     position: absolute;
     top: -30px;
     bottom: -20px;
-    left: -700px;
-    z-index: 0;
+    left: -500px;
+    z-index: 1;
 }

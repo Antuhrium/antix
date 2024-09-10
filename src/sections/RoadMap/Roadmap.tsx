@@ -131,7 +131,7 @@ const RoadMap = () => {
   ];
 
   return (
-    <div className={styles.roadMap}>
+    <div className={styles.roadMap} id='roadmap'>
       <h1 className={styles.title}>Road Map</h1>
       <div className={styles.roadMapContent}>
         <div className={styles.test}>
