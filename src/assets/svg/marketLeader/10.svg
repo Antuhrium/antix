@@ -1,9 +1,9 @@
-<svg width="216" height="60" viewBox="0 0 216 60" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="216" height="61" viewBox="0 0 216 61" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g opacity="0.9" filter="url(#filter0_i_315_3667)">
-<rect x="0.90918" y="0.0433655" width="214.183" height="59.4427" fill="url(#pattern0_315_3667)"/>
+<rect x="0.90918" y="0.866821" width="214.183" height="59.4427" fill="url(#pattern0_315_3667)"/>
 </g>
 <defs>
-<filter id="filter0_i_315_3667" x="0.90918" y="0.0433655" width="214.183" height="59.4427" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_i_315_3667" x="0.90918" y="0.866821" width="214.183" height="59.4427" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>

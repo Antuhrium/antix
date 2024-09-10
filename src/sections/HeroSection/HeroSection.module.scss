@@ -1,12 +1,18 @@
 .container {
-    position: relative;
-    overflow-x: hidden;
-    max-width: 1600px;
+    background-image: url("../../assets/images/hero-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     width: 100%;
+}
+
+.content {
+    max-width: 1600px;
+    padding-top: 130px;
     height: 100vh;
 
+    width: 100%;
     margin: 0 auto;
-    padding-top: 130px;
 
     display: flex;
     align-items: center;
@@ -15,14 +21,14 @@
     color: #fff;
 }
 
-.bgImg {
-    pointer-events: none;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 0;
-}
+// .bgImg {
+//     pointer-events: none;
+//     position: absolute;
+//     top: 0;
+//     left: 50%;
+//     transform: translateX(-50%);
+//     z-index: 0;
+// }
 
 .leftWrapper {
     position: relative;
@@ -31,13 +37,15 @@
 
     display: flex;
     flex-direction: column;
+    justify-content: end;
 
     .leftTitle {
         font-family: "Space Grotesk", sans-serif;
-        font-size: 94px;
+        font-size: 120px;
         font-weight: 400;
-        line-height: 104px;
+        line-height: 120px;
         letter-spacing: -0.04em;
+        text-align: left;
 
         color: #f0f0f0;
 
@@ -46,8 +54,18 @@
         }
     }
 
+    .subtitle {
+        margin-top: 14px;
+        font-family: "Inter Tight", sans-serif;
+        font-size: 32px;
+        font-weight: 300;
+        line-height: 44.8px;
+        text-align: left;
+        color: #f0f0f0;
+    }
+
     .leftText {
-        margin-top: 40px;
+        margin-top: 48px;
         font-family: "Inter Tight", sans-serif;
         font-size: 32px;
         font-weight: 300;
@@ -62,7 +80,7 @@
     }
 
     .leftButtons {
-        margin-top: 110px;
+        margin-top: 100px;
 
         display: flex;
         align-items: center;
@@ -188,25 +206,11 @@
         background: linear-gradient(
             0deg,
             rgba(15, 15, 15, 0.08) 0%,
-            rgba(237, 255, 254, 0.72) 100%,
-            
+            rgba(237, 255, 254, 0.72) 100%
         );
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
 
-    .timerContainer {
-        position: relative;
-        padding: 1px;
 
-        &::after {
-            content: "";
-            border-radius: 10px;
-            z-index: 1;
-            position: absolute;
-            inset: 0px;
-            background: linear-gradient(180deg, #f0f0f0 0%, #8a8a8a 100%);
-            opacity: 0.6;
-        }
-    }
 }
