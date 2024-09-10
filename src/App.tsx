@@ -8,6 +8,7 @@ import UserFlow from "./sections/UserFlow/UserFlow";
 import Goal from "./sections/Goal/Goal";
 import FAQ from "./sections/Faq/Faq";
 import JoinUs from "./sections/JoinUs/JoinUs";
+import TeamAdvisors from "./sections/TeamAdvisors/TeamAdvisors";
 
 function App() {
     return (
@@ -18,6 +19,7 @@ function App() {
             <Goal />
             <RoadMap />
             <UserFlow />
+            <TeamAdvisors />
             <JoinUs />
             <FAQ />
             <Footer />
