@@ -13,6 +13,7 @@ import TeamAdvisors from "./sections/TeamAdvisors/TeamAdvisors";
 import FeaturedIn from "./sections/FeaturedIn/FeaturedIn";
 import VideoSection from "./sections/VideoSection/VideoSection";
 import TokenInfo from "./sections/TokenInfo/TokenInfo";
+import MarketLeader from "./sections/MarketLeader/MarketLeader";
 
 function App() {
     return (
@@ -22,6 +23,7 @@ function App() {
             <FeaturedIn />
             <VideoSection />
             <Goal />
+            <MarketLeader />
             <TokenomicsSection />
             <TokenInfo />
             <UserFlow />
