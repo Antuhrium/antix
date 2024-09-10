@@ -27,12 +27,7 @@ const Person: React.FC<PersonProps> = ({ image, name, role, linkedin }) => (
     </div>
 );
 
-interface TeamAdvisorsProps {
-    team: PersonProps[];
-    advisors: PersonProps[];
-}
-
-const TeamAdvisors: React.FC<TeamAdvisorsProps> = () => {
+const TeamAdvisors = () => {
     const team = [
         {
             image: '/team/roman.png',
