@@ -18,14 +18,14 @@
 .logosWrapper {
     margin-top: 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     gap: 20px;
 }
 
 .logo {
-    width: 210px;
     height: 60px;
+    padding: 0 20px;
 
     display: flex;
     align-items: center;

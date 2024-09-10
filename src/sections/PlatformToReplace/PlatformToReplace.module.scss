@@ -1,0 +1,71 @@
+.container {
+    margin-top: 100px;
+    background-image: url("../../assets/svg/platform-to-replace-bg.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+
+    padding: 100px 0;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    span {
+        opacity: 0.6;
+        font-family: "Inter Tight", sans-serif;
+        font-size: 32px;
+        font-weight: 300;
+        line-height: 44.8px;
+        text-align: left;
+        color: #f0f0f0;
+    }
+
+    h4 {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 54px;
+        font-weight: 400;
+        line-height: 64.8px;
+        letter-spacing: -0.04em;
+        text-align: left;
+        color: #f0f0f0;
+    }
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    span {
+        opacity: 0.2;
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 40px;
+        font-weight: 400;
+        line-height: 48px;
+        text-align: center;
+        color: #f0f0f0;
+    }
+
+    .rightActive {
+        opacity: 1;
+        padding: 16px 32px 28px 32px;
+        border-radius: 12px;
+        background: #1dded203;
+        backdrop-filter: blur(94px);
+
+        border: 1px solid rgba(255, 255, 255, 0.19);
+
+        font-size: 94px;
+        line-height: 104px;
+        letter-spacing: -0.04em;
+        color: #12fff1;
+    }
+}

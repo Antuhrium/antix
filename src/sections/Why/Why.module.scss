@@ -1,0 +1,76 @@
+.container {
+    max-width: 1600px;
+    margin: 220px auto 0;
+    padding: 130px 0 ;
+    background-image: url("../../assets/images/why-bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.item {
+    width: 543px;
+    height: 214px;
+    position: relative;
+
+    background-image: url("../../assets/svg/why-item-bg.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+
+    padding-left: 50px;
+
+    &:nth-child(2) {
+        margin-top: 80px;
+        align-self: flex-end;
+    }
+    &:nth-child(3) {
+        margin-left: 80px;
+    }
+}
+
+.text {
+    max-width: 410px;
+
+    font-family: "Inter Tight", sans-serif;
+    font-size: 32px;
+    line-height: 44.8px;
+    font-weight: 400;
+    text-align: left;
+    color: #f0f0f0;
+
+    span {
+        font-weight: 700;
+    }
+}
+
+.itemNumber {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    // border: 2px solid rgba(237, 255, 254, 0.4);
+
+    border: 2px solid rgba(18, 255, 241, 0.5);
+
+    width: 60px;
+    height: 60px;
+    border-radius: 9px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 33.6px;
+    letter-spacing: -0.01em;
+    text-align: center;
+    color: #fff;
+}

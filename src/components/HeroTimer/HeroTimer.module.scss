@@ -10,7 +10,8 @@
     padding: 15px 30px;
     border-radius: 10px;
 
-    background: rgb(87, 87, 87);
+    background: rgba(87, 87, 87, 0.3);
+    border: 0.75px solid rgba(138, 138, 138, 0.3);
 }
 .timeSegment {
     display: flex;
