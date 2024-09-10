@@ -12,6 +12,7 @@ import JoinUs from "./sections/JoinUs/JoinUs";
 import TeamAdvisors from "./sections/TeamAdvisors/TeamAdvisors";
 import FeaturedIn from "./sections/FeaturedIn/FeaturedIn";
 import VideoSection from "./sections/VideoSection/VideoSection";
+import TokenInfo from "./sections/TokenInfo/TokenInfo";
 
 function App() {
     return (
@@ -22,8 +23,9 @@ function App() {
             <VideoSection />
             <Goal />
             <TokenomicsSection />
-            <RoadMap />
+            <TokenInfo />
             <UserFlow />
+            <RoadMap />
             <TeamAdvisors />
             <JoinUs />
             <FAQ />
