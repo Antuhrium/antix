@@ -15,6 +15,8 @@ import MarketLeader from "./sections/MarketLeader/MarketLeader";
 import PlatformToReplace from "./sections/PlatformToReplace/PlatformToReplace";
 import PreDepositStage from "./sections/PreDepositStage/PreDepositStage";
 import Why from "./sections/Why/Why";
+import Quote from "./sections/Quote/Quote";
+import Statistics from "./sections/Statistics/Statistics";
 
 function App() {
     return (
@@ -26,6 +28,8 @@ function App() {
             <PlatformToReplace />
             <MarketLeader />
             <Why />
+            <Quote />
+            <Statistics />
             <UserFlow />
             <TokenInfo />
             <TokenomicsSection />
