@@ -19,6 +19,7 @@
     background-image: url("../../assets/svg/why-item-bg.svg");
     background-repeat: no-repeat;
     background-position: center;
+    backdrop-filter: blur(10px);
 
     display: flex;
     align-items: center;
