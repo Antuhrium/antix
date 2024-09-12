@@ -5,10 +5,12 @@ import FollowerCard from './FollowerCard';
 const JoinUs: React.FC = () => {
     return (
         <div className={styles.joinUsContainer}>
-            <h1 className={styles.title}>Join Us on Our Journey</h1>
-            <p className={styles.subtitle}>
-                Join our communities and stay informed about Antix project progress
-            </p>
+            <div className={styles.titleContainer}>
+                <h1 className={styles.title}>Join Us on Our Journey</h1>
+                <p className={styles.subtitle}>
+                    <span>Join our communities</span> and stay informed about Antix project progress
+                </p>
+            </div>
             <div className={styles.cardsContainer}>
                 <div className={styles.cardTopLeft}>
                     <FollowerCard platform="x" handle="@acronix" followers={44000} />

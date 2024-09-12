@@ -4,6 +4,10 @@
     padding: 2rem;
     position: relative;
 
+    background:
+        url('../../assets/svg/faq/Gradient.svg') no-repeat center center;
+    background-size: cover;
+
     &::before,
     &::after {
         content: '';
@@ -49,13 +53,21 @@
     /* 140% */
     max-width: 600px;
     margin: 2rem auto;
+
+
+    span {
+        font-family: "Inter Tight";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 28px;
+    }
 }
 
 .grid {
     display: flex;
     flex-wrap: nowrap;
     gap: 1rem;
-    overflow-x: auto;
     padding: 1rem 0;
     justify-content: center;
 
@@ -87,27 +99,34 @@
 
 .person {
     position: relative;
-    overflow: hidden;
     background-size: cover;
     background-position: center;
-    border-radius: 1rem;
+    background-repeat: no-repeat;
     width: 233px;
     height: 297.722px;
-
-    &::after {
-        content: '';
-        position: absolute;
-        bottom: 0px;
-        right: 0px;
-        width: 60px;
-        height: 60px;
-        background-image: url('../../assets/svg/team/in.svg');
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
+    padding: 1rem;
+    box-shadow:
+        inset 0 20px 20px -20px rgba(0, 0, 0, 0.9),
+        inset 0 -20px 20px -20px rgba(0, 0, 0, 0.7);
 }
 
+.bigIcon {
+    position: absolute;
+    bottom: -30px;
+    right: -30px;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
 
+.icon {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
 
 .imageContainer {
     position: relative;
@@ -122,18 +141,12 @@
     object-fit: cover;
 }
 
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
+.inner {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 70%;
 }
 
 .imageContainer:hover .overlay {
@@ -151,21 +164,39 @@
 }
 
 .name {
-    font-size: 1.2rem;
-    margin: 0.5rem 0 0.25rem;
+    color: var(--white-head-text, #F0F0F0);
+    font-family: "Inter Tight";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+}
+
+.nameAdvisor {
+    color: var(--white-head-text, #F0F0F0);
+    font-family: "Inter Tight";
+    font-size: 19.056px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
 }
 
 .role {
-    font-size: 0.9rem;
-    color: #aaa;
-    margin: 0;
+    color: var(--white-head-text, #F0F0F0);
+    font-family: "Inter Tight";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
 }
 
-.arrowIcon {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    color: #4CAF50;
+.roleAdvisor {
+    color: var(--white-head-text, #F0F0F0);
+    font-family: "Inter Tight";
+    font-size: 31.76px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
 }
 
 .advisors {

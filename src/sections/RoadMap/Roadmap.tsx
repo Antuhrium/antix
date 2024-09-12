@@ -1,85 +1,6 @@
 import styles from './RoadMap.module.scss';
 
 const RoadMap = () => {
-  const stages = [
-    {
-      id: 1,
-      title: 'Stage 1 - Q2 2025',
-      description: 'Launch of Digital Twin Creation & Customization Suite',
-      icon: (<svg width="67" height="68" viewBox="0 0 87 88" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g style={{ mixBlendMode: "plus-lighter" }}>
-          <circle cx="43.5" cy="44.3008" r="36" stroke="#002925" strokeWidth="15" />
-        </g>
-        <g filter="url(#filter0_b_358_6427)">
-          <circle cx="43.2164" cy="44.0172" r="29.2164" fill="white" fillOpacity="0.62" />
-        </g>
-        <path d="M51.1663 34.3508V46.9508C51.1663 46.9508 50.1455 48.0008 47.083 48.0008C44.0205 48.0008 41.9788 45.9008 38.9163 45.9008C35.8538 45.9008 34.833 46.9508 34.833 46.9508V34.3508C34.833 34.3508 35.8538 33.3008 38.9163 33.3008C41.9788 33.3008 44.0205 35.4008 47.083 35.4008C50.1455 35.4008 51.1663 34.3508 51.1663 34.3508Z" fill="#F0F0F0" />
-        <path d="M34.833 54.3008V34.3508C34.833 34.3508 35.8538 33.3008 38.9163 33.3008C41.9788 33.3008 44.0205 35.4008 47.083 35.4008C50.1455 35.4008 51.1663 34.3508 51.1663 34.3508V46.9508C51.1663 46.9508 50.1455 48.0008 47.083 48.0008C44.0205 48.0008 41.9788 45.9008 38.9163 45.9008C35.8538 45.9008 34.833 46.9508 34.833 46.9508" stroke="#F0F0F0" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-        <defs>
-          <filter id="filter0_b_358_6427" x="10.5" y="11.3008" width="65.4326" height="65.4326" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-            <feFlood floodOpacity="0" result="BackgroundImageFix" />
-            <feGaussianBlur in="BackgroundImageFix" stdDeviation="1.75" />
-            <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_358_6427" />
-            <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_358_6427" result="shape" />
-          </filter>
-        </defs>
-      </svg>
-      ),
-    },
-    {
-      id: 2,
-      title: 'Stage 2 - Q4 2025',
-      description: 'Expansion of Platform Capabilities & Integration',
-      icon: (<svg width="67" height="68" viewBox="0 0 87 88" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g style={{ mixBlendMode: "plus-lighter" }}>
-          <circle cx="43.5" cy="44.3008" r="36" stroke="#002925" strokeWidth="15" />
-        </g>
-        <g filter="url(#filter0_b_358_6434)">
-          <circle cx="43" cy="43.8008" r="29" fill="#D9D9D9" fillOpacity="0.62" />
-        </g>
-        <path d="M38.5 44.9674C38.5 47.5448 40.5893 49.6341 43.1667 49.6341C44.4553 49.6341 45.622 49.1118 46.4665 48.2673M38.5 44.9674H33.8333M38.5 44.9674C38.5 43.1568 39.5312 41.587 41.0383 40.8133M33.8333 44.9674C33.8333 45.6118 33.311 46.1341 32.6667 46.1341C32.0223 46.1341 31.5 45.6118 31.5 44.9674C31.5 44.3231 32.0223 43.8008 32.6667 43.8008C33.311 43.8008 33.8333 44.3231 33.8333 44.9674ZM50.5084 37.6257C50.2972 37.4146 50.1667 37.1229 50.1667 36.8008C50.1667 36.1564 50.689 35.6341 51.3333 35.6341C51.9777 35.6341 52.5 36.1564 52.5 36.8008C52.5 37.4451 51.9777 37.9674 51.3333 37.9674C51.0112 37.9674 50.7195 37.8369 50.5084 37.6257ZM50.5084 37.6257L46.4665 41.6676M38.9334 35.551C39.3631 35.3789 39.6667 34.9586 39.6667 34.4674C39.6667 33.8231 39.1443 33.3008 38.5 33.3008C37.8557 33.3008 37.3333 33.8231 37.3333 34.4674C37.3333 35.1118 37.8557 35.6341 38.5 35.6341C38.6532 35.6341 38.7994 35.6046 38.9334 35.551ZM38.9334 35.551L41.0383 40.8133M46.4665 48.2673C47.311 47.4228 47.8333 46.2561 47.8333 44.9674C47.8333 43.6788 47.311 42.5121 46.4665 41.6676M46.4665 48.2673L50.5084 52.3092M50.5084 52.3092C50.2972 52.5203 50.1667 52.8119 50.1667 53.1341C50.1667 53.7784 50.689 54.3008 51.3333 54.3008C51.9777 54.3008 52.5 53.7784 52.5 53.1341C52.5 52.4898 51.9777 51.9674 51.3333 51.9674C51.0112 51.9674 50.7195 52.098 50.5084 52.3092ZM46.4665 41.6676C45.622 40.8231 44.4553 40.3008 43.1667 40.3008C42.4 40.3008 41.6765 40.4857 41.0383 40.8133" stroke="#F0F0F0" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-        <path d="M47.8333 44.9674C47.8333 46.2561 47.311 47.4228 46.4665 48.2673C45.622 49.1118 44.4553 49.6341 43.1667 49.6341C40.5893 49.6341 38.5 47.5448 38.5 44.9674C38.5 43.1568 39.5312 41.587 41.0383 40.8133C41.6765 40.4857 42.4 40.3008 43.1667 40.3008C44.4553 40.3008 45.622 40.8231 46.4665 41.6676C47.311 42.5121 47.8333 43.6788 47.8333 44.9674Z" fill="#F0F0F0" />
-        <path d="M33.8333 44.9674C33.8333 45.6118 33.311 46.1341 32.6667 46.1341C32.0223 46.1341 31.5 45.6118 31.5 44.9674C31.5 44.3231 32.0223 43.8008 32.6667 43.8008C33.311 43.8008 33.8333 44.3231 33.8333 44.9674Z" fill="#F0F0F0" />
-        <path d="M52.5 53.1341C52.5 53.7784 51.9777 54.3008 51.3333 54.3008C50.689 54.3008 50.1667 53.7784 50.1667 53.1341C50.1667 52.8119 50.2972 52.5203 50.5084 52.3092C50.7195 52.098 51.0112 51.9674 51.3333 51.9674C51.9777 51.9674 52.5 52.4898 52.5 53.1341Z" fill="#F0F0F0" />
-        <path d="M52.5 36.8008C52.5 36.1564 51.9777 35.6341 51.3333 35.6341C50.689 35.6341 50.1667 36.1564 50.1667 36.8008C50.1667 37.1229 50.2972 37.4146 50.5084 37.6257C50.7195 37.8369 51.0112 37.9674 51.3333 37.9674C51.9777 37.9674 52.5 37.4451 52.5 36.8008Z" fill="#F0F0F0" />
-        <path d="M37.3333 34.4674C37.3333 33.8231 37.8557 33.3008 38.5 33.3008C39.1443 33.3008 39.6667 33.8231 39.6667 34.4674C39.6667 34.9586 39.3631 35.3789 38.9334 35.551C38.7994 35.6046 38.6532 35.6341 38.5 35.6341C37.8557 35.6341 37.3333 35.1118 37.3333 34.4674Z" fill="#F0F0F0" />
-        <defs>
-          <filter id="filter0_b_358_6434" x="10.5" y="11.3008" width="65" height="65" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-            <feFlood floodOpacity="0" result="BackgroundImageFix" />
-            <feGaussianBlur in="BackgroundImageFix" stdDeviation="1.75" />
-            <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_358_6434" />
-            <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_358_6434" result="shape" />
-          </filter>
-        </defs>
-      </svg>
-      ),
-    },
-    {
-      id: 3,
-      title: 'Stage 3 - Q3 2026',
-      description: 'Global Business Development & API Integration',
-      icon: (<svg width="67" height="68" viewBox="0 0 87 88" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g style={{ mixBlendMode: "plus-lighter" }}>
-          <circle cx="43.5" cy="44.3008" r="36" stroke="#002925" strokeWidth="15" />
-        </g>
-        <g filter="url(#filter0_b_358_6441)">
-          <circle cx="44" cy="44.8008" r="29" fill="#D9D9D9" fillOpacity="0.62" />
-        </g>
-        <path d="M37 55.3008C37 55.3008 39.1 54.1341 44 54.1341C48.9 54.1341 51 55.3008 51 55.3008M40.5 50.6341V54.3608M47.5 50.6341V54.3608M37.2333 50.6341H50.7667C52.0735 50.6341 52.7269 50.6341 53.226 50.3798C53.665 50.1561 54.022 49.7991 54.2457 49.3601C54.5 48.861 54.5 48.2076 54.5 46.9008V38.0341C54.5 36.7273 54.5 36.0739 54.2457 35.5748C54.022 35.1358 53.665 34.7788 53.226 34.5551C52.7269 34.3008 52.0735 34.3008 50.7667 34.3008H37.2333C35.9265 34.3008 35.2731 34.3008 34.774 34.5551C34.335 34.7788 33.978 35.1358 33.7543 35.5748C33.5 36.0739 33.5 36.7273 33.5 38.0341V46.9008C33.5 48.2076 33.5 48.861 33.7543 49.3601C33.978 49.7991 34.335 50.1561 34.774 50.3798C35.2731 50.6341 35.9265 50.6341 37.2333 50.6341Z" stroke="#F0F0F0" strokeWidth="1.5" strokeLinecap="round" />
-        <path d="M33.5 38.0341C33.5 36.7273 33.5 36.0739 33.7543 35.5748C33.978 35.1358 34.335 34.7788 34.774 34.5551C35.2731 34.3008 35.9265 34.3008 37.2333 34.3008H50.7667C52.0735 34.3008 52.7269 34.3008 53.226 34.5551C53.665 34.7788 54.022 35.1358 54.2457 35.5748C54.5 36.0739 54.5 36.7273 54.5 38.0341V46.9008C54.5 48.2076 54.5 48.861 54.2457 49.3601C54.022 49.7991 53.665 50.1561 53.226 50.3798C52.7269 50.6341 52.0735 50.6341 50.7667 50.6341H37.2333C35.9265 50.6341 35.2731 50.6341 34.774 50.3798C34.335 50.1561 33.978 49.7991 33.7543 49.3601C33.5 48.861 33.5 48.2076 33.5 46.9008V38.0341Z" fill="#F0F0F0" />
-        <defs>
-          <filter id="filter0_b_358_6441" x="11.5" y="12.3008" width="65" height="65" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-            <feFlood floodOpacity="0" result="BackgroundImageFix" />
-            <feGaussianBlur in="BackgroundImageFix" stdDeviation="1.75" />
-            <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_358_6441" />
-            <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_358_6441" result="shape" />
-          </filter>
-        </defs>
-      </svg>
-      ),
-    },
-  ];
-
   const features = [
     {
       icon: (<svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -135,7 +56,7 @@ const RoadMap = () => {
       <h1 className={styles.title}>Road Map</h1>
       <div className={styles.roadMapContent}>
         <div className={styles.test}>
-          {stages.map((stage) => (
+          {/* {stages.map((stage) => (
             <div key={stage.id} className={`${styles.stage} ${styles[`stage${stage.id}`]}`}>
               <div className={styles.stageContent}>
                 <h3>{stage.title}</h3>
@@ -143,7 +64,7 @@ const RoadMap = () => {
               </div>
               <div className={styles.stageIcon}>{stage.icon}</div>
             </div>
-          ))}
+          ))} */}
         </div>
         <div className={styles.features}>
           {features.map((feature, index) => (
