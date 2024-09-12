@@ -19,6 +19,7 @@ import Quote from "./sections/Quote/Quote";
 import Statistics from "./sections/Statistics/Statistics";
 import Markets from "./sections/Markets/Markets";
 import Amazon from "./sections/Amazon/Amazon";
+import Revolutionizing from "./sections/Revolutionizing/Revolutionizing";
 
 function App() {
     return (
@@ -34,6 +35,7 @@ function App() {
             <Statistics />
             <Markets />
             <Amazon />
+            <Revolutionizing />
             <TokenInfo />
             <UserFlow />
             <TokenomicsSection />
