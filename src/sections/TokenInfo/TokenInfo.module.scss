@@ -1,6 +1,6 @@
 .container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -22,13 +22,19 @@
     }
 }
 
-.containerHeader {
+.containerCenter {
     margin-top: 100px;
+
+    .mark {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2rem;
+    }
 
     h1 {
         color: var(--white-head-text, #F0F0F0);
         text-align: center;
-        /* Header/120/Regular */
         font-family: "Space Grotesk";
         font-size: 120px;
         font-style: normal;
@@ -48,7 +54,7 @@
         button {
             border-radius: 54px;
             background: #FFF;
-            padding: 10px 60px;
+            padding: 10px 80px;
             border: none;
             cursor: pointer;
             color: var(--Black, #0F0F0F);
@@ -64,7 +70,7 @@
     .subheader {
         text-align: center;
         margin-top: 2rem;
-        padding: 0 25%;
+        padding: 0 15%;
 
         .subheaderBoldText {
             color: var(--grey-text, #AFAFAF);
@@ -87,33 +93,62 @@
     }
 }
 
-.infiniteHorizontalScroll {
-    margin-top: 4rem;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-    -ms-overflow-style: none; 
-    &::-webkit-scrollbar {
-        display: none;
+.containerRight,
+.containerLeft {
+    margin: 2rem;
+}
+
+.tokenInfoCard {
+    flex: 0 0 auto;
+    width: 309.999px;
+    height: 132px;
+    margin: 3rem 1rem;
+    padding: 1rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: relative;
+
+    .title {
+        color: var(--white-head-text, #F0F0F0);
+        font-family: "Inter Tight";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 110%;
+        margin-bottom: 1rem;
     }
 
-    .tokenInfoCard {
-        flex: 0 0 auto; 
-        width: 310px; 
-        height: 398.5px;
-        margin-right: 1rem; 
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
 
-        .imageContainer {
-            align-items: center;
-            justify-content: center;
-            display: flex;
-        }
+    .descriptionContainer {
+        width: 80%;
+    }
+
+    .description {
+        color: var(--white-head-text, #F0F0F0);
+        font-family: "Inter Tight";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 21px;
+    }
+
+    .boldDescription {
+        color: var(--white-head-text, #F0F0F0);
+        font-family: "Inter Tight";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 21px;
+    }
+
+
+    .cornerImage {
+        position: absolute;
+        bottom: -25px;
+        right: -25px;
+        height: auto;
+        margin: 0;
+        padding: 0;
     }
 }
