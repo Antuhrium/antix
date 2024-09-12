@@ -17,6 +17,8 @@ import PreDepositStage from "./sections/PreDepositStage/PreDepositStage";
 import Why from "./sections/Why/Why";
 import Quote from "./sections/Quote/Quote";
 import Statistics from "./sections/Statistics/Statistics";
+import Markets from "./sections/Markets/Markets";
+import Amazon from "./sections/Amazon/Amazon";
 
 function App() {
     return (
@@ -30,6 +32,8 @@ function App() {
             <Why />
             <Quote />
             <Statistics />
+            <Markets />
+            <Amazon />
             <TokenInfo />
             <UserFlow />
             <TokenomicsSection />
