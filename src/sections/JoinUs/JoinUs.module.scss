@@ -1,35 +1,45 @@
 .joinUsContainer {
     color: white;
     text-align: center;
+    margin-top: 20rem;
 }
 
-.title {
-    position: relative;
-    z-index: 10;
-    font-family: "Space Grotesk";
-    font-size: 120px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 104px;
-    letter-spacing: -4.8px;
-}
 
-.subtitle {
-    position: relative;
-    top: 10px;
-    z-index: 10;
-    color: var(--grey-text, #AFAFAF);
-    text-align: center;
-    /* Text/32/Light */
-    font-family: "Inter Tight";
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 140%;
-    /* 44.8px */
-    width: 50%;
-    margin: 0 auto;
-    /* 44.8px */
+
+.titleContainer {
+    background: #000;
+    backdrop-filter: blur(68.25px);
+    padding: 2rem;
+
+    .title {
+        position: relative;
+        z-index: 10;
+        font-family: "Space Grotesk";
+        font-size: 120px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 104px;
+        letter-spacing: -4.8px;
+    }
+
+    .subtitle {
+        position: relative;
+        top: 10px;
+        z-index: 10;
+        color: var(--grey-text, #AFAFAF);
+        text-align: center;
+        font-family: "Inter Tight";
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 140%;
+        width: 50%;
+        margin: 0 auto;
+
+        span {
+            font-weight: 600;
+        }
+    }
 }
 
 .cardsContainer {
@@ -40,7 +50,7 @@
     gap: 1rem;
     flex-wrap: wrap;
     position: relative;
-    background: 
+    background:
         linear-gradient(to bottom,
             rgba(0, 0, 0, 1) 0%,
             rgba(0, 0, 0, 0.3) 30%,
@@ -48,7 +58,7 @@
             rgba(0, 0, 0, 0.5) 100%),
         url('../../assets/svg/joinus/joinusbg.png') no-repeat center center;
     background-size: cover;
-    min-height: 500px;
+    min-height: 600px;
 }
 
 .cardsContainer {

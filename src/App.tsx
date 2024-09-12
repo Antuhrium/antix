@@ -33,8 +33,8 @@ function App() {
             <TokenInfo />
             <UserFlow />
             <TokenomicsSection />
-            <RoadMap />
             <TeamAdvisors />
+            <RoadMap />
             <JoinUs />
             <FAQ />
             <Footer />
