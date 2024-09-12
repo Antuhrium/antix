@@ -30,8 +30,8 @@ function App() {
             <Why />
             <Quote />
             <Statistics />
-            <UserFlow />
             <TokenInfo />
+            <UserFlow />
             <TokenomicsSection />
             <RoadMap />
             <TeamAdvisors />
