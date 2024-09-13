@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import styles from './TeamAdvisors.module.scss';
 
 interface PersonProps {
@@ -89,13 +89,54 @@ const TeamAdvisors = () => {
         {
             image: '/team/rafal.png',
             icon: '/team/icon.png',
-            name: 'Rafał',
+            name: 'Rafal',
             role: 'Technological Startup Expert',
             subRole: 'Project Manager',
             linkedin: 'https://www.linkedin.com/in/rafal-project-manager/',
             isBigIcon: false
+        },
+        {
+            image: '/team/dmitry.png',
+            icon: '/team/icon.png',
+            name: 'Dmitry',
+            role: 'Developed an AAA title',
+            subRole: 'Software Engineer',
+            linkedin: 'https://www.linkedin.com/in/rafal-project-manager/',
+            isBigIcon: false
         }
     ];
+
+
+    const gridRef = useRef<HTMLDivElement>(null);
+    const [canScrollLeft, setCanScrollLeft] = useState(false);
+    const [canScrollRight, setCanScrollRight] = useState(true);
+
+    const itemWidth = 233;
+    const gap = 16;
+
+    const scrollCarousel = (direction: 'left' | 'right') => {
+        if (!gridRef.current) return;
+
+        const scrollAmount = (itemWidth + gap) * 3; // Scroll by 3 items at a time
+        gridRef.current.scrollBy({
+            left: direction === 'left' ? -scrollAmount : scrollAmount,
+            behavior: 'smooth'
+        });
+    };
+
+    const checkScrollability = () => {
+        if (!gridRef.current) return;
+
+        const { scrollLeft, scrollWidth, clientWidth } = gridRef.current;
+        setCanScrollLeft(scrollLeft > 0);
+        setCanScrollRight(scrollLeft < scrollWidth - clientWidth);
+    };
+
+    useEffect(() => {
+        checkScrollability();
+        window.addEventListener('resize', checkScrollability);
+        return () => window.removeEventListener('resize', checkScrollability);
+    }, []);
 
     const advisors = [
         {
@@ -132,10 +173,30 @@ const TeamAdvisors = () => {
                 <p className={styles.sectionDescription}>
                     The team has a proven track record of <span>successfully managing business projects.</span> They bring significant experience and exceptional knowledge regarding digital humans & Web3 ventures at scale.
                 </p>
-                <div className={styles.grid}>
-                    {team.map((member, index) => (
-                        <Person key={index} {...member} />
-                    ))}
+                <div className={styles.gridWrapper}>
+                    <div 
+                        className={styles.grid} 
+                        ref={gridRef}
+                        onScroll={checkScrollability}
+                    >
+                        {team.map((member, index) => (
+                            <Person key={index} {...member} />
+                        ))}
+                    </div>
+                </div>
+                <div className={styles.buttons}>
+                    <img 
+                        src="/team/left.png" 
+                        onClick={() => scrollCarousel('left')} 
+                        alt="Scroll left" 
+                        style={{ opacity: canScrollLeft ? 1 : 0.5, cursor: canScrollLeft ? 'pointer' : 'default' }}
+                    />
+                    <img 
+                        src="/team/right.png" 
+                        onClick={() => scrollCarousel('right')} 
+                        alt="Scroll right" 
+                        style={{ opacity: canScrollRight ? 1 : 0.5, cursor: canScrollRight ? 'pointer' : 'default' }}
+                    />
                 </div>
             </section>
 

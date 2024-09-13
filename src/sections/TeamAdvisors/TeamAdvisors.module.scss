@@ -64,14 +64,32 @@
     }
 }
 
+.gridWrapper {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
 .grid {
     display: flex;
     flex-wrap: nowrap;
     gap: 1rem;
     padding: 1rem 0;
-    justify-content: center;
-
+    padding-left: 2rem;
     min-height: calc(297.722px + 5rem);
+    scroll-behavior: smooth;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    .person {
+        flex: 0 0 auto;
+        width: 233px;
+    }
 
     .person:nth-child(even) {
         align-self: flex-end;
@@ -79,6 +97,34 @@
 
     .person:nth-child(odd) {
         align-self: flex-start;
+    }
+}
+
+@media (min-width: 1200px) {
+    .gridWrapper {
+        width: 100%;
+    }
+
+    .grid {
+        flex-wrap: wrap;
+        justify-content: center;
+        overflow-x: visible;
+    }
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+
+    img {
+        cursor: pointer;
+        transition: opacity 0.3s ease;
+
+        &:hover {
+            opacity: 0.7;
+        }
     }
 }
 
