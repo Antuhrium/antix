@@ -23,31 +23,31 @@ import Amazon from "./sections/Amazon/Amazon";
 import Revolutionizing from "./sections/Revolutionizing/Revolutionizing";
 
 function App() {
-    return (
-        <main className={styles.container}>
-            <PreDepositStage />
-            <Header />
-            <HeroSection />
-            <FeaturedIn />
-            <PlatformToReplace />
-            <MarketLeader />
-            <Why />
-            <Quote />
-            <Statistics />
-            <Top10 />
-            <Markets />
-            <Amazon />
-            <Revolutionizing />
-            <TokenInfo />
-            <UserFlow />
-            <TokenomicsSection />
-            <TeamAdvisors />
-            <RoadMap />
-            <JoinUs />
-            <FAQ />
-            <Footer />
-        </main>
-    );
+  return (
+    <main className={styles.container}>
+      <PreDepositStage />
+      <Header />
+      <HeroSection />
+      <FeaturedIn />
+      <PlatformToReplace />
+      <MarketLeader />
+      <Why />
+      <Quote />
+      <Statistics />
+      <Top10 />
+      <Markets />
+      <Amazon />
+      <Revolutionizing />
+      <TokenInfo />
+      <UserFlow />
+      <TokenomicsSection />
+      <TeamAdvisors />
+      <RoadMap />
+      <JoinUs />
+      <FAQ />
+      <Footer />
+    </main>
+  );
 }
 
 export default App;

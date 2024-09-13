@@ -1,216 +1,559 @@
-.container {
-    background-image: url("../../assets/images/hero-bg.png");
+.wrapper {
+  width: 100%;
+  background-image: url(/src/assets/images/sections/ellipse.png),
+    url(/src/assets/images/sections/Hero/heroMobileBg.png);
+  background-size: 100%;
+  background-position: 0px 124px, 0px 150px;
+  background-repeat: no-repeat;
+  padding-top: 118px;
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 60px;
+    max-width: 1600px;
+    height: 871px;
+    color: #fff;
+    padding: 0px 1rem;
+    margin: 0 auto;
+    .leftColumn {
+      padding-top: 120px;
+      text-align: center;
+      .title {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 48px;
+        font-weight: 300;
+        line-height: 54px;
+        letter-spacing: -0.04em;
+        text-align: center;
+        color: #f0f0f0;
+        span {
+          color: #12fff1;
+        }
+      }
+      .subtitle {
+        margin-top: 14px;
+        font-family: "Inter Tight", sans-serif;
+        font-size: 20px;
+        font-weight: 200;
+        line-height: 28px;
+        color: #f0f0f0;
+      }
+      .description {
+        font-family: "Inter Tight", sans-serif;
+        font-size: 16px;
+        font-weight: 200;
+        line-height: 22px;
+        color: #afafaf;
+        margin-top: 35px;
+        b {
+          font-weight: 400;
+          color: #fff;
+        }
+      }
+      .actions {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+        margin-top: 50px;
+        &:hover {
+          opacity: 0.8;
+          svg {
+            transform: translateX(20%);
+          }
+        }
+        .button {
+          height: 60px;
+          width: 220px;
+          background: #12fff1;
+          font-family: "Inter Tight", sans-serif;
+          font-size: 22px;
+          font-weight: 400;
+          line-height: 28px;
+          text-align: center;
+          color: #0f0f0f;
+          transition: all 0.1s ease-in-out;
+          border-radius: 60px;
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+        .linkButton {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          height: 60px;
+          width: 220px;
+          background: #f0f0f026;
+          font-family: "Inter Tight", sans-serif;
+          font-size: 22px;
+          font-weight: 400;
+          line-height: 28px;
+          color: #afafaf;
+          border-radius: 100px;
+          svg {
+            transition: all 0.1s ease-in-out;
+          }
+        }
+      }
+    }
+    .rightColumn {
+      .timerWrapper {
+        position: relative;
+        z-index: 1;
+        height: 379px;
+        width: 361px;
+        padding: 10px;
+        background-image: url("../../assets/svg/hero-card-bg.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        display: flex;
+        flex-direction: column;
+        .timerWrapperTitle {
+          display: flex;
+          align-items: center;
+          justify-content: end;
+          gap: 8px;
+          font-family: "Inter Tight", sans-serif;
+          font-size: 16px;
+          font-weight: 300;
+          line-height: 17px;
+          margin-right: 45px;
+          color: #f0f0f0;
+          img {
+            width: 26px;
+            height: 26px;
+          }
+        }
+        .timer {
+          position: relative;
+          height: 315px;
+          width: 332px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          background: #1f1f1f99;
+          border-radius: 14px;
+          margin: 15px auto;
+          &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: url("../../assets/svg/hero-card-bg-star.svg");
+            background-size: cover;
+            background-position: center;
+          }
+          .title {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 32px;
+            font-weight: 300;
+            line-height: 64.38px;
+            letter-spacing: -0.04em;
+            text-align: left;
+            background: linear-gradient(
+              0deg,
+              rgba(15, 15, 15, 0.08) 0%,
+              rgba(237, 255, 254, 0.72) 100%
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+          .loader {
+            svg {
+              width: 100px;
+              height: 103px;
+              path {
+                fill: linear-gradient(to top, #12fff1, #000000);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Малые устройства (≥576px) */
+@media (min-width: 576px) {
+  .wrapper {
+    .container {
+      .leftColumn {
+        .title {
+          span {
+          }
+        }
+        .subtitle {
+        }
+        .description {
+          b {
+          }
+        }
+        .actions {
+          &:hover {
+            svg {
+            }
+          }
+          .button {
+            &:hover {
+            }
+          }
+          .linkButton {
+            svg {
+            }
+          }
+        }
+      }
+      .rightColumn {
+        .timerWrapper {
+          .title {
+            img {
+            }
+          }
+          .timer {
+            &::after {
+            }
+            .title {
+            }
+            .loader {
+              svg path {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Средние устройства (≥768px) */
+@media (min-width: 768px) {
+  .wrapper {
+    .container {
+      .leftColumn {
+        .title {
+          span {
+          }
+        }
+        .subtitle {
+        }
+        .description {
+          b {
+          }
+        }
+        .actions {
+          &:hover {
+            svg {
+            }
+          }
+          .button {
+            &:hover {
+            }
+          }
+          .linkButton {
+            svg {
+            }
+          }
+        }
+      }
+      .rightColumn {
+        .timerWrapper {
+          .title {
+            img {
+            }
+          }
+          .timer {
+            &::after {
+            }
+            .title {
+            }
+            .loader {
+              svg path {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Большие устройства (≥992px) */
+@media (min-width: 992px) {
+  .wrapper {
+    .container {
+      .leftColumn {
+        .title {
+          span {
+          }
+        }
+        .subtitle {
+        }
+        .description {
+          b {
+          }
+        }
+        .actions {
+          &:hover {
+            svg {
+            }
+          }
+          .button {
+            &:hover {
+            }
+          }
+          .linkButton {
+            svg {
+            }
+          }
+        }
+      }
+      .rightColumn {
+        .timerWrapper {
+          .title {
+            img {
+            }
+          }
+          .timer {
+            &::after {
+            }
+            .title {
+            }
+            .loader {
+              svg path {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Очень большие устройства (≥1200px) */
+@media (min-width: 1200px) {
+  .wrapper {
+    .container {
+      .leftColumn {
+        .title {
+          span {
+          }
+        }
+        .subtitle {
+        }
+        .description {
+          b {
+          }
+        }
+        .actions {
+          &:hover {
+            svg {
+            }
+          }
+          .button {
+            &:hover {
+            }
+          }
+          .linkButton {
+            svg {
+            }
+          }
+        }
+      }
+      .rightColumn {
+        .timerWrapper {
+          .title {
+            img {
+            }
+          }
+          .timer {
+            &::after {
+            }
+            .title {
+            }
+            .loader {
+              svg path {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Сверхбольшие устройства (≥1400px) */
+@media (min-width: 1400px) {
+  .wrapper {
+    width: 100%;
+    background-image: url("../../assets/images/sections/Hero/heroDesktopBg.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    width: 100%;
-}
-
-.content {
-    max-width: 1600px;
-    padding-top: 130px;
-    height: 100vh;
-
-    width: 100%;
-    margin: 0 auto;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    color: #fff;
-}
-
-// .bgImg {
-//     pointer-events: none;
-//     position: absolute;
-//     top: 0;
-//     left: 50%;
-//     transform: translateX(-50%);
-//     z-index: 0;
-// }
-
-.leftWrapper {
-    position: relative;
-    z-index: 1;
-    max-width: 50%;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-
-    .leftTitle {
-        font-family: "Space Grotesk", sans-serif;
-        font-size: 120px;
-        font-weight: 400;
-        line-height: 120px;
-        letter-spacing: -0.04em;
+    padding-top: 160px;
+    .container {
+      display: flex;
+      justify-content: space-between;
+      max-width: 1600px;
+      height: 871px;
+      color: #fff;
+      margin: 0 auto;
+      padding: 0px 1rem;
+      .leftColumn {
+        padding-top: 60px;
         text-align: left;
-
-        color: #f0f0f0;
-
-        span {
+        .title {
+          font-family: "Space Grotesk", sans-serif;
+          font-size: 120px;
+          font-weight: 400;
+          line-height: 120px;
+          letter-spacing: -0.04em;
+          color: #f0f0f0;
+          span {
             color: #12fff1;
+          }
         }
-    }
-
-    .subtitle {
-        margin-top: 14px;
-        font-family: "Inter Tight", sans-serif;
-        font-size: 32px;
-        font-weight: 300;
-        line-height: 44.8px;
-        text-align: left;
-        color: #f0f0f0;
-    }
-
-    .leftText {
-        margin-top: 48px;
-        font-family: "Inter Tight", sans-serif;
-        font-size: 32px;
-        font-weight: 300;
-        line-height: 44.8px;
-        text-align: left;
-        color: #afafaf;
-
-        span {
+        .subtitle {
+          margin-top: 14px;
+          font-family: "Inter Tight", sans-serif;
+          font-size: 32px;
+          font-weight: 200;
+          line-height: 44.8px;
+          color: #f0f0f0;
+        }
+        .description {
+          margin-top: 48px;
+          font-family: "Inter Tight", sans-serif;
+          font-size: 28px;
+          font-weight: 200;
+          line-height: 44.8px;
+          color: #afafaf;
+          b {
+            font-weight: 400;
             color: #fff;
-            font-weight: 600;
+          }
         }
-    }
-
-    .leftButtons {
-        margin-top: 100px;
-
-        display: flex;
-        align-items: center;
-        gap: 80px;
-
-        .leftButton {
+        .actions {
+          margin-top: 80px;
+          display: flex;
+          align-items: center;
+          gap: 2rem;
+          &:hover {
+            opacity: 0.8;
+            svg {
+              transform: translateX(20%);
+            }
+          }
+          .button {
             padding: 32px 100px;
             border-radius: 100px;
             background: #12fff1;
-
             font-family: "Inter Tight", sans-serif;
             font-size: 28px;
             font-weight: 500;
             line-height: 36.4px;
             text-align: center;
             color: #0f0f0f;
-
             transition: all 0.1s ease-in-out;
-
             &:hover {
-                opacity: 0.8;
+              opacity: 0.8;
             }
-        }
-
-        .leftLink {
+          }
+          .linkButton {
             display: flex;
+            justify-content: center;
             align-items: center;
             gap: 30px;
-
+            height: 100px;
+            width: 370px;
+            background: #f0f0f026;
             font-family: "Inter Tight", sans-serif;
             font-size: 28px;
-            font-weight: 500;
+            font-weight: 300;
             line-height: 36.4px;
             color: #afafaf;
-
+            border-radius: 100px;
             svg {
-                transition: all 0.1s ease-in-out;
+              transition: all 0.1s ease-in-out;
             }
-
-            &:hover {
-                opacity: 0.8;
-                svg {
-                    transform: translateX(20%);
-                }
+          }
+        }
+      }
+      .rightColumn {
+        .timerWrapper {
+          position: relative;
+          z-index: 1;
+          width: 656px;
+          height: 687px;
+          padding: 20px;
+          background-image: url("../../assets/svg/hero-card-bg.svg");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain;
+          display: flex;
+          flex-direction: column;
+          .title {
+            margin-right: 125px;
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            gap: 8px;
+            font-family: "Inter Tight", sans-serif;
+            font-size: 24px;
+            font-weight: 300;
+            line-height: 26.4px;
+            color: #f0f0f0;
+            img {
+              width: 26px;
+              height: 26px;
             }
+          }
+          .timer {
+            position: relative;
+            padding: 60px;
+            height: 100%;
+            width: 100%;
+            margin-top: 40px;
+            border-radius: 14px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            background: #1f1f1f99;
+            &::after {
+              content: "";
+              position: absolute;
+              inset: 0;
+              background-image: url("../../assets/svg/hero-card-bg-star.svg");
+              background-size: cover;
+              background-position: center;
+            }
+            .title {
+              font-family: "Space Grotesk", sans-serif;
+              font-size: 54px;
+              font-weight: 300;
+              line-height: 64.8px;
+              letter-spacing: -0.04em;
+              text-align: left;
+              background: linear-gradient(
+                0deg,
+                rgba(15, 15, 15, 0.08) 0%,
+                rgba(237, 255, 254, 0.72) 100%
+              );
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
+            .loader {
+              svg path {
+                fill: linear-gradient(to top, #12fff1, #000000);
+              }
+            }
+          }
         }
+      }
     }
-}
-
-.rightWrapper {
-    position: relative;
-    z-index: 1;
-    width: 41%;
-    height: 690px;
-    padding: 20px;
-    background-image: url("../../assets/svg/hero-card-bg.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-
-    display: flex;
-    flex-direction: column;
-
-    .rightTitle {
-        margin-right: 125px;
-
-        display: flex;
-        align-items: center;
-        justify-content: end;
-        gap: 8px;
-
-        font-family: "Inter Tight", sans-serif;
-        font-size: 24px;
-        font-weight: 400;
-        line-height: 26.4px;
-
-        color: #f0f0f0;
-
-        img {
-            width: 26px;
-            height: 26px;
-        }
-    }
-
-    .rightItem {
-        position: relative;
-
-        padding: 60px;
-        height: 100%;
-        width: 100%;
-        margin-top: 40px;
-        border-radius: 14px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        background: #1f1f1f99;
-
-        &::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-
-            background-image: url("../../assets/svg/hero-card-bg-star.svg");
-            background-size: cover;
-            background-position: center;
-        }
-    }
-
-    .loader {
-        svg path {
-            fill: linear-gradient(to top, #12fff1, #000000);
-        }
-    }
-
-    .timerTitle {
-        font-family: "Space Grotesk", sans-serif;
-        font-size: 54px;
-        font-weight: 300;
-        line-height: 64.8px;
-        letter-spacing: -0.04em;
-        text-align: left;
-        background: linear-gradient(
-            0deg,
-            rgba(15, 15, 15, 0.08) 0%,
-            rgba(237, 255, 254, 0.72) 100%
-        );
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-
+  }
 }
