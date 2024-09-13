@@ -1,0 +1,122 @@
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+
+}
+
+.title {
+    max-width: 1054px;
+
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 120px;
+    font-weight: 400;
+    line-height: 104px;
+    letter-spacing: -0.04em;
+    text-align: center;
+    color: #f0f0f0;
+}
+
+.wrapper {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.iconWrapper {
+    background: linear-gradient(
+        113.36deg,
+        rgba(29, 222, 210, 0.1) 16.73%,
+        rgba(16, 120, 114, 0.1) 79.7%
+    );
+    width: 160px;
+    height: 160px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 170px;
+    border: 1px solid rgba(237, 255, 254, 0.2);
+}
+
+.textWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.itemName {
+    width: fit-content;
+    font-family: "Space Groteskin", sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 48px;
+    letter-spacing: -0.04em;
+    text-align: left;
+
+    background: linear-gradient(
+        90deg,
+        rgba(18, 255, 241, 0.8) 0%,
+        #000000 122.69%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text {
+    position: relative;
+
+    width: 660px;
+    padding: 32px 36px;
+
+    background-image: url("../../assets/svg/revolutionizing/revolutionizing-bg.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    p {
+        font-family: "Inter Tight", sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 32px;
+        text-align: left;
+        color: #f0f0f0;
+
+        span {
+            font-weight: 700;
+        }
+    }
+}
+
+.itemIndex {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    border: 1px solid rgba(18, 255, 241, 0.5);
+
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    text-align: center;
+    color: #ffffff;
+}
