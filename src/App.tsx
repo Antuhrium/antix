@@ -17,6 +17,7 @@ import PreDepositStage from "./sections/PreDepositStage/PreDepositStage";
 import Why from "./sections/Why/Why";
 import Quote from "./sections/Quote/Quote";
 import Statistics from "./sections/Statistics/Statistics";
+import Top10 from "./sections/Top10/Top10";
 
 function App() {
     return (
@@ -30,6 +31,7 @@ function App() {
             <Why />
             <Quote />
             <Statistics />
+            <Top10 />
             <TokenInfo />
             <UserFlow />
             <TokenomicsSection />
