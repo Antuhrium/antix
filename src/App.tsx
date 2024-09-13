@@ -21,6 +21,7 @@ import Top10 from "./sections/Top10/Top10";
 import Markets from "./sections/Markets/Markets";
 import Amazon from "./sections/Amazon/Amazon";
 import Revolutionizing from "./sections/Revolutionizing/Revolutionizing";
+import DigitalMap from "./sections/DigitalMap/DigitalMap";
 
 function App() {
     return (
@@ -38,6 +39,7 @@ function App() {
             <Markets />
             <Amazon />
             <Revolutionizing />
+            <DigitalMap />
             <TokenInfo />
             <UserFlow />
             <TokenomicsSection />
