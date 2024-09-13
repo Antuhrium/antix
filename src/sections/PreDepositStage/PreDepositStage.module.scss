@@ -1,29 +1,70 @@
 .container {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 2;
-    background: rgba(18, 255, 241, 1);
-    padding: 8px 12px;
-}
-
-.link {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: rgba(18, 255, 241, 1);
+  height: 38px;
+  z-index: 2;
+  .link {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 6px;
+    text-align: center;
 
     font-family: "Inter Tight", sans-serif;
-    font-size: 16.11px;
+    font-size: 12px;
     font-weight: 400;
-    line-height: 21.47px;
+    line-height: 38px;
     color: rgba(3, 42, 40, 1);
     text-transform: uppercase;
     cursor: pointer;
+  }
+}
 
-    span {
-        font-weight: 800;
+/* Малые устройства (≥576px) */
+@media (min-width: 576px) {
+}
+
+/* Средние устройства (≥768px) */
+@media (min-width: 768px) {
+}
+
+/* Большие устройства (≥992px) */
+@media (min-width: 992px) {
+  .container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: rgba(18, 255, 241, 1);
+    height: 38px;
+    z-index: 2;
+    .link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      text-align: center;
+
+      font-family: "Inter Tight", sans-serif;
+      font-size: 16.11px;
+      font-weight: 400;
+      line-height: 38px;
+      color: rgba(3, 42, 40, 1);
+      text-transform: uppercase;
+      cursor: pointer;
     }
+  }
+}
+
+/* Очень большие устройства (≥1200px) */
+@media (min-width: 1200px) {
+}
+
+/* Сверхбольшие устройства (≥1400px) */
+@media (min-width: 1400px) {
 }

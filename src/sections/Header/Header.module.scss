@@ -1,6 +1,6 @@
 .wrapper {
   position: fixed;
-  top: 0px;
+  top: 0;
   left: 0;
   right: 0;
   backdrop-filter: blur(22px);
@@ -109,6 +109,7 @@
 /* Большие устройства (≥992px) */
 @media (min-width: 992px) {
   .wrapper {
+    top: 38px;
     .container {
       flex-direction: row;
       height: calc(70px + 2rem);
@@ -121,7 +122,7 @@
         display: none;
       }
       .logo {
-        flex: 35%;
+        flex: 20%;
         img {
           order: 1;
           height: 70px;
@@ -129,7 +130,7 @@
       }
       .socialsContainer {
         order: 2;
-        flex: 30%;
+        flex: 40%;
         .socialItem {
           &:hover {
           }
@@ -167,34 +168,39 @@
 
 /* Сверхбольшие устройства (≥1400px) */
 @media (min-width: 1400px) {
-  .container {
-    &.isOpen {
-    }
-    .burgerBtn {
-    }
-    .logo {
-      img {
+  .wrapper {
+    .container {
+      &.isOpen {
       }
-    }
-    .socialsContainer {
-      .socialItem {
-        &:hover {
-        }
+      .burgerBtn {
       }
-      .socialIcon {
+      .logo {
+        flex: 35%;
         img {
         }
       }
-      .socialName {
-        font-size: 20px;
-      }
-    }
-    .linksContainer {
-      .link {
-        font-size: 20px;
-        &:hover {
+      .socialsContainer {
+        flex: 30%;
+        .socialItem {
+          &:hover {
+          }
         }
-        &:last-child {
+        .socialIcon {
+          img {
+          }
+        }
+        .socialName {
+          font-size: 20px;
+        }
+      }
+      .linksContainer {
+        flex: 35%;
+        .link {
+          font-size: 20px;
+          &:hover {
+          }
+          &:last-child {
+          }
         }
       }
     }
