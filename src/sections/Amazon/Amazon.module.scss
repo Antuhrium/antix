@@ -83,12 +83,11 @@
     right: -600px;
     top: 240px;
     z-index: 0;
+    background: #f0f0f0;
 
     .mobileImg {
         display: none;
     }
-
-    background: #f0f0f0;
 
     @media screen and (max-width: 1600px) {
         width: 100%;

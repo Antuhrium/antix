@@ -2,6 +2,9 @@
     max-width: 960px;
     margin: 0 auto;
 
+    @media screen and (max-width: 1600px) {
+        max-width: none;
+    }
 }
 
 .title {
@@ -14,6 +17,15 @@
     letter-spacing: -0.04em;
     text-align: center;
     color: #f0f0f0;
+
+    @media screen and (max-width: 1600px) {
+        max-width: none;
+        padding: 0 40px;
+
+        font-size: 44px;
+        line-height: 42px;
+        text-align: center;
+    }
 }
 
 .wrapper {
@@ -22,12 +34,31 @@
     flex-direction: column;
     justify-content: center;
     gap: 40px;
+
+    @media screen and (max-width: 1600px) {
+        margin-top: 50px;
+
+        flex-direction: row;
+        justify-content: start;
+
+        width: 100%;
+        overflow-x: auto;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
 }
 
 .item {
     display: flex;
     align-items: center;
     gap: 40px;
+
+    @media screen and (max-width: 1600px) {
+        flex-direction: column;
+        gap: 20px;
+    }
 }
 
 .iconWrapper {
@@ -45,11 +76,17 @@
 
     border-radius: 170px;
     border: 1px solid rgba(237, 255, 254, 0.2);
+
+    @media screen and (max-width: 1600px) {
+        width: 140px;
+        height: 140px;
+    }
 }
 
 .textWrapper {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 8px;
 }
 
@@ -61,6 +98,7 @@
     line-height: 48px;
     letter-spacing: -0.04em;
     text-align: left;
+    text-wrap: nowrap;
 
     background: linear-gradient(
         90deg,
@@ -69,6 +107,12 @@
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+
+    @media screen and (max-width: 1600px) {
+        font-size: 40px;
+        line-height: 48px;
+        text-align: center;
+    }
 }
 
 .text {
@@ -92,6 +136,18 @@
 
         span {
             font-weight: 700;
+        }
+    }
+
+    @media screen and (max-width: 1600px) {
+        width: 329px;
+        height: 155px;
+        padding: 24px 28px;
+        background-image: url("../../assets/svg/revolutionizing/revolutionizing-mobile-bg.svg");
+
+        p {
+            font-size: 14px;
+            line-height: 21px;
         }
     }
 }
