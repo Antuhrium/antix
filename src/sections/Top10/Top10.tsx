@@ -4,10 +4,12 @@ import styles from './Top10.module.scss';
 const Top10: React.FC = () => {
     return (
         <div className={styles.container}>
+            <div className={styles.videoWrapper}>
+                <video autoPlay loop muted className={styles.backgroundVideo}>
+                    <source src="/videos/bgvid.mp4" type="video/mp4" />
+                </video>
+            </div>
 
-            <video autoPlay loop muted className={styles.backgroundVideo}>
-                <source src="/videos/bgvid.mp4" type="video/mp4" />
-            </video>
 
             <div className={styles.content}>
 
