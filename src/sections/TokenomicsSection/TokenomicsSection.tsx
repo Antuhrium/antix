@@ -1,10 +1,11 @@
+import { memo } from 'react';
 import styles from "./TokenomicsSection.module.scss";
 import PieChartComponent from "../../components/PieChart/PieChart";
 
 import RightBg from "../../assets/svg/tokenomics-right-bg.svg";
 import LeftBg from "../../assets/svg/tokenomics-left-bg.svg";
 
-const TokenomicsSection = () => {
+const TokenomicsSection = memo(() => {
     return (
         <section className={styles.tokenomicsWrapper}>
             <div className={styles.container}>
@@ -23,15 +24,19 @@ const TokenomicsSection = () => {
                 alt=""
                 className={styles.rightBg}
                 draggable={false}
+                loading="lazy"
             />
             <img
                 src={LeftBg}
                 alt=""
                 className={styles.leftBg}
                 draggable={false}
+                loading="lazy"
             />
         </section>
     );
-};
+});
+
+TokenomicsSection.displayName = 'TokenomicsSection';
 
 export default TokenomicsSection;
