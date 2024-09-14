@@ -1,8 +1,13 @@
 .container {
     max-width: 1600px;
-    margin: 140px auto 0;
+    margin: 100px auto 0;
 
     position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
 }
 
 .title {
@@ -12,34 +17,27 @@
     line-height: 104px;
     letter-spacing: -0.04em;
     color: #f0f0f0;
-    
-    max-width: 972px;
-    padding-right: 20px;
-    width: fit-content;
-    border-radius: 0 0 520px 0;
-    background: linear-gradient(165deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
-
-    position: absolute;
-    left: 0;
-    top: 0;
+    text-align: center;
 }
 
 .wrapper {
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 1px;
-    border-radius: 15px;
-    overflow: hidden;
-    border: 1px solid #575757;
-    background: #575757;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 8px;
 }
 
 .item {
-    padding: 30px;
-    background: #020304;
+    width: 300px;
+    height: 170px;
+    
     display: flex;
     align-items: center;
     justify-content: center;
+
+    &:nth-child(odd) {
+        border-radius: 16px;
+        border: 1px solid #575757;
+    }
 }

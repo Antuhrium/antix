@@ -21,33 +21,35 @@ import Top10 from "./sections/Top10/Top10";
 import Markets from "./sections/Markets/Markets";
 import Amazon from "./sections/Amazon/Amazon";
 import Revolutionizing from "./sections/Revolutionizing/Revolutionizing";
+import DigitalMap from "./sections/DigitalMap/DigitalMap";
 
 function App() {
-    return (
-        <main className={styles.container}>
-            <PreDepositStage />
-            <Header />
-            <HeroSection />
-            <FeaturedIn />
-            <PlatformToReplace />
-            <MarketLeader />
-            <Why />
-            <Quote />
-            <Statistics />
-            <Top10 />
-            <Markets />
-            <Amazon />
-            <Revolutionizing />
-            <TokenInfo />
-            <UserFlow />
-            <TokenomicsSection />
-            <TeamAdvisors />
-            <RoadMap />
-            <JoinUs />
-            <FAQ />
-            <Footer />
-        </main>
-    );
+  return (
+    <main className={styles.container}>
+      <PreDepositStage />
+      <Header />
+      <HeroSection />
+      <FeaturedIn />
+      <PlatformToReplace />
+      <MarketLeader />
+      <Why />
+      <Quote />
+      <Statistics />
+      <Top10 />
+      <Markets />
+      <Amazon />
+      <Revolutionizing />
+      <DigitalMap />
+      <TokenInfo />
+      <UserFlow />
+      <TokenomicsSection />
+      <TeamAdvisors />
+      <RoadMap />
+      <JoinUs />
+      <FAQ />
+      <Footer />
+    </main>
+  );
 }
 
 export default App;

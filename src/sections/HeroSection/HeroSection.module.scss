@@ -1,216 +1,533 @@
-.container {
-    background-image: url("../../assets/images/hero-bg.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-}
-
-.content {
-    max-width: 1600px;
-    padding-top: 130px;
-    height: 100vh;
-
-    width: 100%;
-    margin: 0 auto;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    color: #fff;
-}
-
-// .bgImg {
-//     pointer-events: none;
-//     position: absolute;
-//     top: 0;
-//     left: 50%;
-//     transform: translateX(-50%);
-//     z-index: 0;
-// }
-
-.leftWrapper {
-    position: relative;
-    z-index: 1;
-    max-width: 50%;
-
+.wrapper {
+  width: 100%;
+  background-image: url("/src/assets/images/sections/ellipse.png"),
+    url("/src/assets/images/sections/Hero/heroMobileBg.png");
+  background-size: 100%;
+  background-position: left 0px bottom -200px, left 0px top 150px;
+  background-repeat: no-repeat;
+  padding-top: 118px;
+  .container {
     display: flex;
     flex-direction: column;
-    justify-content: end;
-
-    .leftTitle {
+    justify-content: space-between;
+    gap: 60px;
+    max-width: 1600px;
+    color: #fff;
+    padding: 0px 1rem;
+    margin: 0 auto;
+    .leftColumn {
+      padding-top: 120px;
+      text-align: center;
+      .title {
         font-family: "Space Grotesk", sans-serif;
-        font-size: 120px;
-        font-weight: 400;
-        line-height: 120px;
+        font-size: 48px;
+        font-weight: 300;
+        line-height: 54px;
         letter-spacing: -0.04em;
-        text-align: left;
-
         color: #f0f0f0;
-
         span {
-            color: #12fff1;
+          color: #12fff1;
         }
-    }
-
-    .subtitle {
+      }
+      .subtitle {
         margin-top: 14px;
         font-family: "Inter Tight", sans-serif;
-        font-size: 32px;
-        font-weight: 300;
-        line-height: 44.8px;
-        text-align: left;
+        font-size: 20px;
+        font-weight: 200;
+        line-height: 28px;
         color: #f0f0f0;
-    }
-
-    .leftText {
-        margin-top: 48px;
+      }
+      .description {
         font-family: "Inter Tight", sans-serif;
-        font-size: 32px;
-        font-weight: 300;
-        line-height: 44.8px;
-        text-align: left;
+        font-size: 16px;
+        font-weight: 200;
+        line-height: 22px;
         color: #afafaf;
-
-        span {
-            color: #fff;
-            font-weight: 600;
+        margin-top: 35px;
+        b {
+          font-weight: 400;
+          color: #fff;
         }
-    }
-
-    .leftButtons {
-        margin-top: 100px;
-
-        display: flex;
-        align-items: center;
-        gap: 80px;
-
-        .leftButton {
-            padding: 32px 100px;
-            border-radius: 100px;
-            background: #12fff1;
-
-            font-family: "Inter Tight", sans-serif;
-            font-size: 28px;
-            font-weight: 500;
-            line-height: 36.4px;
-            text-align: center;
-            color: #0f0f0f;
-
-            transition: all 0.1s ease-in-out;
-
-            &:hover {
-                opacity: 0.8;
-            }
-        }
-
-        .leftLink {
-            display: flex;
-            align-items: center;
-            gap: 30px;
-
-            font-family: "Inter Tight", sans-serif;
-            font-size: 28px;
-            font-weight: 500;
-            line-height: 36.4px;
-            color: #afafaf;
-
-            svg {
-                transition: all 0.1s ease-in-out;
-            }
-
-            &:hover {
-                opacity: 0.8;
-                svg {
-                    transform: translateX(20%);
-                }
-            }
-        }
-    }
-}
-
-.rightWrapper {
-    position: relative;
-    z-index: 1;
-    width: 41%;
-    height: 690px;
-    padding: 20px;
-    background-image: url("../../assets/svg/hero-card-bg.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-
-    display: flex;
-    flex-direction: column;
-
-    .rightTitle {
-        margin-right: 125px;
-
-        display: flex;
-        align-items: center;
-        justify-content: end;
-        gap: 8px;
-
-        font-family: "Inter Tight", sans-serif;
-        font-size: 24px;
-        font-weight: 400;
-        line-height: 26.4px;
-
-        color: #f0f0f0;
-
-        img {
-            width: 26px;
-            height: 26px;
-        }
-    }
-
-    .rightItem {
-        position: relative;
-
-        padding: 60px;
-        height: 100%;
-        width: 100%;
-        margin-top: 40px;
-        border-radius: 14px;
+      }
+      .actions {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        gap: 1rem;
         align-items: center;
-        background: #1f1f1f99;
-
-        &::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-
-            background-image: url("../../assets/svg/hero-card-bg-star.svg");
-            background-size: cover;
-            background-position: center;
+        margin-top: 50px;
+        &:hover {
+          opacity: 0.8;
+          svg {
+            transform: translateX(20%);
+          }
         }
-    }
-
-    .loader {
-        svg path {
-            fill: linear-gradient(to top, #12fff1, #000000);
+        .button {
+          height: 60px;
+          width: 220px;
+          background: #12fff1;
+          font-family: "Inter Tight", sans-serif;
+          font-size: 22px;
+          font-weight: 400;
+          line-height: 28px;
+          text-align: center;
+          color: #0f0f0f;
+          transition: all 0.1s ease-in-out;
+          border-radius: 60px;
+          &:hover {
+            opacity: 0.8;
+          }
         }
+        .linkButton {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          height: 60px;
+          width: 220px;
+          background: #f0f0f026;
+          font-family: "Inter Tight", sans-serif;
+          font-size: 22px;
+          font-weight: 400;
+          line-height: 28px;
+          color: #afafaf;
+          border-radius: 100px;
+          svg {
+            transition: all 0.1s ease-in-out;
+          }
+        }
+      }
     }
+    .rightColumn {
+      .timerWrapper {
+        height: 300px;
+        width: 288px;
+        background-image: url("../../assets/svg/hero-card-bg.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        font-size: 16px;
+        font-size: 12px;
+        margin: auto;
+        z-index: 1;
+        .timerWrapperTitle {
+          display: flex;
+          align-items: center;
+          justify-content: end;
+          gap: 8px;
+          font-family: "Inter Tight", sans-serif;
+          font-weight: 300;
+          line-height: 17px;
+          color: #f0f0f0;
+          padding: 5px 2.5rem 0px 0;
+          img {
+            width: 26px;
+            height: 26px;
+          }
+        }
+        .timer {
+          height: 238px;
+          width: 255px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          background: #1f1f1f99;
+          background-image: url("../../assets/svg/hero-card-bg-star.svg");
+          background-size: cover;
+          background-position: center;
+          border-radius: 14px;
+          margin: 15px auto;
+          .title {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 24px;
+            font-size: 24px;
+            font-weight: 300;
+            line-height: 64.38px;
+            letter-spacing: -0.04em;
+            text-align: left;
+            background: linear-gradient(
+              0deg,
+              rgba(15, 15, 15, 0.08) 0%,
+              rgba(237, 255, 254, 0.72) 100%
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+          .loader {
+            svg {
+              width: 70px;
+              height: 70px;
+              path {
+                fill: linear-gradient(to top, #12fff1, #000000);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
-    .timerTitle {
-        font-family: "Space Grotesk", sans-serif;
-        font-size: 54px;
-        font-weight: 300;
-        line-height: 64.8px;
-        letter-spacing: -0.04em;
+/* Малые устройства (≥576px) */
+@media (min-width: 393px) {
+  .wrapper {
+    .container {
+      .leftColumn {
+        .title {
+          span {
+          }
+        }
+        .subtitle {
+        }
+        .description {
+          b {
+          }
+        }
+        .actions {
+          &:hover {
+            svg {
+            }
+          }
+          .button {
+            &:hover {
+            }
+          }
+          .linkButton {
+            svg {
+            }
+          }
+        }
+      }
+      .rightColumn {
+        .timerWrapper {
+          height: 379px;
+          width: 361px;
+          .timerWrapperTitle {
+            font-size: 16px;
+            font-size: 12px;
+            padding: 10px 3rem 0px 0;
+            img {
+            }
+          }
+          .timer {
+            height: 315px;
+            width: 332px;
+            .title {
+              font-size: 32px;
+              font-size: 24px;
+            }
+            .loader {
+              svg {
+                width: 100px;
+                height: 103px;
+                path {
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Малые устройства (≥576px) */
+@media (min-width: 576px) {
+  .wrapper {
+    .container {
+      .leftColumn {
+        .title {
+          span {
+          }
+        }
+        .subtitle {
+        }
+        .description {
+          b {
+          }
+        }
+        .actions {
+          &:hover {
+            svg {
+            }
+          }
+          .button {
+            &:hover {
+            }
+          }
+          .linkButton {
+            svg {
+            }
+          }
+        }
+      }
+      .rightColumn {
+        .timerWrapper {
+          .timerWrapperTitle {
+            img {
+            }
+          }
+          .timer {
+            &::after {
+            }
+            .title {
+            }
+            .loader {
+              svg path {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Средние устройства (≥768px) */
+@media (min-width: 768px) {
+  .wrapper {
+    background-image: url("../../assets/images/sections/Hero/heroDesktopBg.png");
+    background-size: cover;
+    background-position: left 0px top 0px;
+    background-repeat: no-repeat;
+    .container {
+      flex-direction: row;
+      align-items: center;
+      .leftColumn {
         text-align: left;
-        background: linear-gradient(
-            0deg,
-            rgba(15, 15, 15, 0.08) 0%,
-            rgba(237, 255, 254, 0.72) 100%
-        );
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        padding: 3rem 0;
+        .title {
+          span {
+          }
+        }
+        .subtitle {
+        }
+        .description {
+          b {
+          }
+        }
+        .actions {
+          align-items: baseline;
+          &:hover {
+            svg {
+            }
+          }
+          .button {
+            &:hover {
+            }
+          }
+          .linkButton {
+            svg {
+            }
+          }
+        }
+      }
+      .rightColumn {
+        .timerWrapper {
+          .timerWrapperTitle {
+            img {
+            }
+          }
+          .timer {
+            &::after {
+            }
+            .title {
+            }
+            .loader {
+              svg path {
+              }
+            }
+          }
+        }
+      }
     }
+  }
+}
 
+/* Большие устройства (≥992px) */
+@media (min-width: 992px) {
+  .wrapper {
+    .container {
+      .leftColumn {
+        .title {
+          span {
+          }
+        }
+        .subtitle {
+        }
+        .description {
+          b {
+          }
+        }
+        .actions {
+          flex-direction: row;
+          &:hover {
+            svg {
+            }
+          }
+          .button {
+            &:hover {
+            }
+          }
+          .linkButton {
+            svg {
+            }
+          }
+        }
+      }
+      .rightColumn {
+        .timerWrapper {
+          .timerWrapperTitle {
+            img {
+            }
+          }
+          .timer {
+            &::after {
+            }
+            .title {
+            }
+            .loader {
+              svg path {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
+/* Очень большие устройства (≥1200px) */
+@media (min-width: 1200px) {
+  .wrapper {
+    .container {
+      .leftColumn {
+        .title {
+          span {
+          }
+        }
+        .subtitle {
+        }
+        .description {
+          b {
+          }
+        }
+        .actions {
+          &:hover {
+            svg {
+            }
+          }
+          .button {
+            &:hover {
+            }
+          }
+          .linkButton {
+            svg {
+            }
+          }
+        }
+      }
+      .rightColumn {
+        .timerWrapper {
+          .timerWrapperTitle {
+            img {
+            }
+          }
+          .timer {
+            &::after {
+            }
+            .title {
+            }
+            .loader {
+              svg path {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Сверхбольшие устройства (≥1400px) */
+@media (min-width: 1400px) {
+  .wrapper {
+    padding-top: 160px;
+    .container {
+      gap: unset;
+      .leftColumn {
+        .title {
+          font-size: 120px;
+          line-height: 120px;
+          span {
+          }
+        }
+        .subtitle {
+          font-size: 32px;
+          line-height: 44px;
+        }
+        .description {
+          font-size: 28px;
+          line-height: 39px;
+          b {
+          }
+        }
+        .actions {
+          margin-top: 100px;
+          &:hover {
+            svg {
+            }
+          }
+          .button {
+            height: 75px;
+            width: 255px;
+            font-size: 28px;
+            line-height: 39px;
+            &:hover {
+            }
+          }
+          .linkButton {
+            height: 75px;
+            width: 255px;
+            font-size: 28px;
+            line-height: 39px;
+            svg {
+            }
+          }
+        }
+      }
+      .rightColumn {
+        .timerWrapper {
+          width: 656.5px;
+          height: 687.68px;
+          .timerWrapperTitle {
+            font-size: 24px;
+            line-height: 26px;
+            padding: 2rem 7rem 1rem 0;
+            img {
+            }
+          }
+          .timer {
+            gap: 2rem;
+            width: 603px;
+            height: 573px;
+            &::after {
+            }
+            .title {
+              font-size: 54px;
+              line-height: 64px;
+            }
+            .loader {
+              svg {
+                width: 220px;
+                height: 226px;
+                path {
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

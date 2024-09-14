@@ -1,5 +1,25 @@
 .container {
-    position: relative;
-    background: #020304;
-    overflow-x: hidden;
+  position: relative;
+  background: #020304;
+  overflow-x: hidden;
+}
+
+/* Малые устройства (≥576px) */
+@media (min-width: 576px) {
+}
+
+/* Средние устройства (≥768px) */
+@media (min-width: 768px) {
+}
+
+/* Большие устройства (≥992px) */
+@media (min-width: 992px) {
+}
+
+/* Очень большие устройства (≥1200px) */
+@media (min-width: 1200px) {
+}
+
+/* Сверхбольшие устройства (≥1400px) */
+@media (min-width: 1400px) {
 }

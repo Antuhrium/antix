@@ -1,86 +1,208 @@
-.container {
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  backdrop-filter: blur(22px);
+  z-index: 100;
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 2rem;
     max-width: 1600px;
-    width: 100%;
-
-    margin: 0 auto;
-    padding-top: 80px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    position: fixed;
-    z-index: 100;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.socialsContainer {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    margin-right: 120px;
-    margin-left: auto;
-
-    .socialItem {
+    height: 80px;
+    padding: 1rem;
+    margin: auto;
+    overflow-y: hidden;
+    overflow-x: clip;
+    transition: all 0.3s;
+    &.isOpen {
+      height: 100vh;
+      transition: all 1s;
+    }
+    .burgerBtn {
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+      display: flex;
+      height: 50px;
+    }
+    .logo {
+      img {
+        height: 50px;
+      }
+    }
+    .socialsContainer {
+      order: 3;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      justify-content: center;
+      width: 100%;
+      .socialItem {
         display: flex;
         align-items: center;
         gap: 10px;
-
         &:hover {
-            opacity: 0.8;
+          opacity: 0.8;
         }
-    }
-
-    .socialIcon {
+      }
+      .socialIcon {
         padding: 10px;
         background: #2b2b2b;
         height: 40px;
         width: 40px;
         border-radius: 100px;
-
         display: flex;
         align-items: center;
         justify-content: center;
-
         img {
-            width: 100%;
-            height: 100%;
+          width: 100%;
+          height: 100%;
         }
-    }
+      }
 
-    .socialName {
+      .socialName {
         font-family: "Inter Tight", sans-serif;
-        font-size: 20px;
-        font-weight: 500;
+        font-size: 18px;
+        font-weight: 400;
         line-height: 22px;
         color: #9b9b9b;
+      }
     }
-}
+    .linksContainer {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      background: #3e3e3e66;
+      backdrop-filter: blur(22px);
+      border-radius: 17px;
 
-.linksContainer {
-    padding: 24px 90px;
-    background: #3e3e3e66;
-
-    display: flex;
-    align-items: center;
-    gap: 80px;
-
-    backdrop-filter: blur(22px);
-    border-radius: 100px;
-
-    .link {
+      .link {
         font-family: "Inter Tight", sans-serif;
         font-size: 20px;
-        font-weight: 500;
-        line-height: 22px;
+        font-weight: 400;
+        line-height: 70px;
         text-align: center;
-
         color: #f0f0f0;
-
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
         &:hover {
-            opacity: 0.8;
+          opacity: 0.8;
         }
+        &:last-child {
+          border: none;
+        }
+      }
     }
+  }
+}
+
+/* Малые устройства (≥576px) */
+@media (min-width: 576px) {
+}
+
+/* Средние устройства (≥768px) */
+@media (min-width: 768px) {
+}
+
+/* Большие устройства (≥992px) */
+@media (min-width: 992px) {
+  .wrapper {
+    top: 38px;
+    .container {
+      flex-direction: row;
+      height: calc(70px + 2rem);
+      gap: 0px;
+      align-items: center;
+      &.isOpen {
+        height: auto;
+      }
+      .burgerBtn {
+        display: none;
+      }
+      .logo {
+        flex: 20%;
+        img {
+          order: 1;
+          height: 70px;
+        }
+      }
+      .socialsContainer {
+        order: 2;
+        flex: 40%;
+        .socialItem {
+          &:hover {
+          }
+        }
+        .socialIcon {
+          img {
+          }
+        }
+        .socialName {
+        }
+      }
+      .linksContainer {
+        order: 3;
+        flex-direction: row;
+        flex: 35%;
+        border-radius: 70px;
+        .link {
+          width: 100%;
+          font-size: 18px;
+          line-height: 70px;
+          border-bottom: none;
+          &:hover {
+          }
+          &:last-child {
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Очень большие устройства (≥1200px) */
+@media (min-width: 1200px) {
+}
+
+/* Сверхбольшие устройства (≥1400px) */
+@media (min-width: 1400px) {
+  .wrapper {
+    .container {
+      &.isOpen {
+      }
+      .burgerBtn {
+      }
+      .logo {
+        flex: 35%;
+        img {
+        }
+      }
+      .socialsContainer {
+        flex: 30%;
+        .socialItem {
+          &:hover {
+          }
+        }
+        .socialIcon {
+          img {
+          }
+        }
+        .socialName {
+          font-size: 20px;
+        }
+      }
+      .linksContainer {
+        flex: 35%;
+        .link {
+          font-size: 20px;
+          &:hover {
+          }
+          &:last-child {
+          }
+        }
+      }
+    }
+  }
 }
