@@ -5,6 +5,10 @@
     background-image: url("../../assets/images/amazon-bg.png");
     background-repeat: no-repeat;
     background-position: bottom;
+
+    @media screen and (max-width: 1600px) {
+        padding: 120px 0;
+    }
 }
 
 .contentBg {
@@ -23,11 +27,14 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    @media screen and (max-width: 1600px) {
+        gap: 16px;
+        padding: 45px 0;
+    }
 }
 
 .title {
-    max-width: 5 0%;
-
     font-family: "Space Grotesk", sans-serif;
     font-size: 120px;
     font-weight: 400;
@@ -35,11 +42,16 @@
     letter-spacing: -0.04em;
     text-align: left;
     color: #575757;
+
+    @media screen and (max-width: 1600px) {
+        font-size: 44px;
+        line-height: 42px;
+        text-align: center;
+        padding: 0 24px;
+    }
 }
 
 .text {
-    max-width: 50%;
-
     font-family: "Inter Tight", sans-serif;
     font-size: 32px;
     font-weight: 300;
@@ -51,13 +63,69 @@
     span {
         font-weight: 600;
     }
+
+    @media screen and (max-width: 1600px) {
+        font-size: 20px;
+        line-height: 28px;
+        text-align: center;
+        padding: 0 24px;
+    }
 }
 
-.rightImg {
+.separator {
+    @media screen and (max-width: 1600px) {
+        display: none;
+    }
+}
+
+.rightImgWrapper {
     position: absolute;
     right: -600px;
     top: 240px;
     z-index: 0;
+
+    .mobileImg {
+        display: none;
+    }
+
+    background: #f0f0f0;
+
+    @media screen and (max-width: 1600px) {
+        width: 100%;
+        height: 60vh;
+
+        position: relative;
+        right: 0;
+        top: 0;
+
+        .rightImg {
+            display: none;
+        }
+        .mobileImg {
+            display: block;
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+            object-position: top center;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        height: 50vh;
+
+        .rightImg {
+            display: none;
+        }
+        .mobileImg {
+            display: block;
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+            object-position: left center;
+        }
+    }
 }
 
 .secondContentBg {
@@ -66,18 +134,29 @@
 }
 
 .secondContent {
-    width: fit-content;
+    max-width: 1600px;
     margin: 0 auto;
 
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 40px;
 
     padding: 70px 100px;
 
     border: 2px solid rgba(15, 15, 15, 0.4);
     border-radius: 20px;
+
+    @media screen and (max-width: 1600px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 36px;
+        padding: 0;
+        border: none;
+
+        overflow-x: hidden;
+        width: 100%;
+    }
 }
 
 .secondText {
@@ -88,6 +167,13 @@
     letter-spacing: -0.04em;
     text-align: left;
     color: #575757;
+
+    @media screen and (max-width: 1600px) {
+        font-size: 32px;
+        line-height: 36px;
+        text-align: center;
+        padding: 0 26px;
+    }
 }
 
 .right {
@@ -95,6 +181,7 @@
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    width: 580px;
 
     span {
         opacity: 0.5;
@@ -117,5 +204,23 @@
         line-height: 104px;
         letter-spacing: -0.04em;
         color: #008594;
+    }
+
+    @media screen and (max-width: 1600px) {
+        flex-direction: row;
+        justify-content: center;
+        gap: 12px;
+
+        span {
+            font-size: 24px;
+            line-height: 28.8px;
+            text-wrap: nowrap;
+        }
+
+        .rightActive {
+            font-size: 44px;
+            line-height: 56.14px;
+            padding: 8px 24px 16px;
+        }
     }
 }
