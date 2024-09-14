@@ -79,22 +79,20 @@
 }
 
 .rightImgWrapper {
-  position: absolute;
-  right: -600px;
-  top: 240px;
-  z-index: 0;
+    position: absolute;
+    right: -600px;
+    top: 240px;
+    z-index: 0;
+    background: #f0f0f0;
 
   .mobileImg {
     display: none;
   }
 
-  & {
-    background: #f0f0f0;  // Wrapped in & {}
-  }
+    @media screen and (max-width: 1600px) {
+        width: 100%;
+        height: 60vh;
 
-  @media screen and (max-width: 1600px) {
-    width: 100%;
-    height: 60vh;
 
     position: relative;
     right: 0;
