@@ -67,8 +67,9 @@ const TokenInfoMobile = lazy(
 );
 const RoadMapMobile = lazy(() => import("./sections/RoadMap/mobile/Roadmap"));
 
-const Top10 = lazy(() => import("./sections/Top10/Top10"));
-const Top10Mobile = lazy(() => import("./sections/Top10/mobile/Top10"));
+const Top10 = lazy(() => import('./sections/Top10/Top10'));
+const Top10Mobile = lazy(() => import('./sections/Top10/mobile/Top10'));
+const FooterMobile = lazy(() => import('./sections/Footer/mobile/Footer'));
 
 function App() {
   // const TokenInfoResponsive = useResponsiveComponent(768, TokenInfo, TokenInfoMobile);
@@ -89,6 +90,7 @@ function App() {
   );
   const RoadMapResponsive = useResponsiveComponent(768, RoadMap, RoadMapMobile);
   const Top10Responsive = useResponsiveComponent(768, Top10, Top10Mobile);
+  const FooterResponsive = useResponsiveComponent(768, Footer, FooterMobile);
 
   return (
     <main className={styles.container}>
@@ -116,7 +118,7 @@ function App() {
         <RoadMapResponsive />
         <JoinUs />
         <FAQ />
-        <Footer />
+        <FooterResponsive />
       </Suspense>
     </main>
   );
