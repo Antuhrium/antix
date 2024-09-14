@@ -1,44 +1,61 @@
 .container {
-    position: relative;
-    z-index: 2;
-    
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 
-    width: 300px;
-    padding: 15px 30px;
-    border-radius: 10px;
+  width: 300px;
+  padding: 15px 30px;
+  border-radius: 10px;
 
-    background: rgba(87, 87, 87, 0.3);
-    border: 0.75px solid rgba(138, 138, 138, 0.3);
+  background: rgba(87, 87, 87, 0.3);
+  border: 0.75px solid rgba(138, 138, 138, 0.3);
 }
 .timeSegment {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-    font-family: "Inter Tight", sans-serif;
-    color: #afafaf;
+  font-family: "Inter Tight", sans-serif;
+  color: #afafaf;
 }
 .time {
-    font-size: 34.99px;
-    font-weight: 500;
-    line-height: 38.49px;
-    text-align: center;
+  font-size: 34.99px;
+  font-weight: 400;
+  line-height: 38.49px;
+  text-align: center;
 }
 
 .separator {
-    margin-top: 8px;
+  margin-top: 8px;
 
-    font-size: 20.99px;
-    font-weight: 400;
-    line-height: 23.09px;
+  font-size: 20.99px;
+  font-weight: 400;
+  line-height: 23.09px;
 }
 
 .label {
-    font-size: 14.82px;
-    font-weight: 400;
-    line-height: 16.3px;
-    text-align: center;
+  font-size: 14.82px;
+  font-weight: 400;
+  line-height: 16.3px;
+  text-align: center;
+}
+
+/* Малые устройства (≥576px) */
+@media (min-width: 576px) {
+}
+
+/* Средние устройства (≥768px) */
+@media (min-width: 768px) {
+}
+
+/* Большие устройства (≥992px) */
+@media (min-width: 992px) {
+}
+
+/* Очень большие устройства (≥1200px) */
+@media (min-width: 1200px) {
+}
+
+/* Сверхбольшие устройства (≥1400px) */
+@media (min-width: 1400px) {
 }

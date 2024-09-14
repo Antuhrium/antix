@@ -1,9 +1,9 @@
 .wrapper {
   width: 100%;
-  background-image: url(/src/assets/images/sections/ellipse.png),
-    url(/src/assets/images/sections/Hero/heroMobileBg.png);
+  background-image: url("/src/assets/images/sections/ellipse.png"),
+    url("/src/assets/images/sections/Hero/heroMobileBg.png");
   background-size: 100%;
-  background-position: 0px 124px, 0px 150px;
+  background-position: left 0px bottom -200px, left 0px top 150px;
   background-repeat: no-repeat;
   padding-top: 118px;
   .container {
@@ -12,7 +12,6 @@
     justify-content: space-between;
     gap: 60px;
     max-width: 1600px;
-    height: 871px;
     color: #fff;
     padding: 0px 1rem;
     margin: 0 auto;
@@ -25,7 +24,6 @@
         font-weight: 300;
         line-height: 54px;
         letter-spacing: -0.04em;
-        text-align: center;
         color: #f0f0f0;
         span {
           color: #12fff1;
@@ -101,17 +99,14 @@
     }
     .rightColumn {
       .timerWrapper {
-        position: relative;
-        z-index: 1;
-        height: 379px;
-        width: 361px;
-        padding: 10px;
+        height: 358px;
+        width: 343px;
         background-image: url("../../assets/svg/hero-card-bg.svg");
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
-        display: flex;
-        flex-direction: column;
+        margin: auto;
+        z-index: 1;
         .timerWrapperTitle {
           display: flex;
           align-items: center;
@@ -121,32 +116,26 @@
           font-size: 16px;
           font-weight: 300;
           line-height: 17px;
-          margin-right: 45px;
           color: #f0f0f0;
+          padding: 10px 3rem 0px 0;
           img {
             width: 26px;
             height: 26px;
           }
         }
         .timer {
-          position: relative;
-          height: 315px;
-          width: 332px;
+          height: 295px;
+          width: 315px;
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
           background: #1f1f1f99;
+          background-image: url("../../assets/svg/hero-card-bg-star.svg");
+          background-size: cover;
+          background-position: center;
           border-radius: 14px;
           margin: 15px auto;
-          &::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background-image: url("../../assets/svg/hero-card-bg-star.svg");
-            background-size: cover;
-            background-position: center;
-          }
           .title {
             font-family: "Space Grotesk", sans-serif;
             font-size: 32px;
@@ -168,6 +157,62 @@
               height: 103px;
               path {
                 fill: linear-gradient(to top, #12fff1, #000000);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Малые устройства (≥576px) */
+@media (min-width: 393px) {
+  .wrapper {
+    .container {
+      .leftColumn {
+        .title {
+          span {
+          }
+        }
+        .subtitle {
+        }
+        .description {
+          b {
+          }
+        }
+        .actions {
+          &:hover {
+            svg {
+            }
+          }
+          .button {
+            &:hover {
+            }
+          }
+          .linkButton {
+            svg {
+            }
+          }
+        }
+      }
+      .rightColumn {
+        .timerWrapper {
+          height: 379px;
+          width: 361px;
+          .timerWrapperTitle {
+            img {
+            }
+          }
+          .timer {
+            height: 315px;
+            width: 332px;
+            .title {
+            }
+            .loader {
+              svg {
+                path {
+                }
               }
             }
           }
@@ -209,7 +254,7 @@
       }
       .rightColumn {
         .timerWrapper {
-          .title {
+          .timerWrapperTitle {
             img {
             }
           }
@@ -232,8 +277,16 @@
 /* Средние устройства (≥768px) */
 @media (min-width: 768px) {
   .wrapper {
+    background-image: url("../../assets/images/sections/Hero/heroDesktopBg.png");
+    background-size: cover;
+    background-position: left 0px top 0px;
+    background-repeat: no-repeat;
     .container {
+      flex-direction: row;
+      align-items: center;
       .leftColumn {
+        text-align: left;
+        padding: 3rem 0;
         .title {
           span {
           }
@@ -245,6 +298,7 @@
           }
         }
         .actions {
+          align-items: baseline;
           &:hover {
             svg {
             }
@@ -261,7 +315,7 @@
       }
       .rightColumn {
         .timerWrapper {
-          .title {
+          .timerWrapperTitle {
             img {
             }
           }
@@ -297,6 +351,7 @@
           }
         }
         .actions {
+          flex-direction: row;
           &:hover {
             svg {
             }
@@ -313,7 +368,7 @@
       }
       .rightColumn {
         .timerWrapper {
-          .title {
+          .timerWrapperTitle {
             img {
             }
           }
@@ -365,7 +420,7 @@
       }
       .rightColumn {
         .timerWrapper {
-          .title {
+          .timerWrapperTitle {
             img {
             }
           }
@@ -388,167 +443,77 @@
 /* Сверхбольшие устройства (≥1400px) */
 @media (min-width: 1400px) {
   .wrapper {
-    width: 100%;
-    background-image: url("../../assets/images/sections/Hero/heroDesktopBg.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     padding-top: 160px;
     .container {
-      display: flex;
-      justify-content: space-between;
-      max-width: 1600px;
-      height: 871px;
-      color: #fff;
-      margin: 0 auto;
-      padding: 0px 1rem;
+      gap: unset;
       .leftColumn {
-        padding-top: 60px;
-        text-align: left;
         .title {
-          font-family: "Space Grotesk", sans-serif;
           font-size: 120px;
-          font-weight: 400;
           line-height: 120px;
-          letter-spacing: -0.04em;
-          color: #f0f0f0;
           span {
-            color: #12fff1;
           }
         }
         .subtitle {
-          margin-top: 14px;
-          font-family: "Inter Tight", sans-serif;
           font-size: 32px;
-          font-weight: 200;
-          line-height: 44.8px;
-          color: #f0f0f0;
+          line-height: 44px;
         }
         .description {
-          margin-top: 48px;
-          font-family: "Inter Tight", sans-serif;
           font-size: 28px;
-          font-weight: 200;
-          line-height: 44.8px;
-          color: #afafaf;
+          line-height: 39px;
           b {
-            font-weight: 400;
-            color: #fff;
           }
         }
         .actions {
-          margin-top: 80px;
-          display: flex;
-          align-items: center;
-          gap: 2rem;
+          margin-top: 100px;
           &:hover {
-            opacity: 0.8;
             svg {
-              transform: translateX(20%);
             }
           }
           .button {
-            padding: 32px 100px;
-            border-radius: 100px;
-            background: #12fff1;
-            font-family: "Inter Tight", sans-serif;
+            height: 75px;
+            width: 255px;
             font-size: 28px;
-            font-weight: 500;
-            line-height: 36.4px;
-            text-align: center;
-            color: #0f0f0f;
-            transition: all 0.1s ease-in-out;
+            line-height: 39px;
             &:hover {
-              opacity: 0.8;
             }
           }
           .linkButton {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 30px;
-            height: 100px;
-            width: 370px;
-            background: #f0f0f026;
-            font-family: "Inter Tight", sans-serif;
+            height: 75px;
+            width: 255px;
             font-size: 28px;
-            font-weight: 300;
-            line-height: 36.4px;
-            color: #afafaf;
-            border-radius: 100px;
+            line-height: 39px;
             svg {
-              transition: all 0.1s ease-in-out;
             }
           }
         }
       }
       .rightColumn {
         .timerWrapper {
-          position: relative;
-          z-index: 1;
-          width: 656px;
-          height: 687px;
-          padding: 20px;
-          background-image: url("../../assets/svg/hero-card-bg.svg");
-          background-repeat: no-repeat;
-          background-position: center;
-          background-size: contain;
-          display: flex;
-          flex-direction: column;
-          .title {
-            margin-right: 125px;
-            display: flex;
-            align-items: center;
-            justify-content: end;
-            gap: 8px;
-            font-family: "Inter Tight", sans-serif;
+          width: 656.5px;
+          height: 687.68px;
+          .timerWrapperTitle {
             font-size: 24px;
-            font-weight: 300;
-            line-height: 26.4px;
-            color: #f0f0f0;
+            line-height: 26px;
+            padding: 2rem 7rem 1rem 0;
             img {
-              width: 26px;
-              height: 26px;
             }
           }
           .timer {
-            position: relative;
-            padding: 60px;
-            height: 100%;
-            width: 100%;
-            margin-top: 40px;
-            border-radius: 14px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-            background: #1f1f1f99;
+            gap: 2rem;
+            width: 603px;
+            height: 573px;
             &::after {
-              content: "";
-              position: absolute;
-              inset: 0;
-              background-image: url("../../assets/svg/hero-card-bg-star.svg");
-              background-size: cover;
-              background-position: center;
             }
             .title {
-              font-family: "Space Grotesk", sans-serif;
               font-size: 54px;
-              font-weight: 300;
-              line-height: 64.8px;
-              letter-spacing: -0.04em;
-              text-align: left;
-              background: linear-gradient(
-                0deg,
-                rgba(15, 15, 15, 0.08) 0%,
-                rgba(237, 255, 254, 0.72) 100%
-              );
-              -webkit-background-clip: text;
-              -webkit-text-fill-color: transparent;
+              line-height: 64px;
             }
             .loader {
-              svg path {
-                fill: linear-gradient(to top, #12fff1, #000000);
+              svg {
+                width: 220px;
+                height: 226px;
+                path {
+                }
               }
             }
           }
