@@ -1,50 +1,45 @@
-.container {
-    margin-top: 100px;
-    background-image: url("../../assets/svg/platform-to-replace-bg.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-
+.wrapper {
+  background-image: url("/src/assets/svg/platform-to-replace-bg.svg");
+  background-repeat: no-repeat;
+  background-position: top 8px center;
+  background-size: 278%;
+  margin-top: 5rem;
+  .container {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 40px;
-
-    padding: 100px 0;
-}
-
-.left {
-    display: flex;
     flex-direction: column;
-    gap: 4px;
-
-    span {
+    gap: 40px;
+    max-width: 1400px;
+    padding: 0 1rem;
+    margin: 0 auto;
+    .description {
+      text-align: center;
+      span {
         opacity: 0.6;
         font-family: "Inter Tight", sans-serif;
-        font-size: 32px;
+        font-size: 20px;
+        line-height: 28px;
         font-weight: 300;
-        line-height: 44.8px;
-        text-align: left;
         color: #f0f0f0;
-    }
-
-    h4 {
+      }
+      h4 {
+        max-width: 360px;
         font-family: "Space Grotesk", sans-serif;
-        font-size: 54px;
+        font-size: 32px;
+        line-height: 36px;
         font-weight: 400;
-        line-height: 64.8px;
         letter-spacing: -0.04em;
-        text-align: left;
         color: #f0f0f0;
+        margin-top: 1rem;
+      }
     }
-}
-
-.right {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-
-    span {
+    .carousel {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      span {
         opacity: 0.2;
         font-family: "Space Grotesk", sans-serif;
         font-size: 40px;
@@ -52,20 +47,89 @@
         line-height: 48px;
         text-align: center;
         color: #f0f0f0;
-    }
-
-    .rightActive {
+      }
+      .active {
         opacity: 1;
         padding: 16px 32px 28px 32px;
         border-radius: 12px;
         background: #1dded203;
         backdrop-filter: blur(94px);
-
         border: 1px solid rgba(255, 255, 255, 0.19);
-
         font-size: 94px;
         line-height: 104px;
         letter-spacing: -0.04em;
         color: #12fff1;
+      }
     }
+  }
+}
+
+/* Малые устройства (≥576px) */
+@media (min-width: 393px) {
+}
+
+/* Малые устройства (≥576px) */
+@media (min-width: 576px) {
+}
+
+/* Средние устройства (≥768px) */
+@media (min-width: 768px) {
+  .wrapper {
+    background-position: center;
+    background-size: contain;
+    .container {
+      flex-direction: row;
+      height: 400px;
+      .description {
+        text-align: left;
+        span {
+        }
+        h4 {
+          max-width: none;
+        }
+      }
+      .carousel {
+        span {
+        }
+        .active {
+        }
+      }
+    }
+  }
+}
+
+/* Большие устройства (≥992px) */
+@media (min-width: 992px) {
+}
+
+/* Очень большие устройства (≥1200px) */
+@media (min-width: 1200px) {
+}
+
+/* Сверхбольшие устройства (≥1400px) */
+@media (min-width: 1400px) {
+  .wrapper {
+    .container {
+      gap: 40px;
+      height: 470px;
+      .description {
+        span {
+          font-size: 32px;
+          font-weight: 300;
+        }
+        h4 {
+          font-size: 54px;
+          line-height: 64.8px;
+        }
+      }
+      .carousel {
+        span {
+          font-size: 40px;
+          line-height: 48px;
+        }
+        .active {
+        }
+      }
+    }
+  }
 }
