@@ -69,10 +69,10 @@ const FAQItem = ({ question, answer, isOpen, toggleOpen }: { question: string, a
 );
 
 const FAQ = () => {
-    const [openItems, setOpenItems] = useState<{ [key: number]: boolean }>({});
+    const [openItemIndex, setOpenItemIndex] = useState<number>(0);
 
     const toggleItem = (index: number) => {
-        setOpenItems(prev => ({ ...prev, [index]: !prev[index] }));
+        setOpenItemIndex(prevIndex => prevIndex === index ? -1 : index);
     };
 
     return (
@@ -84,7 +84,7 @@ const FAQ = () => {
                         key={index}
                         question={item.question}
                         answer={item.answer}
-                        isOpen={openItems[index as keyof typeof openItems]}
+                        isOpen={openItemIndex === index}
                         toggleOpen={() => toggleItem(index)}
                     />
                 ))}
