@@ -2,8 +2,8 @@ import { useState } from 'react';
 import styles from './Faq.module.scss';
 
 // SVG components for Plus and X icons
-const PlusIcon = () => (
-    <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+const PlusIcon = ({ className }: { className?: string }) => (
+    <svg className={className} style={{ display: 'block' }} width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M20 0.800781V40.8008M40 20.8008L0 20.8008" stroke="black" />
         <path d="M20 0.800781V40.8008M40 20.8008L0 20.8008" stroke="url(#paint0_linear_358_6816)" />
         <defs>
@@ -16,8 +16,36 @@ const PlusIcon = () => (
 
 );
 
-const XIcon = () => (
-    <svg width="40" height="40" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+const XIcon = ({ className }: { className?: string }) => (
+    <svg className={className} style={{ display: 'block' }} width="40" height="40" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M29.1421 0.65776L0.857865 28.942M29.1421 28.942L0.857866 0.657759" stroke="black" />
+        <path d="M29.1421 0.65776L0.857865 28.942M29.1421 28.942L0.857866 0.657759" stroke="url(#paint0_linear_358_6811)" />
+        <defs>
+            <linearGradient id="paint0_linear_358_6811" x1="29.2744" y1="28.8097" x2="29.6925" y2="30.2235" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#12FFF1" />
+                <stop offset="1" stop-color="#12FFF1" stop-opacity="0.4" />
+            </linearGradient>
+        </defs>
+    </svg>
+);
+
+
+const PlusIconMobile = ({ className }: { className?: string }) => (
+    <svg className={className} width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 0.800781V40.8008M40 20.8008L0 20.8008" stroke="black" />
+        <path d="M20 0.800781V40.8008M40 20.8008L0 20.8008" stroke="url(#paint0_linear_358_6816)" />
+        <defs>
+            <linearGradient id="paint0_linear_358_6816" x1="40" y1="20.6137" x2="41.2954" y2="21.3177" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#12FFF1" />
+                <stop offset="1" stop-color="#12FFF1" stop-opacity="0.4" />
+            </linearGradient>
+        </defs>
+    </svg>
+
+);
+
+const XIconMobile = ({ className }: { className?: string }) => (
+    <svg className={className} width="40" height="40" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M29.1421 0.65776L0.857865 28.942M29.1421 28.942L0.857866 0.657759" stroke="black" />
         <path d="M29.1421 0.65776L0.857865 28.942M29.1421 28.942L0.857866 0.657759" stroke="url(#paint0_linear_358_6811)" />
         <defs>
@@ -56,14 +84,15 @@ const FAQItem = ({ question, answer, isOpen, toggleOpen }: { question: string, a
     <div className={styles.faqItemContainer}>
         <div className={`${styles.faqItem} ${isOpen ? styles.open : ''}`}>
             <button className={styles.questionButton} onClick={toggleOpen}>
-                {question}
+                <span className={styles.question}>{question}</span>
+                {isOpen ? <XIconMobile className={styles.mobileIcon} /> : <PlusIconMobile className={styles.mobileIcon} />}
             </button>
             <div className={styles.answerContainer}>
                 <p className={styles.answer}>{answer}</p>
             </div>
         </div>
         <div className={styles.icon}>
-            {isOpen ? <XIcon /> : <PlusIcon />}
+            {isOpen ? <XIcon className={styles.desktopIcon} /> : <PlusIcon className={styles.desktopIcon} />}
         </div>
     </div>
 );
