@@ -44,7 +44,7 @@ const RoadMap = lazy(() => import("./sections/RoadMap/Roadmap"));
 const JoinUs = lazy(() => import("./sections/JoinUs/JoinUs"));
 const FAQ = lazy(() => import("./sections/Faq/Faq"));
 const Footer = lazy(() => import("./sections/Footer/Footer"));
-const PreDepositStage = lazy(() => import("./sections/PreDepositStage/PreDepositStage"));
+// const PreDepositStage = lazy(() => import("./sections/PreDepositStage/PreDepositStage"));
 
 // Mobile versions (example for TokenInfo)
 // const TokenInfoMobile = lazy(() => import("./sections/TokenInfo/TokenInfoMobile"));
@@ -57,9 +57,9 @@ function App() {
 
   return (
     <main className={styles.container}>
-      <Suspense fallback={<div>Loading...</div>}>
+      {/* <Suspense fallback={<div>Loading...</div>}>
         <PreDepositStage />
-      </Suspense>
+      </Suspense> */}
       <Header />
       <HeroSection />
       <FeaturedIn />
