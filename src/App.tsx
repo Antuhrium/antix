@@ -1,11 +1,10 @@
 import { lazy, Suspense, useEffect, useState } from 'react';
 import styles from "./App.module.scss";
-
 import Header from "./sections/Header/Header";
 import HeroSection from "./sections/HeroSection/HeroSection";
 import FeaturedIn from "./sections/FeaturedIn/FeaturedIn";
-import PlatformToReplace from "./sections/PlatformToReplace/PlatformToReplace";
 import MarketLeader from "./sections/MarketLeader/MarketLeader";
+import PlatformToReplace from "./sections/PlatformToReplace/PlatformToReplace";
 import Why from "./sections/Why/Why";
 import Quote from "./sections/Quote/Quote";
 import Statistics from "./sections/Statistics/Statistics";
