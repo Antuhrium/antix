@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect, useState } from 'react';
+import { lazy, Suspense, useEffect, useState } from "react";
 import styles from "./App.module.scss";
 import Header from "./sections/Header/Header";
 import HeroSection from "./sections/HeroSection/HeroSection";
@@ -6,12 +6,18 @@ import FeaturedIn from "./sections/FeaturedIn/FeaturedIn";
 import MarketLeader from "./sections/MarketLeader/MarketLeader";
 import PlatformToReplace from "./sections/PlatformToReplace/PlatformToReplace";
 import Why from "./sections/Why/Why";
-import Quote from "./sections/Quote/Quote";
+// import Quote from "./sections/Quote/Quote";
 import Statistics from "./sections/Statistics/Statistics";
 
 // Custom hook for responsive imports
-const useResponsiveComponent = (mobileBreakpoint: number, DesktopComponent: React.LazyExoticComponent<() => JSX.Element>, MobileComponent: React.LazyExoticComponent<() => JSX.Element>) => {
-  const [Component, setComponent] = useState<React.ComponentType>(() => DesktopComponent);
+const useResponsiveComponent = (
+  mobileBreakpoint: number,
+  DesktopComponent: React.LazyExoticComponent<() => JSX.Element>,
+  MobileComponent: React.LazyExoticComponent<() => JSX.Element>
+) => {
+  const [Component, setComponent] = useState<React.ComponentType>(
+    () => DesktopComponent
+  );
 
   useEffect(() => {
     const handleResize = () => {
@@ -23,8 +29,8 @@ const useResponsiveComponent = (mobileBreakpoint: number, DesktopComponent: Reac
     };
 
     handleResize();
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, [mobileBreakpoint, DesktopComponent, MobileComponent]);
 
   return Component; // Return the component itself, not JSX
@@ -34,11 +40,15 @@ const useResponsiveComponent = (mobileBreakpoint: number, DesktopComponent: Reac
 const Top10 = lazy(() => import("./sections/Top10/Top10"));
 const Markets = lazy(() => import("./sections/Markets/Markets"));
 const Amazon = lazy(() => import("./sections/Amazon/Amazon"));
-const Revolutionizing = lazy(() => import("./sections/Revolutionizing/Revolutionizing"));
+const Revolutionizing = lazy(
+  () => import("./sections/Revolutionizing/Revolutionizing")
+);
 const DigitalMap = lazy(() => import("./sections/DigitalMap/DigitalMap"));
 const TokenInfo = lazy(() => import("./sections/TokenInfo/TokenInfo"));
 const UserFlow = lazy(() => import("./sections/UserFlow/UserFlow"));
-const TokenomicsSection = lazy(() => import("./sections/TokenomicsSection/TokenomicsSection"));
+const TokenomicsSection = lazy(
+  () => import("./sections/TokenomicsSection/TokenomicsSection")
+);
 const TeamAdvisors = lazy(() => import("./sections/TeamAdvisors/TeamAdvisors"));
 const RoadMap = lazy(() => import("./sections/RoadMap/Roadmap"));
 const JoinUs = lazy(() => import("./sections/JoinUs/JoinUs"));
@@ -48,12 +58,24 @@ const Footer = lazy(() => import("./sections/Footer/Footer"));
 
 // Mobile versions (example for TokenInfo)
 // const TokenInfoMobile = lazy(() => import("./sections/TokenInfo/TokenInfoMobile"));
-const TeamAdvisorsMobile = lazy(() => import("./sections/TeamAdvisors/mobile/TeamAdvisors"));
-const TokenomicsSectionMobile = lazy(() => import("./sections/TokenomicsSection/mobile/TokenomicsSection"));
+const TeamAdvisorsMobile = lazy(
+  () => import("./sections/TeamAdvisors/mobile/TeamAdvisors")
+);
+const TokenomicsSectionMobile = lazy(
+  () => import("./sections/TokenomicsSection/mobile/TokenomicsSection")
+);
 function App() {
   // const TokenInfoResponsive = useResponsiveComponent(768, TokenInfo, TokenInfoMobile);
-  const TeamAdvisorsResponsive = useResponsiveComponent(768, TeamAdvisors, TeamAdvisorsMobile);
-  const TokenomicsSectionResponsive = useResponsiveComponent(768, TokenomicsSection, TokenomicsSectionMobile);
+  const TeamAdvisorsResponsive = useResponsiveComponent(
+    768,
+    TeamAdvisors,
+    TeamAdvisorsMobile
+  );
+  const TokenomicsSectionResponsive = useResponsiveComponent(
+    768,
+    TokenomicsSection,
+    TokenomicsSectionMobile
+  );
 
   return (
     <main className={styles.container}>
@@ -66,7 +88,7 @@ function App() {
       <PlatformToReplace />
       <MarketLeader />
       <Why />
-      <Quote />
+      {/* <Quote /> */}
       <Statistics />
       <Suspense fallback={<div>Loading...</div>}>
         <Top10 />
