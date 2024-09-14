@@ -91,11 +91,11 @@ function App() {
         <Why />
         <Quote />
         <Statistics />
-        <Top10Responsive />
         <Markets />
         <Amazon />
         <Revolutionizing />
         <DigitalMap />
+        <Top10Responsive />
         <TokenInfoResponsive />
         <UserFlow />
         <TokenomicsSectionResponsive />

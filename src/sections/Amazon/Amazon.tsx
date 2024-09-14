@@ -15,7 +15,7 @@ const Amazon = () => {
                 const [first, ...rest] = prevWords;
                 return [...rest, first];
             });
-        }, 4000);
+        }, 5000);
 
         return () => clearInterval(intervalId);
     }, []);
