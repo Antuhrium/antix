@@ -99,12 +99,14 @@
     }
     .rightColumn {
       .timerWrapper {
-        height: 358px;
-        width: 343px;
+        height: 300px;
+        width: 288px;
         background-image: url("../../assets/svg/hero-card-bg.svg");
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
+        font-size: 16px;
+        font-size: 12px;
         margin: auto;
         z-index: 1;
         .timerWrapperTitle {
@@ -113,19 +115,18 @@
           justify-content: end;
           gap: 8px;
           font-family: "Inter Tight", sans-serif;
-          font-size: 16px;
           font-weight: 300;
           line-height: 17px;
           color: #f0f0f0;
-          padding: 10px 3rem 0px 0;
+          padding: 5px 2.5rem 0px 0;
           img {
             width: 26px;
             height: 26px;
           }
         }
         .timer {
-          height: 295px;
-          width: 315px;
+          height: 238px;
+          width: 255px;
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -138,7 +139,8 @@
           margin: 15px auto;
           .title {
             font-family: "Space Grotesk", sans-serif;
-            font-size: 32px;
+            font-size: 24px;
+            font-size: 24px;
             font-weight: 300;
             line-height: 64.38px;
             letter-spacing: -0.04em;
@@ -153,8 +155,8 @@
           }
           .loader {
             svg {
-              width: 100px;
-              height: 103px;
+              width: 70px;
+              height: 70px;
               path {
                 fill: linear-gradient(to top, #12fff1, #000000);
               }
@@ -201,6 +203,9 @@
           height: 379px;
           width: 361px;
           .timerWrapperTitle {
+            font-size: 16px;
+            font-size: 12px;
+            padding: 10px 3rem 0px 0;
             img {
             }
           }
@@ -208,9 +213,13 @@
             height: 315px;
             width: 332px;
             .title {
+              font-size: 32px;
+              font-size: 24px;
             }
             .loader {
               svg {
+                width: 100px;
+                height: 103px;
                 path {
                 }
               }
