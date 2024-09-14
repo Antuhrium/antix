@@ -27,10 +27,24 @@
         text-align: center;
     }
 }
-
+.mobileSlider {
+    display: none;
+}
 .wrapper {
-    margin-top: 80px;
     display: flex;
+}
+@media screen and (max-width: 1600px) {
+    .mobileSlider {
+        display: flex;
+    }
+    .wrapper {
+        display: none;
+    }
+}
+
+.wrapper,
+.mobileSlider {
+    margin-top: 80px;
     flex-direction: column;
     justify-content: center;
     gap: 40px;
