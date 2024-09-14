@@ -1,0 +1,23 @@
+/* RunLine.module.scss */
+.runLineWrapper {
+  overflow: hidden; // Скрываем лишние элементы
+  width: 100%;
+}
+
+.runLine {
+  display: flex;
+  flex-direction: row;
+  animation: run linear infinite;
+  animation-duration: var(
+    --animation-duration
+  ); // Длительность анимации зависит от ширины контейнера
+}
+
+@keyframes run {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}

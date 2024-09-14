@@ -9,7 +9,6 @@ import UserFlow from "./sections/UserFlow/UserFlow";
 import FAQ from "./sections/Faq/Faq";
 import JoinUs from "./sections/JoinUs/JoinUs";
 import TeamAdvisors from "./sections/TeamAdvisors/TeamAdvisors";
-import FeaturedIn from "./sections/FeaturedIn/FeaturedIn";
 import TokenInfo from "./sections/TokenInfo/TokenInfo";
 import MarketLeader from "./sections/MarketLeader/MarketLeader";
 import PlatformToReplace from "./sections/PlatformToReplace/PlatformToReplace";
@@ -22,6 +21,7 @@ import Markets from "./sections/Markets/Markets";
 import Amazon from "./sections/Amazon/Amazon";
 import Revolutionizing from "./sections/Revolutionizing/Revolutionizing";
 import DigitalMap from "./sections/DigitalMap/DigitalMap";
+import FeaturedIn from "./sections/FeaturedIn/FeaturedIn";
 
 function App() {
   return (
