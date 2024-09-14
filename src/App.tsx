@@ -12,7 +12,6 @@ import TeamAdvisors from "./sections/TeamAdvisors/TeamAdvisors";
 import TokenInfo from "./sections/TokenInfo/TokenInfo";
 import MarketLeader from "./sections/MarketLeader/MarketLeader";
 import PlatformToReplace from "./sections/PlatformToReplace/PlatformToReplace";
-import PreDepositStage from "./sections/PreDepositStage/PreDepositStage";
 import Why from "./sections/Why/Why";
 import Quote from "./sections/Quote/Quote";
 import Statistics from "./sections/Statistics/Statistics";
@@ -26,7 +25,6 @@ import FeaturedIn from "./sections/FeaturedIn/FeaturedIn";
 function App() {
   return (
     <main className={styles.container}>
-      <PreDepositStage />
       <Header />
       <HeroSection />
       <FeaturedIn />
