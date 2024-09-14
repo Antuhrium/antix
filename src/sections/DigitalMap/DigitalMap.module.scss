@@ -1,0 +1,122 @@
+.container {
+    background-image: url("../../assets/images/map-bg.png");
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+
+    position: relative;
+    height: 1600px;
+
+    margin-top: 48px;
+    padding-top: 150px;
+}
+
+@keyframes fade {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+.content {
+    margin: 0 auto;
+    max-width: 1600px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+
+    .subTitle {
+        max-width: 610px;
+
+        font-family: "Inter Tight", sans-serif;
+        font-size: 32px;
+        font-weight: 300;
+        line-height: 44.8px;
+        letter-spacing: -0.02em;
+        text-align: left;
+        color: #afafaf;
+
+        span {
+            font-weight: 600;
+        }
+    }
+
+    .title {
+        max-width: 848px;
+
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 120px;
+        font-weight: 400;
+        line-height: 104px;
+        letter-spacing: -0.04em;
+        text-align: right;
+        color: #f0f0f0;
+    }
+}
+
+.point1 {
+    animation: fade 0.3s ease-in-out;
+    position: absolute;
+    left: 106px;
+    bottom: 290px;
+}
+.point2 {
+    position: absolute;
+    bottom: 570px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.point3 {
+    position: absolute;
+    right: 240px;
+    bottom: 420px;
+}
+.point4 {
+    position: absolute;
+    z-index: 1;
+    bottom: 73px;
+    right: 170px;
+
+    .videoWrapper {
+        left: 0;
+        transform: translateX(-20%);
+    }
+}
+.point5 {
+    position: absolute;
+    bottom: 290px;
+    right: 130px;
+
+    .videoWrapper {
+        left: 0;
+        transform: translateX(50%);
+    }
+}
+.videoWrapper {
+    position: absolute;
+    bottom: 160px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    .play {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0.1s ease-in-out;
+    }
+
+    &:hover {
+        cursor: pointer;
+
+        .play {
+            opacity: 0.5;
+        }
+    }
+}
