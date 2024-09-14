@@ -10,8 +10,6 @@ import Quote from "./sections/Quote/Quote";
 import Statistics from "./sections/Statistics/Statistics";
 
 // Custom hook for responsive imports
-// @ts-expect-error use later this hook to enable responsive components
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const useResponsiveComponent = (mobileBreakpoint: number, DesktopComponent: React.LazyExoticComponent<() => JSX.Element>, MobileComponent: React.LazyExoticComponent<() => JSX.Element>) => {
   const [Component, setComponent] = useState<React.ComponentType>(() => DesktopComponent);
 
@@ -29,7 +27,7 @@ const useResponsiveComponent = (mobileBreakpoint: number, DesktopComponent: Reac
     return () => window.removeEventListener('resize', handleResize);
   }, [mobileBreakpoint, DesktopComponent, MobileComponent]);
 
-  return <Component />;
+  return Component; // Return the component itself, not JSX
 };
 
 // Dynamically imported components
@@ -46,19 +44,22 @@ const RoadMap = lazy(() => import("./sections/RoadMap/Roadmap"));
 const JoinUs = lazy(() => import("./sections/JoinUs/JoinUs"));
 const FAQ = lazy(() => import("./sections/Faq/Faq"));
 const Footer = lazy(() => import("./sections/Footer/Footer"));
-const PreDepositStage = lazy(() => import("./sections/PreDepositStage/PreDepositStage"));
+// const PreDepositStage = lazy(() => import("./sections/PreDepositStage/PreDepositStage"));
 
 // Mobile versions (example for TokenInfo)
 // const TokenInfoMobile = lazy(() => import("./sections/TokenInfo/TokenInfoMobile"));
-
+const TeamAdvisorsMobile = lazy(() => import("./sections/TeamAdvisors/mobile/TeamAdvisors"));
+const TokenomicsSectionMobile = lazy(() => import("./sections/TokenomicsSection/mobile/TokenomicsSection"));
 function App() {
   // const TokenInfoResponsive = useResponsiveComponent(768, TokenInfo, TokenInfoMobile);
+  const TeamAdvisorsResponsive = useResponsiveComponent(768, TeamAdvisors, TeamAdvisorsMobile);
+  const TokenomicsSectionResponsive = useResponsiveComponent(768, TokenomicsSection, TokenomicsSectionMobile);
 
   return (
     <main className={styles.container}>
-      <Suspense fallback={<div>Loading...</div>}>
+      {/* <Suspense fallback={<div>Loading...</div>}>
         <PreDepositStage />
-      </Suspense>
+      </Suspense> */}
       <Header />
       <HeroSection />
       <FeaturedIn />
@@ -76,8 +77,8 @@ function App() {
         {/* <TokenInfoResponsive /> */}
         <TokenInfo />
         <UserFlow />
-        <TokenomicsSection />
-        <TeamAdvisors />
+        <TokenomicsSectionResponsive />
+        <TeamAdvisorsResponsive />
         <RoadMap />
         <JoinUs />
         <FAQ />

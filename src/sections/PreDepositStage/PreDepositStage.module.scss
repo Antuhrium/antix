@@ -1,6 +1,6 @@
 .container {
-  position: fixed;
-  top: 80px;
+  position: absolute;
+  top: 0px;
   left: 0;
   right: 0;
   width: 100%;
@@ -35,7 +35,7 @@
 /* Большие устройства (≥992px) */
 @media (min-width: 992px) {
   .container {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
