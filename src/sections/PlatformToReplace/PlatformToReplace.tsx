@@ -19,17 +19,17 @@ const PlatformToReplace = () => {
     }, []);
 
     return (
-        <section className={styles.container}>
-            <div className={styles.content}>
-                <div className={styles.left}>
+        <section className={styles.wrapper}>
+            <div className={styles.container}>
+                <div className={styles.description}>
                     <span>Reshaping a $300 billion industry.</span>
                     <h4>Platform for digital humans to replace:</h4>
                 </div>
-                <div className={styles.right} ref={containerRef}>
+                <div className={styles.carousel} ref={containerRef}>
                     {displayWords.map((word, index) => (
                         <span
                             key={word}
-                            className={index === 1 ? styles.rightActive : ""}
+                            className={index === 1 ? styles.active : ""}
                         >
                             {word}
                         </span>

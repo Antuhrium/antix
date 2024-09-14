@@ -1,30 +1,65 @@
+import { lazy, Suspense, useEffect, useState } from 'react';
 import styles from "./App.module.scss";
-
-import Footer from "./sections/Footer/Footer";
 import Header from "./sections/Header/Header";
 import HeroSection from "./sections/HeroSection/HeroSection";
-import TokenomicsSection from "./sections/TokenomicsSection/TokenomicsSection";
-import RoadMap from "./sections/RoadMap/Roadmap";
-import UserFlow from "./sections/UserFlow/UserFlow";
-import FAQ from "./sections/Faq/Faq";
-import JoinUs from "./sections/JoinUs/JoinUs";
-import TeamAdvisors from "./sections/TeamAdvisors/TeamAdvisors";
-import TokenInfo from "./sections/TokenInfo/TokenInfo";
+import FeaturedIn from "./sections/FeaturedIn/FeaturedIn";
 import MarketLeader from "./sections/MarketLeader/MarketLeader";
 import PlatformToReplace from "./sections/PlatformToReplace/PlatformToReplace";
 import Why from "./sections/Why/Why";
 import Quote from "./sections/Quote/Quote";
 import Statistics from "./sections/Statistics/Statistics";
-import Top10 from "./sections/Top10/Top10";
-import Markets from "./sections/Markets/Markets";
-import Amazon from "./sections/Amazon/Amazon";
-import Revolutionizing from "./sections/Revolutionizing/Revolutionizing";
-import DigitalMap from "./sections/DigitalMap/DigitalMap";
-import FeaturedIn from "./sections/FeaturedIn/FeaturedIn";
 
+// Custom hook for responsive imports
+const useResponsiveComponent = (mobileBreakpoint: number, DesktopComponent: React.LazyExoticComponent<() => JSX.Element>, MobileComponent: React.LazyExoticComponent<() => JSX.Element>) => {
+  const [Component, setComponent] = useState<React.ComponentType>(() => DesktopComponent);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= mobileBreakpoint) {
+        setComponent(MobileComponent);
+      } else {
+        setComponent(DesktopComponent);
+      }
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [mobileBreakpoint, DesktopComponent, MobileComponent]);
+
+  return Component; // Return the component itself, not JSX
+};
+
+// Dynamically imported components
+const Top10 = lazy(() => import("./sections/Top10/Top10"));
+const Markets = lazy(() => import("./sections/Markets/Markets"));
+const Amazon = lazy(() => import("./sections/Amazon/Amazon"));
+const Revolutionizing = lazy(() => import("./sections/Revolutionizing/Revolutionizing"));
+const DigitalMap = lazy(() => import("./sections/DigitalMap/DigitalMap"));
+const TokenInfo = lazy(() => import("./sections/TokenInfo/TokenInfo"));
+const UserFlow = lazy(() => import("./sections/UserFlow/UserFlow"));
+const TokenomicsSection = lazy(() => import("./sections/TokenomicsSection/TokenomicsSection"));
+const TeamAdvisors = lazy(() => import("./sections/TeamAdvisors/TeamAdvisors"));
+const RoadMap = lazy(() => import("./sections/RoadMap/Roadmap"));
+const JoinUs = lazy(() => import("./sections/JoinUs/JoinUs"));
+const FAQ = lazy(() => import("./sections/Faq/Faq"));
+const Footer = lazy(() => import("./sections/Footer/Footer"));
+// const PreDepositStage = lazy(() => import("./sections/PreDepositStage/PreDepositStage"));
+
+// Mobile versions (example for TokenInfo)
+// const TokenInfoMobile = lazy(() => import("./sections/TokenInfo/TokenInfoMobile"));
+const TeamAdvisorsMobile = lazy(() => import("./sections/TeamAdvisors/mobile/TeamAdvisors"));
+const TokenomicsSectionMobile = lazy(() => import("./sections/TokenomicsSection/mobile/TokenomicsSection"));
 function App() {
+  // const TokenInfoResponsive = useResponsiveComponent(768, TokenInfo, TokenInfoMobile);
+  const TeamAdvisorsResponsive = useResponsiveComponent(768, TeamAdvisors, TeamAdvisorsMobile);
+  const TokenomicsSectionResponsive = useResponsiveComponent(768, TokenomicsSection, TokenomicsSectionMobile);
+
   return (
     <main className={styles.container}>
+      {/* <Suspense fallback={<div>Loading...</div>}>
+        <PreDepositStage />
+      </Suspense> */}
       <Header />
       <HeroSection />
       <FeaturedIn />
@@ -33,19 +68,22 @@ function App() {
       <Why />
       <Quote />
       <Statistics />
-      <Top10 />
-      <Markets />
-      <Amazon />
-      <Revolutionizing />
-      <DigitalMap />
-      <TokenInfo />
-      <UserFlow />
-      <TokenomicsSection />
-      <TeamAdvisors />
-      <RoadMap />
-      <JoinUs />
-      <FAQ />
-      <Footer />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Top10 />
+        <Markets />
+        <Amazon />
+        <Revolutionizing />
+        <DigitalMap />
+        {/* <TokenInfoResponsive /> */}
+        <TokenInfo />
+        <UserFlow />
+        <TokenomicsSectionResponsive />
+        <TeamAdvisorsResponsive />
+        <RoadMap />
+        <JoinUs />
+        <FAQ />
+        <Footer />
+      </Suspense>
     </main>
   );
 }
