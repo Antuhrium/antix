@@ -31,7 +31,7 @@ const Revolutionizing = () => {
     return (
         <section className={styles.container}>
             <h3 className={styles.title}>Revolutionizing Digital Human</h3>
-            <div className={styles.wrapper}>
+            <div className={styles.mobileSlider}>
                 <Swiper spaceBetween={50} slidesPerView={1}>
                     {items.map((item, index) => (
                         <SwiperSlide key={index}>
@@ -54,6 +54,26 @@ const Revolutionizing = () => {
                         </SwiperSlide>
                     ))}
                 </Swiper>
+            </div>
+            <div className={styles.wrapper}>
+                    {items.map((item, index) => (
+                            <div className={styles.item}>
+                                <div className={styles.iconWrapper}>
+                                    <img src={item.icon} alt={item.title} />
+                                </div>
+                                <div className={styles.textWrapper}>
+                                    <h4 className={styles.itemName}>
+                                        {item.title}
+                                    </h4>
+                                    <div className={styles.text}>
+                                        <p>{item.text}</p>
+                                        <span className={styles.itemIndex}>
+                                            0{index + 1}
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                    ))}
             </div>
         </section>
     );
