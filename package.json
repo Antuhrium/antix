@@ -17,6 +17,9 @@
     "recharts": "^2.12.7",
     "swiper": "^11.1.14"
   },
+  "optionalDependencies": {
+    "@rollup/rollup-linux-x64-gnu": "4.6.1"
+  },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
     "@types/react": "^18.3.3",
