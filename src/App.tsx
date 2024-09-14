@@ -49,10 +49,11 @@ const PreDepositStage = lazy(() => import("./sections/PreDepositStage/PreDeposit
 // Mobile versions (example for TokenInfo)
 // const TokenInfoMobile = lazy(() => import("./sections/TokenInfo/TokenInfoMobile"));
 const TeamAdvisorsMobile = lazy(() => import("./sections/TeamAdvisors/mobile/TeamAdvisors"));
-
+const TokenomicsSectionMobile = lazy(() => import("./sections/TokenomicsSection/mobile/TokenomicsSection"));
 function App() {
   // const TokenInfoResponsive = useResponsiveComponent(768, TokenInfo, TokenInfoMobile);
   const TeamAdvisorsResponsive = useResponsiveComponent(768, TeamAdvisors, TeamAdvisorsMobile);
+  const TokenomicsSectionResponsive = useResponsiveComponent(768, TokenomicsSection, TokenomicsSectionMobile);
 
   return (
     <main className={styles.container}>
@@ -76,7 +77,7 @@ function App() {
         {/* <TokenInfoResponsive /> */}
         <TokenInfo />
         <UserFlow />
-        <TokenomicsSection />
+        <TokenomicsSectionResponsive />
         <TeamAdvisorsResponsive />
         <RoadMap />
         <JoinUs />
