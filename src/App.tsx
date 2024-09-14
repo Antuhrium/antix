@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect, useState } from 'react';
+import { lazy, Suspense, useEffect, useState } from "react";
 import styles from "./App.module.scss";
 import Header from "./sections/Header/Header";
 import HeroSection from "./sections/HeroSection/HeroSection";
@@ -14,7 +14,9 @@ const useResponsiveComponent = <Props,>(
   DesktopComponent: React.LazyExoticComponent<React.ComponentType<Props>>,
   MobileComponent: React.LazyExoticComponent<React.ComponentType<Props>>
 ) => {
-  const [Component, setComponent] = useState<React.LazyExoticComponent<React.ComponentType<Props>>>(() => DesktopComponent);
+  const [Component, setComponent] = useState<
+    React.LazyExoticComponent<React.ComponentType<Props>>
+  >(() => DesktopComponent);
 
   useEffect(() => {
     const handleResize = () => {
@@ -26,8 +28,8 @@ const useResponsiveComponent = <Props,>(
     };
 
     handleResize();
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, [mobileBreakpoint, DesktopComponent, MobileComponent]);
 
   return Component; // Return the component itself, not JSX
@@ -36,11 +38,15 @@ const useResponsiveComponent = <Props,>(
 // Dynamically imported components
 const Markets = lazy(() => import("./sections/Markets/Markets"));
 const Amazon = lazy(() => import("./sections/Amazon/Amazon"));
-const Revolutionizing = lazy(() => import("./sections/Revolutionizing/Revolutionizing"));
+const Revolutionizing = lazy(
+  () => import("./sections/Revolutionizing/Revolutionizing")
+);
 const DigitalMap = lazy(() => import("./sections/DigitalMap/DigitalMap"));
 const TokenInfo = lazy(() => import("./sections/TokenInfo/TokenInfo"));
 const UserFlow = lazy(() => import("./sections/UserFlow/UserFlow"));
-const TokenomicsSection = lazy(() => import("./sections/TokenomicsSection/TokenomicsSection"));
+const TokenomicsSection = lazy(
+  () => import("./sections/TokenomicsSection/TokenomicsSection")
+);
 const TeamAdvisors = lazy(() => import("./sections/TeamAdvisors/TeamAdvisors"));
 const RoadMap = lazy(() => import("./sections/RoadMap/Roadmap"));
 const JoinUs = lazy(() => import("./sections/JoinUs/JoinUs"));
@@ -50,21 +56,41 @@ const Footer = lazy(() => import("./sections/Footer/Footer"));
 
 // Mobile versions (example for TokenInfo)
 // const TokenInfoMobile = lazy(() => import("./sections/TokenInfo/TokenInfoMobile"));
-const TeamAdvisorsMobile = lazy(() => import("./sections/TeamAdvisors/mobile/TeamAdvisors"));
-const TokenomicsSectionMobile = lazy(() => import("./sections/TokenomicsSection/mobile/TokenomicsSection"));
-const TokenInfoMobile = lazy(() => import("./sections/TokenInfo/mobile/TokenInfo"));
+const TeamAdvisorsMobile = lazy(
+  () => import("./sections/TeamAdvisors/mobile/TeamAdvisors")
+);
+const TokenomicsSectionMobile = lazy(
+  () => import("./sections/TokenomicsSection/mobile/TokenomicsSection")
+);
+const TokenInfoMobile = lazy(
+  () => import("./sections/TokenInfo/mobile/TokenInfo")
+);
 const RoadMapMobile = lazy(() => import("./sections/RoadMap/mobile/Roadmap"));
 
 const Top10 = lazy(() => import('./sections/Top10/Top10'));
 const Top10Mobile = lazy(() => import('./sections/Top10/mobile/Top10'));
+const FooterMobile = lazy(() => import('./sections/Footer/mobile/Footer'));
 
 function App() {
   // const TokenInfoResponsive = useResponsiveComponent(768, TokenInfo, TokenInfoMobile);
-  const TeamAdvisorsResponsive = useResponsiveComponent(768, TeamAdvisors, TeamAdvisorsMobile);
-  const TokenomicsSectionResponsive = useResponsiveComponent(768, TokenomicsSection, TokenomicsSectionMobile);
-  const TokenInfoResponsive = useResponsiveComponent(768, TokenInfo, TokenInfoMobile);
+  const TeamAdvisorsResponsive = useResponsiveComponent(
+    768,
+    TeamAdvisors,
+    TeamAdvisorsMobile
+  );
+  const TokenomicsSectionResponsive = useResponsiveComponent(
+    768,
+    TokenomicsSection,
+    TokenomicsSectionMobile
+  );
+  const TokenInfoResponsive = useResponsiveComponent(
+    768,
+    TokenInfo,
+    TokenInfoMobile
+  );
   const RoadMapResponsive = useResponsiveComponent(768, RoadMap, RoadMapMobile);
   const Top10Responsive = useResponsiveComponent(768, Top10, Top10Mobile);
+  const FooterResponsive = useResponsiveComponent(768, Footer, FooterMobile);
 
   return (
     <main className={styles.container}>
@@ -92,7 +118,7 @@ function App() {
         <RoadMapResponsive />
         <JoinUs />
         <FAQ />
-        <Footer />
+        <FooterResponsive />
       </Suspense>
     </main>
   );
