@@ -6,7 +6,7 @@ import FeaturedIn from "./sections/FeaturedIn/FeaturedIn";
 import MarketLeader from "./sections/MarketLeader/MarketLeader";
 import PlatformToReplace from "./sections/PlatformToReplace/PlatformToReplace";
 import Why from "./sections/Why/Why";
-// import Quote from "./sections/Quote/Quote";
+import Quote from "./sections/Quote/Quote";
 import Statistics from "./sections/Statistics/Statistics";
 
 const useResponsiveComponent = <Props,>(
@@ -101,7 +101,7 @@ function App() {
       <PlatformToReplace />
       <MarketLeader />
       <Why />
-      {/* <Quote /> */}
+      <Quote />
       <Statistics />
       <Suspense fallback={<div>Loading...</div>}>
         <Top10Responsive />
