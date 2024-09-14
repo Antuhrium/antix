@@ -9,15 +9,14 @@ import Why from "./sections/Why/Why";
 // import Quote from "./sections/Quote/Quote";
 import Statistics from "./sections/Statistics/Statistics";
 
-// Custom hook for responsive imports
-const useResponsiveComponent = (
+const useResponsiveComponent = <Props,>(
   mobileBreakpoint: number,
-  DesktopComponent: React.LazyExoticComponent<() => JSX.Element>,
-  MobileComponent: React.LazyExoticComponent<() => JSX.Element>
+  DesktopComponent: React.LazyExoticComponent<React.ComponentType<Props>>,
+  MobileComponent: React.LazyExoticComponent<React.ComponentType<Props>>
 ) => {
-  const [Component, setComponent] = useState<React.ComponentType>(
-    () => DesktopComponent
-  );
+  const [Component, setComponent] = useState<
+    React.LazyExoticComponent<React.ComponentType<Props>>
+  >(() => DesktopComponent);
 
   useEffect(() => {
     const handleResize = () => {
@@ -37,7 +36,6 @@ const useResponsiveComponent = (
 };
 
 // Dynamically imported components
-const Top10 = lazy(() => import("./sections/Top10/Top10"));
 const Markets = lazy(() => import("./sections/Markets/Markets"));
 const Amazon = lazy(() => import("./sections/Amazon/Amazon"));
 const Revolutionizing = lazy(
@@ -64,6 +62,14 @@ const TeamAdvisorsMobile = lazy(
 const TokenomicsSectionMobile = lazy(
   () => import("./sections/TokenomicsSection/mobile/TokenomicsSection")
 );
+const TokenInfoMobile = lazy(
+  () => import("./sections/TokenInfo/mobile/TokenInfo")
+);
+const RoadMapMobile = lazy(() => import("./sections/RoadMap/mobile/Roadmap"));
+
+const Top10 = lazy(() => import("./sections/Top10/Top10"));
+const Top10Mobile = lazy(() => import("./sections/Top10/mobile/Top10"));
+
 function App() {
   // const TokenInfoResponsive = useResponsiveComponent(768, TokenInfo, TokenInfoMobile);
   const TeamAdvisorsResponsive = useResponsiveComponent(
@@ -76,6 +82,13 @@ function App() {
     TokenomicsSection,
     TokenomicsSectionMobile
   );
+  const TokenInfoResponsive = useResponsiveComponent(
+    768,
+    TokenInfo,
+    TokenInfoMobile
+  );
+  const RoadMapResponsive = useResponsiveComponent(768, RoadMap, RoadMapMobile);
+  const Top10Responsive = useResponsiveComponent(768, Top10, Top10Mobile);
 
   return (
     <main className={styles.container}>
@@ -91,17 +104,16 @@ function App() {
       {/* <Quote /> */}
       <Statistics />
       <Suspense fallback={<div>Loading...</div>}>
-        <Top10 />
+        <Top10Responsive />
         <Markets />
         <Amazon />
         <Revolutionizing />
         <DigitalMap />
-        {/* <TokenInfoResponsive /> */}
-        <TokenInfo />
+        <TokenInfoResponsive />
         <UserFlow />
         <TokenomicsSectionResponsive />
         <TeamAdvisorsResponsive />
-        <RoadMap />
+        <RoadMapResponsive />
         <JoinUs />
         <FAQ />
         <Footer />

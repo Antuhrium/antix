@@ -48,9 +48,7 @@ const ListItem = ({ item, isOpen, setIsOpen }: ListItemProps) => {
         <button
             onClick={() => setIsOpen(isOpen === item.title ? "" : item.title)}
             key={item.title}
-            className={`${styles.item} ${
-                isOpen === item.title ? styles.itemActive : ""
-            }`}
+            className={styles.item}
         >
             <div
                 className={`${
@@ -63,6 +61,7 @@ const ListItem = ({ item, isOpen, setIsOpen }: ListItemProps) => {
                 {isOpen === item.title && (
                     <p className={styles.itemText}>{item.text}</p>
                 )}
+                <p className={styles.mobileItemText}>{item.text}</p>
             </div>
             <div className={styles.itemArrow}>
                 <img

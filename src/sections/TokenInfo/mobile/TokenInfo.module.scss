@@ -1,0 +1,157 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: #fff;
+    background-color: #000;
+    position: relative;
+    z-index: 1;
+}
+
+
+.title {
+    color: var(--white-head-text, #F0F0F0);
+    text-align: center;
+    font-family: "Space Grotesk";
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 42px;
+    letter-spacing: -1.76px;
+    padding-top: 2rem;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+    z-index: 9999;
+
+    button {
+        padding: 0.5rem 3rem;
+        width: 100%;
+        color: var(--Black, #0F0F0F);
+        text-align: center;
+        font-family: "Inter Tight";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 21px;
+        border-radius: 100px;
+        background: var(--white-head-text, #F0F0F0);
+        //text inside button dont make it to next line
+        white-space: nowrap;
+    }
+}
+
+.subheader {
+    text-align: center;
+    padding: 1rem 5%;
+
+    .subheaderBoldText {
+        color: var(--grey-text, #AFAFAF);
+        text-align: center;
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 23px;
+        letter-spacing: -0.32px;
+    }
+
+    .subheaderText {
+        color: var(--grey-text, #AFAFAF);
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 23px;
+        letter-spacing: -0.32px;
+    }
+}
+
+
+.gridWrapper {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.infosGrid {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 1rem 0;
+    padding-left: 2rem;
+    scroll-behavior: smooth;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    .tokenInfoCard {
+        flex: 0 0 auto;
+    }
+}
+
+.tokenInfoCard {
+    width: 309.999px;
+    height: 132px;
+    margin: 3rem 1rem;
+    padding: 1rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: relative;
+
+    .tokenInfoTitle {
+        color: var(--white-head-text, #F0F0F0);
+        font-family: "Inter Tight";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 110%;
+        margin-bottom: 1rem;
+    }
+
+
+    .descriptionContainer {
+        width: 80%;
+    }
+
+    .description {
+        color: var(--white-head-text, #F0F0F0);
+        font-family: "Inter Tight";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 21px;
+    }
+
+    .boldDescription {
+        color: var(--white-head-text, #F0F0F0);
+        font-family: "Inter Tight";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 21px;
+    }
+
+
+    .cornerImage {
+        position: absolute;
+        bottom: -25px;
+        right: -25px;
+        height: auto;
+        margin: 0;
+        padding: 0;
+    }
+}

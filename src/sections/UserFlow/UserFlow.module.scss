@@ -1,9 +1,22 @@
-.userFlow {
+.userFlowContainer {
     background-color: #000;
     color: #fff;
     height: 100%;
     width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; 
+}
+
+.userFlow {
     display: flex;
     justify-content: center;
     padding: 100px 200px;
+    min-width: 1374px; 
+}
+
+@media (max-width: 768px) {
+    .userFlow {
+        padding: 50px 0;
+        justify-content: flex-start;
+    }
 }

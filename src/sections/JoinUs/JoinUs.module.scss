@@ -2,9 +2,11 @@
     color: white;
     text-align: center;
     margin-top: 20rem;
+
+    @media (max-width: 768px) {
+        margin-top: 1rem;
+    }
 }
-
-
 
 .titleContainer {
     background: #000;
