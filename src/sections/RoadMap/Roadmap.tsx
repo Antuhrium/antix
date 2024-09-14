@@ -56,15 +56,13 @@ const RoadMap = () => {
       <h1 className={styles.title}>Road Map</h1>
       <div className={styles.roadMapContent}>
         <div className={styles.test}>
-          {/* {stages.map((stage) => (
-            <div key={stage.id} className={`${styles.stage} ${styles[`stage${stage.id}`]}`}>
-              <div className={styles.stageContent}>
-                <h3>{stage.title}</h3>
-                <p>{stage.description}</p>
-              </div>
-              <div className={styles.stageIcon}>{stage.icon}</div>
+          {/* <div  className={`${styles.stage} `}>
+            <div className={styles.stageContent}>
+              <h3>Stage 1</h3>
+              <p>Description</p>
             </div>
-          ))} */}
+            <div className={styles.stageIcon}>icon</div>
+          </div> */}
         </div>
         <div className={styles.features}>
           {features.map((feature, index) => (
