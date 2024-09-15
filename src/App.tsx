@@ -1,14 +1,15 @@
-import { lazy, Suspense, useEffect, useState } from "react";
+import React, { lazy, Suspense, useEffect, useState } from "react";
 import styles from "./App.module.scss";
 
-const Header = lazy(() => import("./sections/Header/Header"));
-const HeroSection = lazy(() => import("./sections/HeroSection/HeroSection"));
-const FeaturedIn = lazy(() => import("./sections/FeaturedIn/FeaturedIn"));
-const MarketLeader = lazy(() => import("./sections/MarketLeader/MarketLeader"));
-const PlatformToReplace = lazy(() => import("./sections/PlatformToReplace/PlatformToReplace"));
-const Why = lazy(() => import("./sections/Why/Why"));
-const Quote = lazy(() => import("./sections/Quote/Quote"));
-const Statistics = lazy(() => import("./sections/Statistics/Statistics"));
+// Import initial components directly
+import Header from "./sections/Header/Header";
+import HeroSection from "./sections/HeroSection/HeroSection";
+import FeaturedIn from "./sections/FeaturedIn/FeaturedIn";
+import PlatformToReplace from "./sections/PlatformToReplace/PlatformToReplace";
+import MarketLeader from "./sections/MarketLeader/MarketLeader";
+import Why from "./sections/Why/Why";
+import Quote from "./sections/Quote/Quote";
+import Statistics from "./sections/Statistics/Statistics";
 
 const useResponsiveComponent = <Props,>(
   mobileBreakpoint: number,
@@ -82,15 +83,18 @@ function App() {
 
   return (
     <main className={styles.container}>
+      {/* Initial components loaded without Suspense */}
+      <Header />
+      <HeroSection />
+      <FeaturedIn />
+      <PlatformToReplace />
+      <MarketLeader />
+      <Why />
+      <Quote />
+      <Statistics />
+
+      {/* Remaining components wrapped in Suspense */}
       <Suspense fallback={<div>Loading...</div>}>
-        <Header />
-        <HeroSection />
-        <FeaturedIn />
-        <PlatformToReplace />
-        <MarketLeader />
-        <Why />
-        <Quote />
-        <Statistics />
         <Top10Responsive />
         <Markets />
         <Amazon />
