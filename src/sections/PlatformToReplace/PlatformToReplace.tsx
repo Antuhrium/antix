@@ -26,7 +26,7 @@ const PlatformToReplace = () => {
                     slidesPerView={3}
                     loop={true}
                     centeredSlides={true}
-                    autoplay={{ delay: 4000 }}
+                    autoplay={{ delay: 3000 }}
                     modules={[Autoplay]}
                     allowTouchMove={false}
                     noSwiping={true}
