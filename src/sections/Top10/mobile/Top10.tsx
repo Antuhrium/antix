@@ -15,9 +15,12 @@ const Top10: React.FC = () => {
 
 
             <div className={styles.videoWrapper}>
-                <video autoPlay loop muted className={styles.backgroundVideo}>
-                    <source src="/videos/bgvid.mp4" type="video/mp4" />
-                </video>
+                
+                <div className={styles.videoContainer}>
+                    <video autoPlay loop muted className={styles.backgroundVideo}>
+                        <source src="/videos/bgvid.mp4" type="video/mp4" />
+                    </video>
+                </div>
 
 
                 <div className={styles.header}>

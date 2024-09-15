@@ -12,7 +12,7 @@ interface PersonProps {
     icon?: string;
 }
 
-const Person: React.FC<PersonProps> = ({ image, name, role, isBigIcon, subRole, icon, isAdvisor }) => (
+const Person: React.FC<PersonProps> = ({ image, name, role, isBigIcon, subRole, icon, isAdvisor, linkedin }) => (
     <div className={styles.person} style={{ backgroundImage: `url(${image})` }}>
         <div className={styles.inner}>
             <p className={isAdvisor ? styles.roleAdvisor : styles.role}>{role}</p>
@@ -28,9 +28,9 @@ const Person: React.FC<PersonProps> = ({ image, name, role, isBigIcon, subRole, 
                 )}
                 <p className={isAdvisor ? styles.nameAdvisor : styles.name}>{name + (subRole ? `: ${subRole}` : '')}</p>
                 {isBigIcon ? (
-                    <img src={icon} className={styles.bigIcon} />
+                    <img src={icon} onClick={() => window.open(linkedin, '_blank')} className={styles.bigIcon} />
                 ) : (
-                    <img src={icon} className={styles.icon} />
+                    <img src={icon} onClick={() => window.open(linkedin, '_blank')} className={styles.icon} />
                 )}
             </div>
         </div>
@@ -45,7 +45,7 @@ const TeamAdvisors = () => {
             name: 'Roman',
             role: 'Top-10 Global Talents',
             subRole: 'Founder, CEO',
-            linkedin: 'https://www.linkedin.com/in/roman-founder-ceo/',
+            linkedin: 'https://www.linkedin.com/in/cyganovroman/',
             hasReadMore: true,
             isBigIcon: false
         },
@@ -55,7 +55,7 @@ const TeamAdvisors = () => {
             name: 'Marina',
             role: 'Ex-regional director at Disney',
             subRole: 'Co-founder, President',
-            linkedin: 'https://www.linkedin.com/in/marina-co-founder-president/',
+            linkedin: 'https://www.linkedin.com/in/marina-jigalova/',
             hasReadMore: true,
             isBigIcon: false
         },
@@ -65,7 +65,7 @@ const TeamAdvisors = () => {
             name: 'Anton',
             role: 'Ex-Big 4 Professional',
             subRole: 'CFO',
-            linkedin: 'https://www.linkedin.com/in/anton-cfo/',
+            linkedin: 'https://www.linkedin.com/in/anton-galkin-finance/',
             isBigIcon: false
         },
         {
@@ -83,7 +83,7 @@ const TeamAdvisors = () => {
             name: 'Kacper',
             role: 'Senior Social Media Manager',
             subRole: 'Community Manager',
-            linkedin: 'https://www.linkedin.com/in/kacper-community-manager/',
+            linkedin: 'https://www.linkedin.com/in/hoffmannk96/',
             isBigIcon: false
         },
         {
@@ -92,7 +92,7 @@ const TeamAdvisors = () => {
             name: 'Rafal',
             role: 'Technological Startup Expert',
             subRole: 'Project Manager',
-            linkedin: 'https://www.linkedin.com/in/rafal-project-manager/',
+            linkedin: 'https://www.linkedin.com/in/yulia-unal-1a976415/',
             isBigIcon: false
         },
         {
