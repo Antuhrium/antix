@@ -130,13 +130,13 @@ const TeamAdvisors = () => {
             <div className={styles.buttons}>
                 <button 
                     onClick={() => setShowTeam(true)}
-                    className={showTeam ? styles.activeButton : ''}
+                    className={showTeam ? styles.activeButton : styles.inactiveButton}
                 >
                     Team
                 </button>
                 <button 
                     onClick={() => setShowTeam(false)}
-                    className={!showTeam ? styles.activeButton : ''}
+                    className={!showTeam ? styles.activeButton : styles.inactiveButton}
                 >
                     Advisors
                 </button>
