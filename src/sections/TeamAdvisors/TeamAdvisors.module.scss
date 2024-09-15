@@ -68,6 +68,9 @@
     overflow: hidden;
     position: relative;
     width: 100%;
+
+    position: relative;
+    z-index: 10;
 }
 
 .grid {
@@ -163,6 +166,8 @@
     height: auto;
     margin: 0;
     padding: 0;
+
+    cursor: pointer;
 }
 
 .icon {
@@ -172,6 +177,8 @@
     height: auto;
     margin: 0;
     padding: 0;
+
+    cursor: pointer;
 }
 
 .imageContainer {
