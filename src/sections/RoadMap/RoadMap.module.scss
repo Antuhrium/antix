@@ -1,5 +1,3 @@
-// RoadMap.module.scss
-
 .roadMap {
   color: #fff;
   font-family: Arial, sans-serif;
@@ -18,7 +16,6 @@
   font-style: normal;
   font-weight: 400;
   line-height: 104px;
-  /* 86.667% */
   letter-spacing: -4.8px;
 }
 
@@ -29,119 +26,76 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  position: relative;
 
-  // &::after {
-  //   content: '';
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   right: 0;
-  //   bottom: 0;
-  //   background: linear-gradient(to bottom,
-  //       rgba(0, 0, 0, 0) 0%,
-  //       rgba(0, 0, 0, 0) 30%,
-  //       rgba(0, 0, 0, 0) 70%,
-  //       rgba(0, 0, 0, 9) 100%);
-  //   z-index: 1;
-  // }
 
-  // >* {
-  //   position: relative;
-  //   z-index: 2;
-  // }
+  // Extra large devices (large desktops, 1280px and up)
+  // Extra extra large devices (1536px and up)
+  @media (min-width: 2000px) {
+    height: 800px;
+  }
+
 }
 
-.stage {
+.stage1,
+.stage2,
+.stage3 {
+  cursor: pointer;
+  transition: transform 0.3s ease;
   position: absolute;
-  z-index: 2;
-  text-align: center;
-  width: 150px; // Fixed width for consistency
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: -50px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 40px;
-    height: 40px;
-    background-image: url('../../assets/svg/roadmap/topstar.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-
-  @media (max-width: 768px) {
-    position: relative;
-    width: 100%;
-    max-width: 200px;
-    margin-bottom: 20px;
-  }
+  z-index: 20;
 }
 
 .stage1 {
-  top: -25%;
+  top: 25%;
   left: 15%;
+  padding: 10rem;
 }
 
 .stage2 {
-  top: 46%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  padding: 10rem;
 }
 
 .stage3 {
-  bottom: 51%;
-  right: 15%;
+  bottom: 35%;
+  right: 10%;
+  padding: 10rem;
 }
-
-
-
-.icon {
-  color: #00ffff;
-  width: 24px;
-  height: 24px;
-}
-
-.stageContent {
-  h3 {
-    font-size: 0.9rem;
-    margin-bottom: 0.25rem;
-    color: #00ffff;
-  }
-
-  p {
-    font-size: 0.8rem;
-    color: rgba(255, 255, 255, 0.9);
-    line-height: 1.2;
-  }
-}
-
-// Responsive adjustments
-@media (max-width: 768px) {
-
-  .stage1,
-  .stage2,
-  .stage3 {
-    top: auto;
-    left: auto;
-    right: auto;
-    bottom: auto;
-    transform: none;
-  }
-}
-
 
 .features {
   position: absolute;
-  top: 50%;
-  left: 20%;
   z-index: 10;
-  width: 25%;
-  padding: 1rem;
+  padding: 30px 20px;
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(11.5px);
-  padding: 30px 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.feature1 {
+  top: 55%;
+  left: 15%;
+}
+
+.feature2 {
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+}
+
+.feature3 {
+  bottom: 10%;
+  right: 15%;
 }
 
 .feature {
@@ -149,12 +103,21 @@
   align-items: center;
   margin-bottom: 1.5rem;
   position: relative;
+
+  &:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    bottom: -14px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(8, 8, 8, 0.28) 1.11%, rgba(255, 255, 255, 0.28) 49.07%, rgba(0, 0, 0, 0.28) 96.98%);
+  }
 }
 
 .featureIcon {
-  flex-shrink: 0;
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   margin-right: 1rem;
   color: #00ffff;
 }
@@ -168,19 +131,6 @@
   font-weight: bold;
   margin: 0;
   color: white;
-}
-.feature:not(:last-child) {
-  margin-bottom: 1.5rem;
-}
-
-.feature:not(:last-child)::after {
-  content: '';
-  position: absolute;
-  bottom: -14px;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, rgba(8, 8, 8, 0.28) 1.11%, rgba(255, 255, 255, 0.28) 49.07%, rgba(0, 0, 0, 0.28) 96.98%);
 }
 
 .featureDescription {
