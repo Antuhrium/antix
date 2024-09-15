@@ -1,31 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap");
 
 @font-face {
-    font-family: "Arial Unicode MS";
-    src: url("./assets/fonts/arial-unicode-ms.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Arial Unicode MS";
+  src: url("./assets/fonts/arial-unicode-ms.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 :root {
-    font-family: "Inter Tight", sans-serif;
-    line-height: 1.5;
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Inter Tight", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-style: normal;
 }
 
 *,
 *::after,
 *::before {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 button {
-    border: none;
-    outline: none;
+  border: none;
+  outline: none;
 }
