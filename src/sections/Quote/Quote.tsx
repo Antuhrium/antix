@@ -50,7 +50,7 @@ const Quote = () => {
                     </span>{" "}
                     The question is how we will manage their rights?
                 </p>
-                <span className={styles.quoteAuthor}>[с] Alan Kepler</span>
+                <span className={styles.quoteAuthor}>- Alan Kepler</span>
             </div>
             <div className={styles.quoteImage}>
                 <img src={currentAuthor.avatar} alt={currentAuthor.user} />
