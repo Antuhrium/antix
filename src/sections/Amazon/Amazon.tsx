@@ -62,9 +62,9 @@ const Amazon = () => {
                         centeredSlides={true}
                         autoplay={{ delay: 3000 }}
                         modules={[Autoplay]}
-                        allowTouchMove={false}
-                        noSwiping={true}
-                        keyboard={{ enabled: false }}
+                        // allowTouchMove={false}
+                        // noSwiping={true}
+                        // keyboard={{ enabled: false }}
                         className={styles.carousel}
                     >
                         {words.map((word) => (
