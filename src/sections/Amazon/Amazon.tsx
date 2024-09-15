@@ -2,24 +2,22 @@ import styles from "./Amazon.module.scss";
 
 import RightImg from "../../assets/images/amazon-img.png";
 import MobileImg from "../../assets/images/mobile-amazon-img.png";
-import { useEffect, useState } from "react";
 
-const words = ["clothes", "digital twins", "accessories"];
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/autoplay";
+
+const words = [
+    "influencers",
+    "actors",
+    "TV hosts",
+    "influencers",
+    "actors",
+    "TV hosts",
+];
 
 const Amazon = () => {
-    const [displayWords, setDisplayWords] = useState(words);
-
-    useEffect(() => {
-        const intervalId = setInterval(() => {
-            setDisplayWords((prevWords) => {
-                const [first, ...rest] = prevWords;
-                return [...rest, first];
-            });
-        }, 5000);
-
-        return () => clearInterval(intervalId);
-    }, []);
-
     return (
         <section className={styles.container}>
             <div className={styles.contentBg}>
@@ -57,18 +55,32 @@ const Amazon = () => {
                         Antix features a unique <br /> marketplace to buy, rent,
                         or sell
                     </h4>
-                    <div className={styles.right}>
-                        {displayWords.map((word, index) => (
-                            <span
-                                key={word}
-                                className={
-                                    index === 1 ? styles.rightActive : ""
-                                }
-                            >
-                                {word}
-                            </span>
+                    <Swiper
+                        direction={"vertical"}
+                        slidesPerView={3}
+                        loop={true}
+                        centeredSlides={true}
+                        autoplay={{ delay: 1000 }}
+                        modules={[Autoplay]}
+                        allowTouchMove={false}
+                        noSwiping={true}
+                        keyboard={{ enabled: false }}
+                        className={styles.carousel}
+                    >
+                        {words.map((word) => (
+                            <SwiperSlide key={word} className={styles.slide}>
+                                {({ isActive }) => (
+                                    <span
+                                        className={
+                                            isActive ? styles.active : ""
+                                        }
+                                    >
+                                        {word}
+                                    </span>
+                                )}
+                            </SwiperSlide>
                         ))}
-                    </div>
+                    </Swiper>
                 </div>
             </div>
         </section>
