@@ -1,5 +1,6 @@
 import React from "react";
-import { PieChart, Pie, Cell, Tooltip } from "recharts";
+import { PieChart, Pie, Cell, Tooltip, TooltipProps } from "recharts";
+import { NameType, ValueType } from "recharts/types/component/DefaultTooltipContent";
 import styles from "./PieChart.module.scss";
 
 // Interface for data structure
@@ -103,6 +104,18 @@ const renderCustomizedLabelLine = ({
     );
 };
 
+const CustomTooltip = ({ active, payload }: TooltipProps<ValueType, NameType>) => {
+    if (active && payload && payload.length) {
+        const data = payload[0].payload;
+        return (
+            <div className={styles.customTooltip}>
+                <p>{`${data.name}: ${data.value}%`}</p>
+            </div>
+        );
+    }
+    return null;
+};
+
 const PieChartComponent: React.FC = () => {
     return (
         <PieChart width={1300} height={1000}>
@@ -124,7 +137,7 @@ const PieChartComponent: React.FC = () => {
                     />
                 ))}
             </Pie>
-            <Tooltip />
+            <Tooltip content={<CustomTooltip />} />
         </PieChart>
     );
 };
