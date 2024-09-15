@@ -33,7 +33,7 @@ const Quote = () => {
             setCurrentAuthorIndex(
                 (prevIndex) => (prevIndex + 1) % authors.length
             );
-        }, 3000);
+        }, 4000);
 
         return () => clearInterval(intervalId);
     }, []);

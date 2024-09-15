@@ -13,7 +13,7 @@ const PlatformToReplace = () => {
                 const [first, ...rest] = prevWords;
                 return [...rest, first];
             });
-        }, 3000);
+        }, 4000);
 
         return () => clearInterval(intervalId);
     }, []);

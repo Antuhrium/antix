@@ -30,6 +30,7 @@ const DigitalMap = () => {
     return (
         <section className={styles.container}>
             <div className={styles.content}>
+                <button className={styles.contentButton}>Watch Preview</button>
                 <p className={styles.subTitle}>
                     Antix makes <span>Hollywood-quality</span> digital humans
                     accessible to all without the need for big teams, long

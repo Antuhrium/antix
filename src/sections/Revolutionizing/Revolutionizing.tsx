@@ -1,8 +1,13 @@
+// import React from "react";
+// import "swiper/swiper-bundle.min.css";
 import styles from "./Revolutionizing.module.scss";
 
 import Icon1 from "../../assets/svg/revolutionizing/1.svg";
 import Icon2 from "../../assets/svg/revolutionizing/2.svg";
 import Icon3 from "../../assets/svg/revolutionizing/3.svg";
+
+import "swiper/css";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 const items = [
     {
@@ -26,23 +31,49 @@ const Revolutionizing = () => {
     return (
         <section className={styles.container}>
             <h3 className={styles.title}>Revolutionizing Digital Human</h3>
-            <div className={styles.wrapper}>
-                {items.map((item, index) => (
-                    <div key={index} className={styles.item}>
-                        <div className={styles.iconWrapper}>
-                            <img src={item.icon} alt={item.title} />
-                        </div>
-                        <div className={styles.textWrapper}>
-                            <h4 className={styles.itemName}>{item.title}</h4>
-                            <div className={styles.text}>
-                                <p>{item.text}</p>
-                                <span className={styles.itemIndex}>
-                                    0{index+1}
-                                </span>
+            <div className={styles.mobileSlider}>
+                <Swiper spaceBetween={50} slidesPerView={1}>
+                    {items.map((item, index) => (
+                        <SwiperSlide key={index}>
+                            <div className={styles.item}>
+                                <div className={styles.iconWrapper}>
+                                    <img src={item.icon} alt={item.title} />
+                                </div>
+                                <div className={styles.textWrapper}>
+                                    <h4 className={styles.itemName}>
+                                        {item.title}
+                                    </h4>
+                                    <div className={styles.text}>
+                                        <p>{item.text}</p>
+                                        <span className={styles.itemIndex}>
+                                            0{index + 1}
+                                        </span>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                ))}
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
+            </div>
+            <div className={styles.wrapper}>
+                    {items.map((item, index) => (
+                            <div className={styles.item}>
+                                <div className={styles.iconWrapper}>
+                                    <img src={item.icon} alt={item.title} />
+                                </div>
+                                <div className={styles.textWrapper}>
+                                    <h4 className={styles.itemName}>
+                                        {item.title}
+                                    </h4>
+                                    <div className={styles.text}>
+                                        <p>{item.text}</p>
+                                        <span className={styles.itemIndex}>
+                                            0{index + 1}
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                    ))}
             </div>
         </section>
     );
