@@ -38,8 +38,6 @@ const Quote = () => {
         return () => clearInterval(intervalId);
     }, []);
 
-    const currentAuthor = authors[currentAuthorIndex];
-
     return (
         <div className={styles.container}>
             <div className={styles.infoWrapper}>
@@ -53,8 +51,11 @@ const Quote = () => {
                 <span className={styles.quoteAuthor}>- Alan Kepler</span>
             </div>
             <div className={styles.quoteImage}>
-                <img src={currentAuthor.avatar} alt={currentAuthor.user} />
-                <span>{currentAuthor.user}</span>
+                <img
+                    src={authors[currentAuthorIndex].avatar}
+                    alt={authors[currentAuthorIndex].user}
+                />
+                <span>{authors[currentAuthorIndex].user}</span>
             </div>
             <div className={styles.dots}>
                 <div className={styles.dotsContent}></div>

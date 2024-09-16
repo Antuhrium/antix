@@ -29,7 +29,8 @@ export const RunLine: React.FC<RunLineProps> = ({
       );
 
       console.log("totalWidth", totalWidth);
-      const animationTime = totalWidth / 100;
+      const windowWidth = window.innerWidth < 680 ? 1000 : 100
+      const animationTime = totalWidth / windowWidth;
 
       // Устанавливаем скорость анимации в зависимости от полной ширины
       container.style.setProperty("--animation-duration", `${animationTime}s`);
