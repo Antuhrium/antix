@@ -28,10 +28,10 @@ const Footer = () => {
                     <div className={styles.topItem}>
                         <span className={styles.smallTitle}>E-mail:</span>
                         <a
-                            href="mailto:hello@antix.in"
+                            href="mailto:token@antix.in"
                             className={styles.mailLink}
                         >
-                            hello@antix.in
+                            token@antix.in
                         </a>
                         <div className={styles.centerLinksWrapper}>
                             <div className={styles.linkWrapper}>
