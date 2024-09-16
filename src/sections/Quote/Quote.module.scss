@@ -26,10 +26,11 @@
 }
 
 .quoteText {
+    max-width: 875px;
     font-family: "Space Grotesk", sans-serif;
-    font-size: 54px;
+    font-size: 41px;
     font-weight: 300;
-    line-height: 73px;
+    line-height: 55px;
     letter-spacing: -0.04em;
     color: #ffffff;
 
@@ -58,13 +59,13 @@
 
 .quoteAuthor {
     font-family: "Inter Tight", sans-serif;
-    font-size: 32px;
+    font-size: 26.5px;
     font-weight: 500;
-    line-height: 44.8px;
+    line-height: 37.1px;
     text-align: left;
     color: #032a28;
 
-    margin-top: 16px;
+    margin-top: 20px;
 
     @media screen and (max-width: 1600px) {
         font-size: 20px;

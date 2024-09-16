@@ -51,8 +51,17 @@
     }
     .carousel {
       max-height: 200px;
+      // width: 100%;
+      // overflow-x: hidden;
 
+      // &>div {
+      //   display: flex;
+      //   align-items: center;
+      //   gap: 12px;
+      // }
+      
       .slide {
+        // width: fit-content !important;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -66,8 +75,11 @@
         line-height: 28.8px;
         text-align: center;
         color: #f0f0f0;
+
+        text-transform: capitalize;
       }
       .active {
+        width: fit-content !important;
         opacity: 1;
         padding: 8px 24px 16px 24px;
         border-radius: 12px;
@@ -113,8 +125,28 @@
       }
       .carousel {
         span {
+          opacity: 0.2;
+          font-family: "Space Grotesk", sans-serif;
+          font-size: 24px;
+          font-weight: 400;
+          line-height: 28.8px;
+          text-align: center;
+          color: #f0f0f0;
+  
+          text-transform: capitalize;
         }
         .active {
+          opacity: 1;
+          padding: 8px 24px 16px 24px;
+          border-radius: 12px;
+          background: #1dded203;
+          backdrop-filter: blur(94px);
+          border: 1px solid rgba(255, 255, 255, 0.19);
+          font-size: 44px;
+          font-weight: 400;
+          line-height: 56.14px;
+          letter-spacing: -0.04em;
+          color: #12fff1;
         }
       }
     }
@@ -147,13 +179,14 @@
       }
       .carousel {
         width: 630px;
-        max-height: 370px;
+        max-height: 300px;
         span {
           opacity: 0.2;
           font-family: "Space Grotesk", sans-serif;
-          font-size: 40px;
+          font-size: 32.8px;
           font-weight: 400;
-          line-height: 48px;
+          line-height: 39.36px;
+          letter-spacing: -0.04em;
           text-align: center;
           color: #f0f0f0;
         }
@@ -164,9 +197,8 @@
           background: #1dded203;
           backdrop-filter: blur(94px);
           border: 1px solid rgba(255, 255, 255, 0.19);
-          font-size: 94px;
-          line-height: 104px;
-          letter-spacing: -0.04em;
+          font-size: 48px;
+          line-height: 50px;
           color: #12fff1;
         }
       }

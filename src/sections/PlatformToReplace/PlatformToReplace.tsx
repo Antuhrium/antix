@@ -3,17 +3,33 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/autoplay";
 import styles from "./PlatformToReplace.module.scss";
+// import { useEffect, useState } from "react";
 
 const words = [
-    "influencers",
     "actors",
-    "TV hosts",
+    "Personal Assistants",
     "influencers",
-    "actors",
+    "Fitness Instructors",
     "TV hosts",
+    "Game Characters",
+    "Pop singers",
+    "Virtual Companions",
+    "customer support agents",
+    "Event Hosts",
+    "Brand Ambassadors",
 ];
 
 const PlatformToReplace = () => {
+    // const [windowSize, setWindowSize] = useState(window.innerWidth);
+    // useEffect(() => {
+    //     const handleResize = () => {
+    //         setWindowSize(window.innerWidth);
+    //     };
+
+    //     handleResize();
+    //     window.addEventListener("resize", handleResize);
+    //     return () => window.removeEventListener("resize", handleResize);
+    // }, []);
     return (
         <section className={styles.wrapper}>
             <div className={styles.container}>
@@ -22,6 +38,7 @@ const PlatformToReplace = () => {
                     <h4>Platform for digital humans to replace:</h4>
                 </div>
                 <Swiper
+                    // direction={windowSize < 768 ? "horizontal" : "vertical"}
                     direction={"vertical"}
                     slidesPerView={3}
                     loop={true}

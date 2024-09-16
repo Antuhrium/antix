@@ -1,5 +1,9 @@
-import { useState, useMemo, useCallback } from "react";
+import { useState } from "react";
 import styles from "./HeroSection.module.scss";
+
+import Xlogo from "../../assets/svg/social-x.svg"
+import Tglogo from "../../assets/svg/social-telegram.svg"
+import Discordlogo from "../../assets/svg/social-discord.svg"
 
 import { LoaderSvg } from "./ui/LoaderSvg/LoaderSvg";
 import { HeroTimer } from "./ui/HeroTimer/HeroTimer";
@@ -8,19 +12,19 @@ import PreDepositStage from "../PreDepositStage/PreDepositStage";
 const HeroSection = () => {
   const [percents] = useState(30);
 
-  const goToRoadmap = useCallback(() => {
-    document.querySelector("#roadmap")?.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
-  }, []);
+  // const goToRoadmap = useCallback(() => {
+  //   document.querySelector("#roadmap")?.scrollIntoView({
+  //     behavior: "smooth",
+  //     block: "start",
+  //   });
+  // }, []);
 
-  const svgPath = useMemo(() => (
-    <path
-      d="M62.7071 8.70711C63.0976 8.31658 63.0976 7.68342 62.7071 7.29289L56.3431 0.928932C55.9526 0.538408 55.3195 0.538408 54.9289 0.928932C54.5384 1.31946 54.5384 1.95262 54.9289 2.34315L60.5858 8L54.9289 13.6569C54.5384 14.0474 54.5384 14.6805 54.9289 15.0711C55.3195 15.4616 55.9526 15.4616 56.3431 15.0711L62.7071 8.70711ZM0 9H62V7H0V9Z"
-      fill="#AFAFAF"
-    />
-  ), []);
+  // const svgPath = useMemo(() => (
+  //   <path
+  //     d="M62.7071 8.70711C63.0976 8.31658 63.0976 7.68342 62.7071 7.29289L56.3431 0.928932C55.9526 0.538408 55.3195 0.538408 54.9289 0.928932C54.5384 1.31946 54.5384 1.95262 54.9289 2.34315L60.5858 8L54.9289 13.6569C54.5384 14.0474 54.5384 14.6805 54.9289 15.0711C55.3195 15.4616 55.9526 15.4616 56.3431 15.0711L62.7071 8.70711ZM0 9H62V7H0V9Z"
+  //     fill="#AFAFAF"
+  //   />
+  // ), []);
 
   return (
     <section className={styles.wrapper}>
@@ -40,7 +44,7 @@ const HeroSection = () => {
             <br /> digital twins for film, content, and beyond
           </p>
           <div className={styles.actions}>
-            <button className={styles.button}>How it works?</button>
+            {/* <button className={styles.button}>How it works?</button>
             <a className={styles.linkButton} onClick={goToRoadmap}>
               <span>Roadmap</span>
               <svg
@@ -52,7 +56,20 @@ const HeroSection = () => {
               >
                 {svgPath}
               </svg>
+            </a> */}
+            <a className={styles.socialLink} href="https://x.com/antix_in" target="_blank">
+              <div className={styles.socialIcon}><img src={Xlogo} alt="X" /></div>
+              <span>43К</span>
             </a>
+            <a className={styles.socialLink} href="https://t.me/antix_in" target="_blank">
+              <div className={styles.socialIcon}><img src={Tglogo} alt="Telegram" /></div>
+              <span>75К</span>
+            </a>
+            <a className={styles.socialLink} href="https://discord.com/invite/bKcMXChRRT" target="_blank">
+              <div className={styles.socialIcon}><img src={Discordlogo} alt="Discord" /></div>
+              <span>12К</span>
+            </a>
+
           </div>
         </div>
         <div className={styles.rightColumn}>

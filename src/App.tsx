@@ -95,11 +95,11 @@ function App() {
 
       {/* Remaining components wrapped in Suspense */}
       <Suspense fallback={<div>Loading...</div>}>
-        <Top10Responsive />
         <Markets />
         <Amazon />
         <Revolutionizing />
         <DigitalMap />
+        <Top10Responsive />
         <TokenInfoResponsive />
         <UserFlow />
         <TokenomicsSectionResponsive />
