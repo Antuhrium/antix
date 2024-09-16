@@ -59,24 +59,24 @@ const XIconMobile = ({ className }: { className?: string }) => (
 
 const faqData = [
     {
-        question: "What is Antix?",
+        question: "01. What is Antix?",
         answer: "Antix is an AI-powered SaaS platform that creates hyper-realistic and intelligent digital human avatars for digital interactions."
     },
     {
-        question: "What problem does Antix solve?",
-        answer: "Antix solves the problem of creating lifelike digital avatars for various digital interactions and applications."
+        question: "02. What problem does Antix solve?",
+        answer: "Antix addresses challenges in digital interactions by enabling personalized, realistic avatars for users, companies, and influencers, enhancing engagement and content creation."
     },
     {
-        question: "Who is the target audience for Antix?",
-        answer: "The target audience for Antix includes businesses and developers looking to integrate realistic digital humans into their applications or services."
+        question: "03. Who is the target audience for Antix?",
+        answer: "The primary target audience includes tech-savvy individuals aged 25-45, companies, and influencers interested in digital assets, gaming, and Web 3.0 projects."
     },
     {
-        question: "What are digital humans?",
-        answer: "Digital humans are AI-powered virtual beings that can interact with users in a human-like manner, often used in customer service, education, or entertainment applications."
+        question: "04. What are digital humans?",
+        answer: "Digital humans are AI-powered avatars that replicate human behavior and appearance, providing a more personalized and engaging digital experience."
     },
     {
-        question: "How does Antix differ from other digital human platforms?",
-        answer: "Antix differentiates itself through its advanced AI capabilities, hyper-realistic avatars, and flexible SaaS platform, allowing for easy integration and customization."
+        question: "05. How does Antix differ from other digital human platforms?",
+        answer: "Antix offers unmatched realism, advanced AI integration, and extensive customization options, making it unique compared to existing solutions."
     }
 ];
 
