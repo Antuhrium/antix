@@ -1,4 +1,4 @@
-import { useState, useMemo, useCallback } from "react";
+import { useState } from "react";
 import styles from "./HeroSection.module.scss";
 
 import Xlogo from "../../assets/svg/social-x.svg"

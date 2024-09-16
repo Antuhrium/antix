@@ -3,7 +3,7 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/autoplay";
 import styles from "./PlatformToReplace.module.scss";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 
 const words = [
     "actors",
