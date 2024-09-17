@@ -35,19 +35,16 @@ const PlatformToReplace = () => {
             <div className={styles.container}>
                 <div className={styles.description}>
                     <span>Reshaping a $300 billion industry.</span>
-                    <h4>Platform for digital humans to replace:</h4>
+                    <h4>Platform to create, train and monetize AI-powered digital characters to replace:</h4>
                 </div>
                 <Swiper
-                    // direction={windowSize < 768 ? "horizontal" : "vertical"}
-                    direction={"vertical"}
+                    direction={window.innerWidth > 1400 ? "vertical" : "horizontal"}
                     slidesPerView={3}
                     loop={true}
                     centeredSlides={true}
-                    autoplay={{ delay: 3000 }}
+                    autoplay={{ delay: 3000, disableOnInteraction: false }}
                     modules={[Autoplay]}
                     allowTouchMove={false}
-                    noSwiping={true}
-                    keyboard={{ enabled: false }}
                     className={styles.carousel}
                 >
                     {words.map((word) => (

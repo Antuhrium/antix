@@ -8,8 +8,9 @@
   background-size: contain;
   backdrop-filter: blur(10px);
   display: flex;
-  align-items: center;
-  padding-left: 1rem;
+  flex-direction: column;
+  gap: 2px;
+  padding: 1rem;
   &:nth-child(2) {
     // margin-top: 80px;
     align-self: flex-end;
@@ -17,17 +18,24 @@
   &:nth-child(3) {
     margin-left: 80px;
   }
-  .desc {
-    max-width: 410px;
+
+  .title {
     font-family: "Inter Tight", sans-serif;
     font-size: 18px;
-    line-height: 26px;
-    font-weight: 400;
+    font-weight: 700;
+    line-height: 25.2px;
     text-align: left;
     color: #f0f0f0;
-    span {
-      font-weight: 700;
-    }
+    text-wrap: nowrap;
+  }
+  .desc {
+    max-width: 260px;
+    font-family: "Inter Tight", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25.2px;
+    text-align: left;
+    color: #f0f0f0;
   }
   .number {
     position: absolute;
@@ -54,6 +62,8 @@
 /* Малые устройства (≥576px) */
 @media (min-width: 393px) {
   .wrapper {
+    gap: 10px;
+    padding: 25px 30px 25px;
     width: 361px;
     height: 172px;
     &:nth-child(2) {
@@ -107,7 +117,7 @@
     width: 543px;
     height: 214px;
     background-image: url("../../../../assets/svg/why-item-bg.svg");
-    padding-left: 50px;
+    padding: 30px 40px;
     &:nth-child(2) {
       margin-top: 80px;
       align-self: flex-end;
@@ -115,10 +125,17 @@
     &:nth-child(3) {
       margin-left: 80px;
     }
+
+    .title {
+      font-size: 26.5px;
+      font-weight: 700;
+      line-height: 37.1px;
+    }
     .desc {
       max-width: 410px;
-      font-size: 32px;
-      line-height: 44.8px;
+      font-size: 26.5px;
+      font-weight: 400;
+      line-height: 37.1px;
       span {
       }
     }
