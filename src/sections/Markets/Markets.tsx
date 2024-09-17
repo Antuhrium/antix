@@ -99,7 +99,7 @@ const Markets = () => {
                 <img src={HeadImg} alt="" className={styles.headImg} />
 
                 <span className={styles.bottomLink}>
-                    *source of{" "}
+                    *source:{" "}
                     <a
                         href="https://hbr.org/2024/05/should-your-brand-hire-a-virtual-influencer"
                         target="_blank"
