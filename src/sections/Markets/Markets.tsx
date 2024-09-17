@@ -50,14 +50,8 @@ const ListItem = ({ item, isOpen, setIsOpen }: ListItemProps) => {
             key={item.title}
             className={styles.item}
         >
-            <div
-                className={`${
-                    isOpen === item.title
-                        ? styles.activeItemTextWrapper
-                        : styles.itemTextWrapper
-                }`}
-            >
-                <h4 className={styles.itemTitle}>{item.title}</h4>
+            <div className={styles.itemTextWrapper}>
+                <h4 className={isOpen === item.title ? styles.itemActiveTitle : styles.itemTitle}>{item.title}</h4>
                 {isOpen === item.title && (
                     <p className={styles.itemText}>{item.text}</p>
                 )}

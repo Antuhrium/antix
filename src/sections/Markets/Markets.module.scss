@@ -39,7 +39,11 @@
     flex-direction: column;
     justify-content: space-between;
 
-    @media screen and (max-width: 1600px) {
+    @media screen and (max-width: 1220px) {
+        height: 130vh;
+    }
+
+    @media screen and (max-width: 1024px) {
         height: fit-content;
         align-items: center;
         gap: 40px;
@@ -58,7 +62,7 @@
     text-align: center;
     color: #f0f0f0;
 
-    @media screen and (max-width: 1600px) {
+    @media screen and (max-width: 1024px) {
         font-size: 44px;
         font-weight: 400;
         line-height: 42px;
@@ -76,7 +80,9 @@
     display: flex;
     justify-content: space-between;
 
-    @media screen and (max-width: 1600px) {
+    padding: 0 20px;
+
+    @media screen and (max-width: 1024px) {
         margin-top: 0;
         overflow-x: auto;
         max-width: 100%;
@@ -96,7 +102,7 @@
     flex-direction: column;
     gap: 40px;
 
-    @media screen and (max-width: 1600px) {
+    @media screen and (max-width: 1024px) {
         flex-direction: row;
         gap: 20px;
     }
@@ -106,22 +112,30 @@
     position: relative;
     background-color: transparent;
 
+    display: flex;
+    gap: 12px;
+
     width: 460px;
 
+
     .itemTextWrapper {
-        background-image: url("../../assets/svg/markets/closed-bg.svg");
-        background-repeat: no-repeat;
-        background-position: top;
-        background-size: contain;
         backdrop-filter: blur(56px);
 
         padding: 11px 0 15px 36px;
+        width: 100%;
+        height: fit-content;
+
+        border: 1.66px solid rgba(237, 255, 254, 0.48);
+        background: #FFFFFF0A;
+        border-radius: 6px 4px 6px 6px;
 
         max-width: 386px;
 
-        transition: all 0.1s linear;
+        transition: all 0.3s linear;
 
         .itemTitle {
+            transition: all 0.1s linear;
+            
             font-family: "Space Grotesk", sans-serif;
             font-size: 28px;
             font-weight: 400;
@@ -133,23 +147,9 @@
         .mobileItemText {
             display: none;
         }
-    }
 
-    .activeItemTextWrapper {
-        background-image: url("../../assets/svg/markets/opened-bg.svg");
-        background-repeat: no-repeat;
-        background-position: top;
-        background-size: contain;
-        backdrop-filter: blur(56px);
-
-        padding: 31px 94px 42px 36px;
-
-        width: 460px;
-        height: 283px;
-
-        transition: all 0.3s ease-in-out;
-
-        .itemTitle {
+        .itemActiveTitle {
+            margin-top: 15px;
             transition: all 0.1s linear;
 
             font-family: "Space Grotesk", sans-serif;
@@ -161,7 +161,9 @@
         }
 
         .itemText {
-            margin-top: 30px;
+            transition: all 0.1s linear;
+
+            margin: 30px 0 15px;
             width: 330px;
 
             font-family: "Inter Tight", sans-serif;
@@ -172,16 +174,10 @@
             color: #afafaf;
         }
 
-        .mobileItemText {
-            display: none;
-        }
     }
 
-    .itemArrow {
-        position: absolute;
-        top: 0px;
-        right: 0px;
 
+    .itemArrow {
         width: 60px;
         height: 60px;
         border-radius: 9px;
@@ -193,7 +189,7 @@
         border: 2px solid rgba(18, 255, 241, 0.6);
     }
 
-    @media screen and (max-width: 1600px) {
+    @media screen and (max-width: 1024px) {
         width: 313px;
         height: 166px;
 
@@ -254,7 +250,7 @@
         }
     }
 
-    @media screen and (max-width: 1600px) {
+    @media screen and (max-width: 1024px) {
         font-size: 12px;
         line-height: 14.52px;
         text-align: center;
@@ -268,7 +264,7 @@
     transform: translateX(-50%);
     z-index: 0;
 
-    @media screen and (max-width: 1600px) {
+    @media screen and (max-width: 1024px) {
         display: none;
     }
 }

@@ -23,6 +23,7 @@
         font-size: 114px;
         line-height: 114px;
         font-weight: 700;
+        margin-left: -4px;
       }
       > p {
         font-size: 12px;
@@ -198,7 +199,8 @@
     line-height: 28px;
     color: #f0f0f0;
     span {
-      display: inline-flex;
+      display: flex;
+      padding: 2px 0 0 1px;
       border: 2px solid rgba(18, 255, 241, 0.5);
       height: 30px;
       width: 30px;

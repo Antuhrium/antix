@@ -9,12 +9,15 @@ import "swiper/css";
 import "swiper/css/autoplay";
 
 const words = [
-    "influencers",
-    "actors",
-    "TV hosts",
-    "influencers",
-    "actors",
-    "TV hosts",
+    "digital twins",
+    "clothes",
+    "accessories",
+    "gestures",
+    "skills",
+    "haircuts",
+    "full outfits",
+    "languages",
+    "voices"
 ];
 
 const Amazon = () => {
@@ -56,15 +59,13 @@ const Amazon = () => {
                         or sell
                     </h4>
                     <Swiper
-                        direction={"vertical"}
+                        direction={window.innerWidth > 1600 ? "vertical" : "horizontal"}
                         slidesPerView={3}
                         loop={true}
                         centeredSlides={true}
-                        autoplay={{ delay: 3000 }}
+                        autoplay={{ delay: 3000, disableOnInteraction: false }}
                         modules={[Autoplay]}
-                        // allowTouchMove={false}
-                        // noSwiping={true}
-                        // keyboard={{ enabled: false }}
+                        allowTouchMove={false}
                         className={styles.carousel}
                     >
                         {words.map((word) => (

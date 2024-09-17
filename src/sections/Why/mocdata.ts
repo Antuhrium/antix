@@ -6,18 +6,18 @@ export type WhyItemType = {
 
 export const whyData: WhyItemType[] = [
   {
-    boldText: "ANTIX tokens",
-    text: "– stake and earn with every transaction on the platform.",
+    boldText: "Create and profit from avatars",
+    text: "Design, customize, and monetize digital avatars with Antix across various platforms.",
     index: 1,
   },
   {
-    boldText: "Revolutionizing a $300 billion industry",
-    text: "– accessible, profitable tech for everyone.",
+    boldText: "Secure ownership via blockchain",
+    text: "Your avatars are protected and owned through NFTs, fully tradable and secure.",
     index: 2,
   },
   {
-    boldText: "Make your digital twin earn for you.",
-    text: "Create rent or sell on Antix platform.",
+    boldText: "ANTIX drives the platform",
+    text: "Use ANTIX tokens for payments, customization, and rewards, with exclusive discounts.",
     index: 3,
   },
 ];
