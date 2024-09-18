@@ -13,13 +13,13 @@ const JoinUs: React.FC = () => {
             </div>
             <div className={styles.cardsContainer}>
                 <div className={styles.cardTopLeft}>
-                    <FollowerCard platform="x" handle="@antix" followers={44000} />
+                    <FollowerCard platform="x" link='https://x.com/antix_in' handle="@antix" followers={44000} />
                 </div>
                 <div className={styles.cardBottomCenter}>
-                    <FollowerCard platform="discord" handle="@antix" followers={12000} />
+                    <FollowerCard platform="discord" link="https://discord.com/invite/bKcMXChRRT" handle="@antix" followers={12000} />
                 </div>
                 <div className={styles.cardTopRight}>
-                    <FollowerCard platform="telegram" handle="@antix" followers={75000} />
+                    <FollowerCard platform="telegram" link="https://t.me/antix_in" handle="@antix" followers={75000} />
                 </div>
             </div>
         </div>
