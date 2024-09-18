@@ -59,7 +59,7 @@ const renderCustomizedLabel = ({
             dominantBaseline="central"
             className={styles.chartsLabel}
         >
-            {`${value}%`}
+            {value > 7 && <>{`${value}%`}</>}
         </text>
     );
 };
