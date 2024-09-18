@@ -81,9 +81,9 @@ const faqData = [
 ];
 
 const FAQItem = ({ question, answer, isOpen, toggleOpen }: { question: string, answer: string, isOpen: boolean, toggleOpen: () => void }) => (
-    <div className={styles.faqItemContainer} onClick={toggleOpen}>
+    <div className={styles.faqItemContainer}>
         <div className={`${styles.faqItem} ${isOpen ? styles.open : ''}`}>
-            <button className={styles.questionButton}>
+            <button className={styles.questionButton} onClick={toggleOpen}>
                 <span className={styles.question}>{question}</span>
                 {isOpen ? <XIconMobile className={styles.mobileIcon} /> : <PlusIconMobile className={styles.mobileIcon} />}
             </button>
@@ -91,7 +91,7 @@ const FAQItem = ({ question, answer, isOpen, toggleOpen }: { question: string, a
                 <p className={styles.answer}>{answer}</p>
             </div>
         </div>
-        <div className={styles.icon}>
+        <div className={styles.icon} onClick={toggleOpen}>
             {isOpen ? <XIcon className={styles.desktopIcon} /> : <PlusIcon className={styles.desktopIcon} />}
         </div>
     </div>

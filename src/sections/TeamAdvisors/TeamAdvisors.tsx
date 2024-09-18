@@ -174,8 +174,8 @@ const TeamAdvisors = () => {
                     The team has a proven track record of <span>successfully managing business projects.</span> They bring significant experience and exceptional knowledge regarding digital humans & Web3 ventures at scale.
                 </p>
                 <div className={styles.gridWrapper}>
-                    <div 
-                        className={styles.grid} 
+                    <div
+                        className={styles.grid}
                         ref={gridRef}
                         onScroll={checkScrollability}
                     >
@@ -184,20 +184,22 @@ const TeamAdvisors = () => {
                         ))}
                     </div>
                 </div>
-                <div className={styles.buttons}>
-                    <img 
-                        src="/team/left.png" 
-                        onClick={() => scrollCarousel('left')} 
-                        alt="Scroll left" 
-                        style={{ opacity: canScrollLeft ? 1 : 0.5, cursor: canScrollLeft ? 'pointer' : 'default' }}
-                    />
-                    <img 
-                        src="/team/right.png" 
-                        onClick={() => scrollCarousel('right')} 
-                        alt="Scroll right" 
-                        style={{ opacity: canScrollRight ? 1 : 0.5, cursor: canScrollRight ? 'pointer' : 'default' }}
-                    />
-                </div>
+                {canScrollLeft || canScrollRight && (
+                    <div className={styles.buttons}>
+                        <img
+                            src="/team/left.png"
+                            onClick={() => scrollCarousel('left')}
+                            alt="Scroll left"
+                            style={{ opacity: canScrollLeft ? 1 : 0.5, cursor: canScrollLeft ? 'pointer' : 'default' }}
+                        />
+                        <img
+                            src="/team/right.png"
+                            onClick={() => scrollCarousel('right')}
+                            alt="Scroll right"
+                            style={{ opacity: canScrollRight ? 1 : 0.5, cursor: canScrollRight ? 'pointer' : 'default' }}
+                        />
+                    </div>
+                )}
             </section>
 
             <section className={styles.advisors}>

@@ -46,6 +46,7 @@
 .advisorsDescription {
     padding: 2rem;
     padding-bottom: 0;
+    padding-top: 0;
     color: var(--grey-text, #AFAFAF);
     text-align: center;
     font-family: "Inter Tight";
@@ -119,8 +120,9 @@
     height: 297.722px;
     padding: 1rem;
     box-shadow:
-        inset 0 20px 20px -20px rgba(0, 0, 0, 0.9),
-        inset 0 -20px 20px -20px rgba(0, 0, 0, 0.7);
+        inset 0 20px 20px -20px rgba(0, 0, 0, 1),
+        inset 0 -20px 20px -20px rgba(0, 0, 0, 0.7),
+        inset 0 0 40px rgba(0, 0, 0, 1.5);
 }
 
 
