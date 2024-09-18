@@ -4,12 +4,12 @@
   // top: 38px;
   left: 0;
   right: 0;
-  backdrop-filter: blur(22px);
+  
   z-index: 100;
-  transition: top 0.3s;
+  transition: backdrop-filter 0.3s;
 
-  &.sticky {
-    top: 0;
+  &.blur {
+    backdrop-filter: blur(22px);
   }
   .container {
     display: flex;

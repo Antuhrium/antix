@@ -1,30 +1,29 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./Header.module.scss";
 import { links } from "./mocdata";
 import { BurgerButton } from "./ui/BurgerButton/BurgerButton";
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
-    // const [isSticky, setIsSticky] = useState(false);
+    const [isBlur, setIsBlur] = useState(false);
 
-    // useEffect(() => {
-    //     const handleScroll = () => {
-    //         if (window.scrollY > 38) {
-    //             setIsSticky(true);
-    //         } else {
-    //             setIsSticky(false);
-    //         }
-    //     };
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 10) {
+                setIsBlur(true);
+            } else {
+                setIsBlur(false);
+            }
+        };
 
-    //     window.addEventListener("scroll", handleScroll);
+        window.addEventListener("scroll", handleScroll);
 
-    //     return () => {
-    //         window.removeEventListener("scroll", handleScroll);
-    //     };
-    // }, []);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
     return (
-    //   <header className={`${styles.wrapper} ${isSticky ? styles.sticky : ""}`}>
-        <header className={styles.wrapper}>
+        <header className={`${styles.wrapper} ${isBlur ? styles.blur : ""}`}>
             <div
                 className={`${styles.container} ${
                     isOpen ? styles.isOpen : null

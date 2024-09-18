@@ -44,7 +44,7 @@ const PlatformToReplace = () => {
                     centeredSlides={true}
                     autoplay={{ delay: 3000, disableOnInteraction: false }}
                     modules={[Autoplay]}
-                    allowTouchMove={false}
+                    // allowTouchMove={false}
                     className={styles.carousel}
                 >
                     {words.map((word) => (

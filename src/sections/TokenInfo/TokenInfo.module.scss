@@ -103,7 +103,7 @@
     width: 309.999px;
     height: 132px;
     margin: 3rem 1rem;
-    padding: 1rem;
+    padding: 25px 70px 30px 25px;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -112,34 +112,31 @@
     .title {
         color: var(--white-head-text, #F0F0F0);
         font-family: "Inter Tight";
-        font-size: 20px;
-        font-style: normal;
+        font-size: 18px;
         font-weight: 500;
-        line-height: 110%;
-        margin-bottom: 1rem;
+        line-height: 18.22px;
+        margin-bottom: 9px;
     }
 
 
-    .descriptionContainer {
-        width: 80%;
-    }
+    // .descriptionContainer {
+    //     width: 80%;
+    // }
 
     .description {
         color: var(--white-head-text, #F0F0F0);
         font-family: "Inter Tight";
-        font-size: 14px;
-        font-style: normal;
+        font-size: 13px;
         font-weight: 300;
-        line-height: 21px;
+        line-height: 17.39px;
     }
 
     .boldDescription {
         color: var(--white-head-text, #F0F0F0);
         font-family: "Inter Tight";
-        font-size: 14px;
-        font-style: normal;
+        font-size: 13px;
         font-weight: 700;
-        line-height: 21px;
+        line-height: 17.39px;
     }
 
 

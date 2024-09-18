@@ -28,7 +28,11 @@ const HeroSection = () => {
 
   return (
     <section className={styles.wrapper}>
-      {/* <PreDepositStage /> */}
+      <div className={styles.videoWrapper}>
+        <video autoPlay muted loop className={styles.backgroundVideo}>
+          <source src="/header-video-bg.webm" type="video/webm" />
+        </video>
+      </div>
       <div className={styles.container}>
         <div className={styles.leftColumn}>
           <h1 className={styles.title}>

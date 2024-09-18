@@ -78,8 +78,8 @@ const TokenInfo = () => {
             backgroundImage: '/tokeninfo/bg.png',
             image: '/tokeninfo/staking.png',
             title: 'Staking',
-            boldDescription: 'Stake your tokens and boost your rewards.',
-            description: 'Higher stake, higher earnings.',
+            boldDescription: 'Higher stake, higher earnings.',
+            description: 'Stake your tokens and boost your rewards.',
             boldFirst: false,
         },
         {

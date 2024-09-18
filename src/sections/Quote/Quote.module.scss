@@ -35,7 +35,7 @@
     color: #ffffff;
 
     span {
-        font-weight: 500;
+        font-weight: 600;
     }
 
     @media screen and (max-width: 1600px) {
@@ -58,6 +58,7 @@
 }
 
 .quoteAuthor {
+    display: block;
     font-family: "Inter Tight", sans-serif;
     font-size: 26.5px;
     font-weight: 500;

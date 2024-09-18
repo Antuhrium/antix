@@ -153,7 +153,7 @@
       height: 470px;
       .description {
         text-align: left;
-        width: 70%;
+        width: 72%;
         span {
           font-size: 32px;
           font-weight: 300;
@@ -164,11 +164,11 @@
         }
       }
       .carousel {
-        max-height: 370px;
+        max-height: 350px;
         position: relative;
 
         min-width: 0;
-        width: 30%;
+        width: 25%;
         span {
           opacity: 0.2;
           font-family: "Space Grotesk", sans-serif;
@@ -181,7 +181,7 @@
         }
         .active {
           opacity: 1;
-          padding: 16px 32px 28px 32px;
+          padding: 16px;
           border-radius: 12px;
           background: #1dded203;
           backdrop-filter: blur(94px);
