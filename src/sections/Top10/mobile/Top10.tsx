@@ -17,7 +17,19 @@ const Top10: React.FC = () => {
             <div className={styles.videoWrapper}>
                 
                 <div className={styles.videoContainer}>
-                    <video autoPlay loop muted className={styles.backgroundVideo}>
+                    <video
+                        loop
+                        muted
+                        className={styles.backgroundVideo}
+                        onClick={(e) => {
+                            const video = e.currentTarget as HTMLVideoElement;
+                            if (video.paused) {
+                                video.play();
+                            } else {
+                                video.pause();
+                            }
+                        }}
+                    >
                         <source src="/videos/bgvid.mp4" type="video/mp4" />
                     </video>
                 </div>

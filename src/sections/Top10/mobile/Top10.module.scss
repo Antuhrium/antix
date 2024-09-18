@@ -78,16 +78,16 @@
     height: 100%;
 }
 
-.videoContainer::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(270deg, rgba(0, 0, 0, 0.00) 0%, #000 100%);
-    z-index: 1;
-}
+// .videoContainer::after {
+//     content: '';
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     bottom: 0;
+//     background: linear-gradient(270deg, rgba(0, 0, 0, 0.00) 0%, #000 100%);
+//     z-index: 1;
+// }
 
 
 .footer {

@@ -5,6 +5,7 @@ interface FollowerCardProps {
     platform: 'x' | 'discord' | 'telegram';
     handle: string;
     followers: number;
+    link: string;
 }
 
 const platformIcons = {
@@ -28,13 +29,13 @@ const platformIcons = {
     </svg>),
 };
 
-const FollowerCard: React.FC<FollowerCardProps> = ({ platform, handle, followers }) => {
+const FollowerCard: React.FC<FollowerCardProps> = ({ platform, handle, followers, link }) => {
     const formatFollowers = (count: number) => {
         return count >= 1000 ? `${(count / 1000).toFixed(0)}K` : count.toString();
     };
 
     return (
-        <div className={styles.cardContainer}>
+        <a href={link} target="_blank" className={styles.cardContainer}>
             <div className={styles.card}>
                 <div className={styles.platform}>
                     {platformIcons[platform]}
@@ -44,7 +45,7 @@ const FollowerCard: React.FC<FollowerCardProps> = ({ platform, handle, followers
                     followers: <p>{formatFollowers(followers)}</p>
                 </div>
             </div>
-        </div>
+        </a>
     );
 };
 

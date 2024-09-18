@@ -7,7 +7,7 @@ import Discordlogo from "../../assets/svg/social-discord.svg"
 
 import { LoaderSvg } from "./ui/LoaderSvg/LoaderSvg";
 import { HeroTimer } from "./ui/HeroTimer/HeroTimer";
-import PreDepositStage from "../PreDepositStage/PreDepositStage";
+// import PreDepositStage from "../PreDepositStage/PreDepositStage";
 
 const HeroSection = () => {
   const [percents] = useState(30);
@@ -28,7 +28,7 @@ const HeroSection = () => {
 
   return (
     <section className={styles.wrapper}>
-      <PreDepositStage />
+      {/* <PreDepositStage /> */}
       <div className={styles.container}>
         <div className={styles.leftColumn}>
           <h1 className={styles.title}>
