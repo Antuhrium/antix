@@ -41,13 +41,14 @@
     position: relative;
     z-index: 2;
     color: white;
-    padding: 50px 58px;
+    padding: 60px 68px;
     width: 100%;
     max-width: 1600px; // Match the original video width
     min-height: calc(600px + 1rem);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
 }
 
 .aiDriven {
@@ -96,7 +97,11 @@
 }
 
 .footer {
-    max-width: 420px
+    max-width: 420px;
+
+    p {
+        width: 100%;
+    }
 }
 
 h1 {

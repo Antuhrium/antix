@@ -59,6 +59,8 @@
         display: flex;
         flex-direction: column;
         position: relative;
+        margin-left: 1rem;
+        margin-bottom: 0.5rem;
 
         //add vertical line
         &::after {
@@ -102,5 +104,6 @@
 
     @media (max-width: 768px) {
         margin-right: 4rem;
+        padding-top: 0.5rem;
     }
 }
