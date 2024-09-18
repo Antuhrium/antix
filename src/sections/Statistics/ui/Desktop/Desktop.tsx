@@ -26,7 +26,6 @@ export const Desktop = () => {
   const [hidden, setHidden] = useState(false);
 
   useEffect(() => {
-    console.log("window.innerWidth---", window.innerWidth);
     if (window.innerWidth <= 768) {
       setHidden(true);
     }

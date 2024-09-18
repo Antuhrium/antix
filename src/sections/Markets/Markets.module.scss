@@ -32,7 +32,7 @@
 .content {
     position: relative;
     max-width: 1600px;
-    height: 100vh;
+    height: 110vh;
     margin: 0 auto;
 
     display: flex;
@@ -117,25 +117,19 @@
 
     width: 460px;
 
-
     .itemTextWrapper {
         backdrop-filter: blur(56px);
-
         padding: 11px 0 15px 36px;
         width: 100%;
         height: fit-content;
-
         border: 1.66px solid rgba(237, 255, 254, 0.48);
-        background: #FFFFFF0A;
+        background: #ffffff0a;
         border-radius: 6px 4px 6px 6px;
-
         max-width: 386px;
-
-        transition: all 0.3s linear;
+        transition: all 0.3s ease; /* Общий переход */
 
         .itemTitle {
             transition: all 0.1s linear;
-            
             font-family: "Space Grotesk", sans-serif;
             font-size: 28px;
             font-weight: 400;
@@ -150,8 +144,7 @@
 
         .itemActiveTitle {
             margin-top: 15px;
-            transition: all 0.1s linear;
-
+            transition: all 0.3s ease; /* Плавный переход */
             font-family: "Space Grotesk", sans-serif;
             font-size: 32px;
             font-weight: 400;
@@ -161,32 +154,44 @@
         }
 
         .itemText {
-            transition: all 0.1s linear;
-
-            margin: 30px 0 15px;
+            margin: 0;
             width: 330px;
-
             font-family: "Inter Tight", sans-serif;
             font-size: 24px;
             font-weight: 400;
             line-height: 33.6px;
             text-align: left;
             color: #afafaf;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, opacity 0.4s ease; /* Переход на высоту и прозрачность */
         }
 
+        &.openItemTextWrapper .itemText {
+            max-height: 300px; /* Задайте достаточную высоту для текста */
+            opacity: 1;
+            margin: 30px 0 15px;
+        }
     }
-
 
     .itemArrow {
         width: 60px;
         height: 60px;
         border-radius: 9px;
-
         display: flex;
         align-items: center;
         justify-content: center;
-
         border: 2px solid rgba(18, 255, 241, 0.6);
+        transition: transform 0.3s ease; /* Плавный поворот */
+
+        img {
+            transition: transform 0.3s ease;
+        }
+    }
+
+    .openItemArrow {
+        transform: rotate(180deg); /* Поворот стрелки */
     }
 
     @media screen and (max-width: 1024px) {

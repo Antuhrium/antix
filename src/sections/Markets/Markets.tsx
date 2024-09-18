@@ -44,29 +44,33 @@ type ListItemProps = {
 };
 
 const ListItem = ({ item, isOpen, setIsOpen }: ListItemProps) => {
-    return (
-        <button
-            onClick={() => setIsOpen(isOpen === item.title ? "" : item.title)}
-            key={item.title}
-            className={styles.item}
-        >
-            <div className={styles.itemTextWrapper}>
-                <h4 className={isOpen === item.title ? styles.itemActiveTitle : styles.itemTitle}>{item.title}</h4>
-                {isOpen === item.title && (
-                    <p className={styles.itemText}>{item.text}</p>
-                )}
-                <p className={styles.mobileItemText}>{item.text}</p>
-            </div>
-            <div className={styles.itemArrow}>
-                <img
-                    src={ArrowIcon}
-                    alt="Arrow Down"
-                    style={isOpen === item.title ? {} : { rotate: "180deg" }}
-                />
-            </div>
-        </button>
-    );
+  const isActive = isOpen === item.title;
+
+  return (
+    <button
+      onClick={() => setIsOpen(isActive ? "" : item.title)}
+      key={item.title}
+      className={styles.item}
+    >
+      <div className={`${styles.itemTextWrapper} ${isActive ? styles.openItemTextWrapper : ""}`}>
+        <h4 className={isActive ? styles.itemActiveTitle : styles.itemTitle}>
+          {item.title}
+        </h4>
+        <div className={`${isActive ? styles.openContent : ""}`}>
+          <p className={styles.itemText}>{item.text}</p>
+        </div>
+        <p className={styles.mobileItemText}>{item.text}</p>
+      </div>
+      <div className={`${styles.itemArrow} ${isActive ? styles.openArrow : ""}`}>
+        <img
+          src={ArrowIcon}
+          alt="Arrow Down"
+        />
+      </div>
+    </button>
+  );
 };
+
 
 const Markets = () => {
     const [isOpen, setIsOpen] = useState("");

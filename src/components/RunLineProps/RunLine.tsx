@@ -28,7 +28,6 @@ export const RunLine: React.FC<RunLineProps> = ({
         0
       );
 
-      console.log("totalWidth", totalWidth);
       const windowWidth = window.innerWidth < 680 ? 1000 : 100
       const animationTime = totalWidth / windowWidth;
 

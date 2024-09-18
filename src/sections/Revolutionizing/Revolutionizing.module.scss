@@ -168,7 +168,7 @@
 
 .itemIndex {
     position: absolute;
-    right: 0;
+    right: 5px;
     bottom: 0;
 
     width: 44px;
@@ -189,4 +189,8 @@
     letter-spacing: -0.01em;
     text-align: center;
     color: #ffffff;
+
+    @media screen and (max-width: 1024px) {
+        right: 0;
+    }
 }

@@ -1,6 +1,6 @@
 .wrapper {
-  width: 292px;
-  height: 136px;
+  width: 330px;
+  height: 160px;
   position: relative;
   background-image: url("../../../../assets/svg/why/Subtract.svg");
   background-repeat: no-repeat;
@@ -9,8 +9,8 @@
   backdrop-filter: blur(10px);
   display: flex;
   flex-direction: column;
-  gap: 2px;
-  padding: 1rem;
+  gap: 12px;
+  padding: 24px 30px;
   &:nth-child(2) {
     // margin-top: 80px;
     align-self: flex-end;
@@ -43,19 +43,21 @@
     right: 0;
     // border: 2px solid rgba(237, 255, 254, 0.4);
     border: 2px solid rgba(18, 255, 241, 0.5);
-    width: 40px;
-    height: 40px;
-    border-radius: 9px;
+    width: 36px;
+    height: 36px;
+    border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: "Space Grotesk", sans-serif;
-    font-size: 20px;
+    font-size: 16.96px;
     font-weight: 700;
-    line-height: 24px;
+    line-height: 20.36px;
     letter-spacing: -0.01em;
     text-align: center;
-    color: #fff;
+    color: rgba(237, 255, 254, 0.7);
+
+    font-family: Space Grotesk;
   }
 }
 
@@ -64,8 +66,6 @@
   .wrapper {
     gap: 10px;
     padding: 25px 30px 25px;
-    width: 361px;
-    height: 172px;
     &:nth-child(2) {
     }
     &:nth-child(3) {
@@ -97,8 +97,9 @@
       }
     }
     .number {
-      width: 50px;
-      height: 50px;
+      right: 5px;
+      width: 40px;
+      height: 40px;
     }
   }
 }
@@ -114,10 +115,12 @@
 /* Сверхбольшие устройства (≥1400px) */
 @media (min-width: 1400px) {
   .wrapper {
-    width: 543px;
-    height: 214px;
+    display: flex;
+    justify-content: center;
+    width: 460px;
+    height: 268px;
     background-image: url("../../../../assets/svg/why-item-bg.svg");
-    padding: 30px 40px;
+    padding: 30px 25px 30px 40px;
     &:nth-child(2) {
       margin-top: 80px;
       align-self: flex-end;
@@ -127,6 +130,7 @@
     }
 
     .title {
+      text-wrap: wrap;
       font-size: 26.5px;
       font-weight: 700;
       line-height: 37.1px;
@@ -136,12 +140,19 @@
       font-size: 26.5px;
       font-weight: 400;
       line-height: 37.1px;
+
       span {
       }
     }
     .number {
-      font-size: 28px;
-      line-height: 33.6px;
+      width: 50px;
+      height: 50px;
+      border-radius: 7px;
+
+      font-size: 23.19px;
+      font-weight: 700;
+      line-height: 27.83px;
+      letter-spacing: -0.01em;
     }
   }
 }

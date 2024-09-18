@@ -58,7 +58,7 @@ const MarketLeader = () => {
           }
         );
       }
-    }, 1500);
+    }, 1000);
 
     return () => clearInterval(interval);
   }, [shownLogos, displayedLogos]);
