@@ -6,7 +6,7 @@ import PieChartComponent from "../../../components/PieChart/mobile/PieChart";
 
 const TokenomicsSection = () => {
     return (
-        <section className={styles.tokenomicsWrapper}>
+        <section className={styles.tokenomicsWrapper} id="Tokenomics">
             <div className={styles.container}>
                 <h3 className={styles.title}>Tokenomics</h3>
 

@@ -167,7 +167,7 @@ const TeamAdvisors = () => {
 
 
     return (
-        <div className={styles.teamContainer}>
+        <div className={styles.teamContainer} id='Advisors'>
             <section className={styles.team}>
                 <h2 className={styles.sectionTitle}>Team</h2>
                 <p className={styles.sectionDescription}>

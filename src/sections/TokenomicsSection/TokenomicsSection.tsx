@@ -7,7 +7,7 @@ import LeftBg from "../../assets/svg/tokenomics-left-bg.svg";
 
 const TokenomicsSection = memo(() => {
     return (
-        <section className={styles.tokenomicsWrapper}>
+        <section className={styles.tokenomicsWrapper} id='Tokenomics'>
             <div className={styles.container}>
                 <h3 className={styles.title}>Tokenomics</h3>
 

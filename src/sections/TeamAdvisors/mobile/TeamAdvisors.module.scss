@@ -34,12 +34,12 @@
 
     .activeButton {
         background: var(--white-head-text, #F0F0F0);
+        color: #0F0F0F;
     }
 
     .inactiveButton {
         background: rgba(240, 240, 240, 0.10);
-        // color: #fff;
-        color: #12FFF1;
+        color: #fff;
     }
 }
 

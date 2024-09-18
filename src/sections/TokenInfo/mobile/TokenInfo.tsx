@@ -101,7 +101,7 @@ const TokenInfo = () => {
     }
 
     return (
-        <div className={styles.container}>
+        <div className={styles.container} id='AboutTokens'>
             <div className={styles.title}>ANTIX Token</div>
 
             <div className={styles.subheader}>

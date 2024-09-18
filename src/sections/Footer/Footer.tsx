@@ -7,8 +7,14 @@ import socialDiscord from "../../assets/svg/social-discord.svg";
 import TitleImg from "../../assets/svg/footer-title.svg";
 
 const Footer = () => {
+    const handleClick = (id: string) => {
+        const el = document.getElementById(id)
+        if (el) {
+            el.scrollIntoView({ behavior: "smooth" });
+        }
+    }
     return (
-        <footer className={styles.footer}>
+        <footer className={styles.footer} id="Footer">
             <div className={styles.footerConatiner}>
                 <div className={styles.topWrapper}>
                     <div className={styles.topItem}>
@@ -34,21 +40,21 @@ const Footer = () => {
                             token@antix.in
                         </a>
                         <div className={styles.centerLinksWrapper}>
-                            <div className={styles.linkWrapper}>
-                                <a href="#">Advisors</a>
-                                <a href="#">About tokens</a>
-                                <a href="#">Tocenomics</a>
+                        <div className={styles.linkWrapper}>
+                                <button onClick={() => handleClick("Advisors")}>Advisors</button>
+                                <button onClick={() => handleClick("AboutTokens")}>About tokens</button>
+                                <button onClick={() => handleClick("Tokenomics")}>Tokenomics</button>
                             </div>
                             <div className={styles.linkWrapper}>
-                                <a href="#">About project</a>
-                                <a href="#">Team</a>
-                                <a href="#">Partners</a>
+                                <button onClick={() => handleClick("AboutProject")}>About project</button>
+                                <button onClick={() => handleClick("Advisors")}>Team</button>
+                                <button onClick={() => handleClick("Partners")}>Partners</button>
                             </div>
 
                             <div className={styles.linkWrapper}>
-                                <a href="#">Road map</a>
-                                <a href="#">Community</a>
-                                <a href="#">FAQ</a>
+                                <button onClick={() => handleClick("RoadMap")}>Road map</button>
+                                <button onClick={() => handleClick("Community")}>Community</button>
+                                <button onClick={() => handleClick("FAQ")}>FAQ</button>
                             </div>
                         </div>
                     </div>

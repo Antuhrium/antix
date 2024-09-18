@@ -126,7 +126,7 @@ const TeamAdvisors = () => {
     ];
 
     return (
-        <div className={styles.teamContainer}>
+        <div className={styles.teamContainer} id='Advisors'>
             <div className={styles.buttons}>
                 <button 
                     onClick={() => setShowTeam(true)}
