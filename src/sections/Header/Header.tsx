@@ -22,6 +22,14 @@ const Header = () => {
             window.removeEventListener("scroll", handleScroll);
         };
     }, []);
+
+    const handleClick = (id: string) => {
+        const el = document.getElementById(id)
+        if (el) {
+            el.scrollIntoView({ behavior: "smooth" });
+        }
+    }
+
     return (
         <header className={`${styles.wrapper} ${isBlur ? styles.blur : ""}`}>
             <div
@@ -55,13 +63,13 @@ const Header = () => {
         </div> */}
                 <div className={styles.linksContainer}>
                     {links.map((link) => (
-                        <a
+                        <button
                             className={styles.link}
                             key={link.title}
-                            href={link.href}
+                            onClick={() => handleClick(link.href)}
                         >
                             {link.title}
-                        </a>
+                        </button>
                     ))}
                 </div>
             </div>

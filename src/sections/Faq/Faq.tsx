@@ -105,7 +105,7 @@ const FAQ = () => {
     };
 
     return (
-        <div className={styles.faqContainer}>
+        <div className={styles.faqContainer} id='FAQ'>
             <h2 className={styles.faqTitle}>FAQ</h2>
             <div className={styles.faqList}>
                 {faqData.map((item, index) => (

@@ -1,7 +1,32 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import styles from './Top10.module.scss';
+import Preview from "../../../assets/images/top10.png"
 
 const Top10: React.FC = () => {
+    const [isPaused, setIsPaused] = useState(true);
+    const videoRef = useRef<HTMLVideoElement | null>(null);
+
+    const handleVideoClick = () => {
+        const video = videoRef.current;
+        if (video) {
+          if (video.paused) {
+            video.play();
+            setIsPaused(false); // Когда видео воспроизводится, скрываем кнопку
+          } else {
+            video.pause();
+            setIsPaused(true); // Когда видео на паузе, показываем кнопку
+          }
+        }
+      };
+
+      const handlePause = () => {
+        setIsPaused(true); // Устанавливаем состояние паузы
+      };
+    
+      const handlePlay = () => {
+        setIsPaused(false); // Скрываем кнопку, когда видео играет
+      };
+
     return (
         <div className={styles.container}>
             <div className={styles.footer}>
@@ -18,23 +43,24 @@ const Top10: React.FC = () => {
                 
                 <div className={styles.videoContainer}>
                     <video
+                        ref={videoRef}
                         loop
                         muted
                         className={styles.backgroundVideo}
-                        onClick={(e) => {
-                            const video = e.currentTarget as HTMLVideoElement;
-                            if (video.paused) {
-                                video.play();
-                            } else {
-                                video.pause();
-                            }
-                        }}
+                        onClick={handleVideoClick}
+                        onPause={handlePause} // Обработчик паузы
+                        onPlay={handlePlay} 
                     >
                         <source src="/videos/bgvid.mp4" type="video/mp4" />
                     </video>
+                    {isPaused && (
+                        <div className={styles.videoPreview} onClick={handleVideoClick}>
+                            <img src={Preview} alt="Play" />
+                        </div>
+                    )}
                 </div>
 
-
+{/* 
                 <div className={styles.header}>
                     <div className={styles.icon}>
                         <img src="/top10/awards.png" alt="top10" />
@@ -48,7 +74,7 @@ const Top10: React.FC = () => {
                             </linearGradient>
                         </defs>
                     </svg>
-                </div>
+                </div> */}
             </div>
 
         </div>

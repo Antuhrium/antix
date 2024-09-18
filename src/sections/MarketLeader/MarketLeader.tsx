@@ -64,7 +64,7 @@ const MarketLeader = () => {
   }, [shownLogos, displayedLogos]);
 
   return (
-    <section className={styles.wrapper}>
+    <section className={styles.wrapper} id="Partners">
       <h4 className={styles.title}>From market leader serving</h4>
       <div className={styles.container}>
         {displayedLogos.map((url, index) => (

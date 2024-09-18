@@ -102,7 +102,7 @@ const TokenInfo = () => {
     }
 
     return (
-        <div className={styles.container}>
+        <div className={styles.container} id='AboutTokens'>
             <div className={styles.containerLeft}>
                 {TokenInfosLeft.map((tokenInfo, index) => (
                     <TokenInfoCard key={index} {...tokenInfo} />
