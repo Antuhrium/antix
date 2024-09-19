@@ -4,7 +4,10 @@ import FollowerCard from './FollowerCard';
 
 const JoinUs: React.FC = () => {
     return (
-        <div className={styles.joinUsContainer}>
+        <div className={styles.joinUsContainer} id='Community'>
+            <video className={styles.backgroundVideo} autoPlay muted loop>
+                <source src="/videos/join-us-bg.mp4" type="video/mp4" />
+            </video>
             <div className={styles.titleContainer}>
                 <h1 className={styles.title}>Join Us on Our Journey</h1>
                 <p className={styles.subtitle}>

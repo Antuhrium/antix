@@ -31,7 +31,7 @@ const PlatformToReplace = () => {
     //     return () => window.removeEventListener("resize", handleResize);
     // }, []);
     return (
-        <section className={styles.wrapper}>
+        <section className={styles.wrapper} id="AboutProject">
             <div className={styles.container}>
                 <div className={styles.description}>
                     <span>Reshaping a $300 billion industry.</span>

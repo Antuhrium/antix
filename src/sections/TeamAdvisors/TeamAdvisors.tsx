@@ -167,8 +167,8 @@ const TeamAdvisors = () => {
 
 
     return (
-        <div className={styles.teamContainer} id='Advisors'>
-            <section className={styles.team}>
+        <div className={styles.teamContainer}>
+            <section className={styles.team} id='Team'>
                 <h2 className={styles.sectionTitle}>Team</h2>
                 <p className={styles.sectionDescription}>
                     The team has a proven track record of <span>successfully managing business projects.</span> They bring significant experience and exceptional knowledge regarding digital humans & Web3 ventures at scale.
@@ -202,7 +202,7 @@ const TeamAdvisors = () => {
                 )}
             </section>
 
-            <section className={styles.advisors}>
+            <section className={styles.advisors} id='Advisors'>
                 <h2 className={styles.sectionTitle}>Advisors</h2>
                 <p className={styles.sectionDescription}>
                     Antix advisory team has a proven <span>ten-year track record</span> of successful investing, bringing significant business experience and exceptional knowledge of Web3 sector.

@@ -121,10 +121,13 @@
     width: 233px;
     height: 297.722px;
     padding: 1rem;
-    box-shadow:
-        inset 0 20px 20px -20px rgba(0, 0, 0, 1),
-        inset 0 -20px 20px -20px rgba(0, 0, 0, 0.7),
-        inset 0 0 40px rgba(0, 0, 0, 1.5);
+    // box-shadow:
+    //     inset 0 20px 20px -20px rgba(0, 0, 0, 1),
+    //     inset 0 -20px 20px -20px rgba(0, 0, 0, 0.7),
+    //     inset 0 0 40px rgba(0, 0, 0, 1.5);
+
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: inset 3em 3em 5em 3em rgba(0, 0, 0, 0.7);
 }
 
 
