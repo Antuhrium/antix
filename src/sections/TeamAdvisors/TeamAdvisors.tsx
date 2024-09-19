@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import styles from './TeamAdvisors.module.scss';
+import FadeIn from '../../components/FadeIn/FadeIn';
 
 interface PersonProps {
     image: string;
@@ -169,7 +170,9 @@ const TeamAdvisors = () => {
     return (
         <div className={styles.teamContainer}>
             <section className={styles.team} id='Team'>
-                <h2 className={styles.sectionTitle}>Team</h2>
+                <FadeIn direction='up' distance={"50%"}>
+                    <h2 className={styles.sectionTitle}>Team</h2>
+                </FadeIn>
                 <p className={styles.sectionDescription}>
                     The team has a proven track record of <span>successfully managing business projects.</span> They bring significant experience and exceptional knowledge regarding digital humans & Web3 ventures at scale.
                 </p>
@@ -203,7 +206,9 @@ const TeamAdvisors = () => {
             </section>
 
             <section className={styles.advisors} id='Advisors'>
-                <h2 className={styles.sectionTitle}>Advisors</h2>
+                <FadeIn direction='up' distance={"50%"}>
+                    <h2 className={styles.sectionTitle}>Advisors</h2>
+                </FadeIn>
                 <p className={styles.sectionDescription}>
                     Antix advisory team has a proven <span>ten-year track record</span> of successful investing, bringing significant business experience and exceptional knowledge of Web3 sector.
                 </p>

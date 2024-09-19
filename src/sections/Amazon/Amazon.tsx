@@ -7,35 +7,40 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/autoplay";
+import FadeIn from "../../components/FadeIn/FadeIn";
 
 const words = [
-    "digital twins",
     "clothes",
-    "accessories",
-    "gestures",
-    "skills",
-    "haircuts",
     "full outfits",
+    "gestures",
+    "accessories",
+    "skills",
+    "digital twins",
+    "voices",
     "languages",
-    "voices"
+    "haircuts",
 ];
 
 const Amazon = () => {
     return (
         <section className={styles.container}>
             <div className={styles.contentBg}>
-                <div className={styles.textWrapper}>
-                    <h3 className={styles.title}>
-                        Amazon of <br className={styles.separator} /> AI digital
-                        avatars
-                    </h3>
-                    <p className={styles.text}>
-                        Your digital twin, with all the unique features, belongs{" "}
-                        <br className={styles.separator} /> to you{" "}
-                        <span>as a unique NFT</span>, ready to tune, trade or
-                        rent.
-                    </p>
-                </div>
+                    <div className={styles.textWrapper}>
+                        <FadeIn direction="right" distance={"50%"}>
+                            <h3 className={styles.title}>
+                                Amazon of <br className={styles.separator} /> AI digital
+                                avatars
+                            </h3>
+                        </FadeIn>
+                        <FadeIn direction="right" distance={"50%"}>
+                            <p className={styles.text}>
+                                Your digital twin, with all the unique features, belongs{" "}
+                                <br className={styles.separator} /> to you{" "}
+                                <span>as a unique NFT</span>, ready to tune, trade or
+                                rent.
+                            </p>
+                        </FadeIn>
+                    </div>
             </div>
             <div className={styles.rightImgWrapper}>
                 <img
@@ -63,9 +68,9 @@ const Amazon = () => {
                         slidesPerView={3}
                         loop={true}
                         centeredSlides={true}
-                        autoplay={{ delay: 3000, disableOnInteraction: false }}
+                        autoplay={{ delay: 2000, disableOnInteraction: false }}
                         modules={[Autoplay]}
-                        allowTouchMove={false}
+                        // allowTouchMove={false}
                         className={styles.carousel}
                     >
                         {words.map((word) => (

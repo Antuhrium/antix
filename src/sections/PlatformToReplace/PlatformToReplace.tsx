@@ -42,7 +42,7 @@ const PlatformToReplace = () => {
                     slidesPerView={3}
                     loop={true}
                     centeredSlides={true}
-                    autoplay={{ delay: 3000, disableOnInteraction: false }}
+                    autoplay={{ delay: 2000, disableOnInteraction: false }}
                     modules={[Autoplay]}
                     allowTouchMove={false}
                     className={styles.carousel}

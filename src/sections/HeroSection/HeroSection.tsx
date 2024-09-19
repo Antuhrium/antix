@@ -7,6 +7,7 @@ import Discordlogo from "../../assets/svg/social-discord.svg"
 
 import { LoaderSvg } from "./ui/LoaderSvg/LoaderSvg";
 import { HeroTimer } from "./ui/HeroTimer/HeroTimer";
+import FadeIn from "../../components/FadeIn/FadeIn";
 // import PreDepositStage from "../PreDepositStage/PreDepositStage";
 
 const HeroSection = () => {
@@ -35,61 +36,67 @@ const HeroSection = () => {
       </div>
       <div className={styles.container}>
         <div className={styles.leftColumn}>
-          <h1 className={styles.title}>
-            Ready to be
-            <br />
-            <span>Replaced by AI?</span>
-          </h1>
-          <span className={styles.subtitle}>
-            The new era of AI-powered digital humans is here.
-          </span>
-          <p className={styles.description}>
-            Step in <b>$300 billion industry</b> with next-gen
-            <br /> digital twins for film, content, and beyond
-          </p>
-          <div className={styles.actions}>
-            {/* <button className={styles.button}>How it works?</button>
-            <a className={styles.linkButton} onClick={goToRoadmap}>
-              <span>Roadmap</span>
-              <svg
-                width="63"
-                height="16"
-                viewBox="0 0 63 16"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                {svgPath}
-              </svg>
-            </a> */}
-            <a className={styles.socialLink} href="https://x.com/antix_in" target="_blank">
-              <div className={styles.socialIcon}><img src={Xlogo} alt="X" /></div>
-              <span>43К</span>
-            </a>
-            <a className={styles.socialLink} href="https://t.me/antix_in" target="_blank">
-              <div className={styles.socialIcon}><img src={Tglogo} alt="Telegram" /></div>
-              <span>75К</span>
-            </a>
-            <a className={styles.socialLink} href="https://discord.com/invite/bKcMXChRRT" target="_blank">
-              <div className={styles.socialIcon}><img src={Discordlogo} alt="Discord" /></div>
-              <span>12К</span>
-            </a>
+          <FadeIn direction="right" distance="50%">
+            <h1 className={styles.title}>
+              Ready to be
+              <br />
+              <span>Replaced by AI?</span>
+            </h1>
+            <span className={styles.subtitle}>
+              The new era of AI-powered digital humans is here.
+            </span>
+            <p className={styles.description}>
+              Step in <b>$300 billion industry</b> with next-gen
+              <br /> digital twins for film, content, and beyond
+            </p>
+          </FadeIn>
+          <FadeIn direction="right" distance="50%" delay={0.4}>
+            <div className={styles.actions}>
+              {/* <button className={styles.button}>How it works?</button>
+              <a className={styles.linkButton} onClick={goToRoadmap}>
+                <span>Roadmap</span>
+                <svg
+                  width="63"
+                  height="16"
+                  viewBox="0 0 63 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  {svgPath}
+                </svg>
+              </a> */}
+              <a className={styles.socialLink} href="https://x.com/antix_in" target="_blank">
+                <div className={styles.socialIcon}><img src={Xlogo} alt="X" /></div>
+                <span>43К</span>
+              </a>
+              <a className={styles.socialLink} href="https://t.me/antix_in" target="_blank">
+                <div className={styles.socialIcon}><img src={Tglogo} alt="Telegram" /></div>
+                <span>75К</span>
+              </a>
+              <a className={styles.socialLink} href="https://discord.com/invite/bKcMXChRRT" target="_blank">
+                <div className={styles.socialIcon}><img src={Discordlogo} alt="Discord" /></div>
+                <span>12К</span>
+              </a>
 
-          </div>
+            </div>
+          </FadeIn>
         </div>
         <div className={styles.rightColumn}>
-          <div className={styles.timerWrapper}>
-            <div className={styles.timerWrapperTitle}>
-              <img src="/logo-small.svg" alt="Logo" />
-              ANTIX Presale
-            </div>
-            <div className={styles.timer}>
-              <span className={styles.title}>Coming Soon</span>
-              <div className={styles.loader}>
-                <LoaderSvg percent={percents} />
+          <FadeIn direction="left" distance="50%" delay={0.8}>
+            <div className={styles.timerWrapper}>
+              <div className={styles.timerWrapperTitle}>
+                <img src="/logo-small.svg" alt="Logo" />
+                ANTIX Presale
               </div>
-              <HeroTimer targetDate={new Date("2024-12-31T23:59:59")} />
+              <div className={styles.timer}>
+                <span className={styles.title}>Coming Soon</span>
+                <div className={styles.loader}>
+                  <LoaderSvg percent={percents} />
+                </div>
+                <HeroTimer targetDate={new Date("2024-12-31T23:59:59")} />
+              </div>
             </div>
-          </div>
+          </FadeIn>
         </div>
       </div>
     </section>
