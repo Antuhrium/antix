@@ -89,9 +89,10 @@
     padding: 2rem 0;
     padding-left: 2rem;
     scroll-behavior: smooth;
-    overflow-x: auto;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+    overflow-x: scroll;
+    // -ms-overflow-style: none;
+    // scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
 
     &::-webkit-scrollbar {
         display: none;

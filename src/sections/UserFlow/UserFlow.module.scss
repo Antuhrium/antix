@@ -17,11 +17,26 @@
     overflow-x: auto;
 }
 
+.mobileUserFlow {
+    display: none;
+
+    @media screen and (max-width: 768px) {
+        display: flex;
+        padding: 50px 16px;
+        justify-content: flex-start;
+        min-width: 508px; 
+    }
+}
+
 .userFlow {
     display: flex;
     justify-content: center;
     padding: 100px 200px;
     min-width: 1374px; 
+
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
 }
 
 .userFlowLegend {

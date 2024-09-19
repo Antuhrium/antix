@@ -56,7 +56,7 @@ const RoadMap = () => {
     },
     {
       icon: circleIcon,
-      title: "Mockup (Motion Capture)"
+      title: "Moo-cup (Motion Capture)"
     },
     {
       icon: circleIcon,

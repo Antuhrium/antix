@@ -47,7 +47,7 @@ const Footer = () => {
                             </div>
                             <div className={styles.linkWrapper}>
                                 <button onClick={() => handleClick("AboutProject")}>About project</button>
-                                <button onClick={() => handleClick("Advisors")}>Team</button>
+                                <button onClick={() => handleClick("Team")}>Team</button>
                                 <button onClick={() => handleClick("Partners")}>Partners</button>
                             </div>
 
