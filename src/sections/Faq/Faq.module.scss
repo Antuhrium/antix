@@ -121,6 +121,7 @@
             font-weight: 600;
             line-height: 120%;
         }
+
     }
 }
 
@@ -155,6 +156,10 @@
     padding: 0 2rem;
     opacity: 0;
     transition: opacity 0.3s ease;
+
+    @media (max-width: 768px) {
+        padding: 0 2rem;
+    }
 }
 
 .faqItem.open {
