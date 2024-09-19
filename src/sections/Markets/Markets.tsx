@@ -61,8 +61,9 @@ const ListItem = ({ item, isOpen, setIsOpen }: ListItemProps) => {
         </div>
         <p className={styles.mobileItemText}>{item.text}</p>
       </div>
-      <div className={`${styles.itemArrow} ${isActive ? styles.openArrow : ""}`}>
+      <div className={styles.itemArrow}>
         <img
+            className={isActive ? styles.openArrow : ""}
           src={ArrowIcon}
           alt="Arrow Down"
         />

@@ -44,6 +44,7 @@
     height: 100%;
     object-fit: cover;
     z-index: 0;
+    padding-bottom: 2px;
 
     @media (max-width: 768px) {
         display: none;
