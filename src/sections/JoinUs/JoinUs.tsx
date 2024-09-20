@@ -20,17 +20,17 @@ const JoinUs: React.FC = () => {
             <div className={styles.cardsContainer}>
                 <div className={styles.cardTopLeft}>
                     <FadeIn direction='up' distance={"50%"} delay={0.2}>
-                        <FollowerCard platform="x" link='https://x.com/antix_in' handle="@antix" followers={44000} />
+                        <FollowerCard platform="x" link='https://x.com/antix_in' handle="@antix" followers={40900} />
                     </FadeIn>
                 </div>
                 <div className={styles.cardBottomCenter}>
                     <FadeIn direction='up' distance={"50%"} delay={0.4}>
-                        <FollowerCard platform="discord" link="https://discord.com/invite/bKcMXChRRT" handle="@antix" followers={12000} />
+                        <FollowerCard platform="discord" link="https://discord.com/invite/bKcMXChRRT" handle="@antix" followers={2015} />
                     </FadeIn>
                 </div>
                 <div className={styles.cardTopRight}>
                     <FadeIn direction='up' distance={"50%"} delay={0.6}>
-                        <FollowerCard platform="telegram" link="https://t.me/antix_in" handle="@antix" followers={75000} />
+                        <FollowerCard platform="telegram" link="https://t.me/antix_in" handle="@antix" followers={65819} />
                     </FadeIn>
                 </div>
             </div>
