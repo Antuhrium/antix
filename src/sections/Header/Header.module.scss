@@ -157,15 +157,21 @@
         order: 3;
         flex-direction: row;
         flex: 35%;
+        gap: 0;
         border-radius: 70px;
         .link {
           width: 100%;
           font-size: 18px;
           line-height: 70px;
           border-bottom: none;
+          border-radius: 0;
           &:hover {
           }
+          &:first-child {
+            border-radius: 70px 0 0 70px;
+          }
           &:last-child {
+            border-radius: 0 70px 70px 0;
           }
         }
       }
@@ -209,6 +215,8 @@
         flex: 35%;
         .link {
           font-size: 20px;
+          line-height: 57px;
+          cursor: pointer;
           &:hover {
           }
           &:last-child {
