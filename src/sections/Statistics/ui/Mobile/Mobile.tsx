@@ -16,10 +16,23 @@ import StickIcon from "../../../../assets/svg/statistics/stick.svg";
 import DollarIcon from "../../../../assets/svg/statistics/dollar.svg";
 import ArrovButtom from "../../../../assets/svg/statistics/arrovButtom.svg";
 import Icon15m from "../../../../assets/svg/statistics/15m.svg";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { ImgBox } from "./ui/ImgBox/ImgBox";
 
 export const Mobile = () => {
   const [isHidden, setIsHidden] = useState(true);
+  const divRef = useRef<HTMLDivElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (divRef.current && contentRef.current) {
+      if (isHidden) {
+        divRef.current.style.height = "0px";
+      } else {
+        divRef.current.style.height = `${contentRef.current.offsetHeight}px`;
+      }
+    }
+  }, [isHidden]);
 
   return (
     <>
@@ -34,109 +47,113 @@ export const Mobile = () => {
             </p>
           </div>
         </div>
-        <div
-          className={`${styles.content} ${isHidden ? styles.isHidden : null}`}
-        >
-          <div>
-            <img src={img5} />
-            <img src={img8} />
-          </div>
-          <div>
+        <div ref={divRef}>
+          <div ref={contentRef} className={styles.content}>
+            <div>
+              <ImgBox src={img5} className={styles.imgBox} />
+              <ImgBox src={img8} className={styles.imgBox} />
+            </div>
             <div>
               <div>
-                <span>$100K</span>
-                <img src={StickIcon} alt="" />
-                <span>$500K</span>
+                <div>
+                  <span>$100K</span>
+                  <img src={StickIcon} alt="" />
+                  <span>$500K</span>
+                </div>
+                <p>
+                  <b>Cost of Pre-Antix digital characters:</b> Ultra-realistic
+                  digital characters cost $100K-$500K, weeks of production time.
+                </p>
               </div>
-              <p>
-                <b>Cost of Pre-Antix digital characters:</b> Ultra-realistic
-                digital characters cost $100K-$500K, weeks of production time.
-              </p>
-            </div>
-          </div>
-          <div>
-            <div>
-              <img src={Percent50} alt="50%" />
-              <p>
-                <b>Adoption in Gaming and VR/AR Industries:</b> 40% of new games
-                and 50% of VR content to feature digital humans by 2025.
-              </p>
-            </div>
-          </div>
-          <div>
-            <img src={img1} />
-          </div>
-          <div>
-            <img src={img3} />
-          </div>
-          <div>
-            <div>
-              <p>
-                <b>Yearly market growth:</b> $10B in 2023, projected to $30B by
-                2030, 20% CAGR.
-              </p>
-              <img src={Percent20} alt="20%" />
-            </div>
-          </div>
-          <div>
-            <div>
-              <img src={Icon15m} alt="" />
-              <p>
-                <b>Virtual influencers market growth:</b> $15B market by 2025,
-                triple the engagement of human.
-              </p>
             </div>
             <div>
-              <img src={DollarIcon} />
+              <div>
+                <img src={Percent50} alt="50%" />
+                <p>
+                  <b>Adoption in Gaming and VR/AR Industries:</b> 40% of new
+                  games and 50% of VR content to feature digital humans by 2025.
+                </p>
+              </div>
             </div>
-          </div>
-          <div>
             <div>
-              <img src={Percent90} alt="90%" />
-              <p>
-                <b>Production cost and time reduction:</b> Antix cuts digital
-                human creation time from weeks to hours, costs down by 90%.
-              </p>
+              <ImgBox src={img1} className={styles.imgBox} />
             </div>
-          </div>
-          <div>
-            <img src={img4} />
-          </div>
-          <div>
-            <img src={img6} />
-          </div>
-          <div>
-            <img src={img7} />
+            <div>
+              <ImgBox src={img3} className={styles.imgBox} />
+            </div>
+            <div>
+              <div>
+                <p>
+                  <b>Yearly market growth:</b> $10B in 2023, projected to $30B
+                  by 2030, 20% CAGR.
+                </p>
+                <img src={Percent20} alt="20%" />
+              </div>
+            </div>
+            <div>
+              <div>
+                <img src={Icon15m} alt="" />
+                <p>
+                  <b>Virtual influencers market growth:</b> $15B market by 2025,
+                  triple the engagement of human.
+                </p>
+              </div>
+              <div>
+                <ImgBox
+                  src={DollarIcon}
+                  className={styles.imgBox}
+                  style={{ backgroundSize: "contain" }}
+                />
+              </div>
+            </div>
+            <div>
+              <div>
+                <img src={Percent90} alt="90%" />
+                <p>
+                  <b>Production cost and time reduction:</b> Antix cuts digital
+                  human creation time from weeks to hours, costs down by 90%.
+                </p>
+              </div>
+            </div>
+            <div>
+              <ImgBox src={img4} className={styles.imgBox} />
+            </div>
+            <div>
+              <ImgBox src={img6} className={styles.imgBox} />
+            </div>
+            <div>
+              <ImgBox src={img7} className={styles.imgBox} />
+            </div>
           </div>
         </div>
+        <div className={styles.action}>
+          {isHidden ? (
+            <button
+              className={styles.btn}
+              onClick={() => setIsHidden((oldState) => !oldState)}
+            >
+              Read more{" "}
+              <span>
+                <img src={ArrovButtom} alt="" />
+              </span>
+            </button>
+          ) : (
+            <button
+              className={styles.btn}
+              onClick={() => setIsHidden((oldState) => !oldState)}
+            >
+              Hide Details{" "}
+              <span>
+                <img
+                  src={ArrovButtom}
+                  alt=""
+                  style={{ transform: "rotate(180deg)" }}
+                />
+              </span>
+            </button>
+          )}
+        </div>
       </section>
-      <div className={styles.action}>
-        {isHidden ? (
-          <button
-            className={styles.btn}
-            onClick={() => setIsHidden((oldState) => !oldState)}
-          >
-            Read more{" "}
-            <span>
-              <img src={ArrovButtom} alt="" />
-            </span>
-          </button>
-        ) : (
-          <button
-            className={styles.btn}
-            onClick={() => setIsHidden((oldState) => !oldState)}
-          >
-            Hide Details{" "}
-            <span>
-              <img
-                src={ArrovButtom}
-                alt=""
-                style={{ transform: "rotate(180deg)" }}
-              />
-            </span>
-          </button>
-        )}
-      </div>
     </>
   );
 };
