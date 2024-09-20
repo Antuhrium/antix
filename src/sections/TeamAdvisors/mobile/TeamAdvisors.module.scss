@@ -74,6 +74,7 @@
     overflow: hidden;
     position: relative;
     width: 100%;
+    -webkit-overflow-scrolling: touch;
 }
 
 .teamGrid, 
@@ -89,7 +90,8 @@
     overflow-x: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
-
+    -webkit-overflow-scrolling: touch;
+    
     &::-webkit-scrollbar {
         display: none;
     }
