@@ -10,13 +10,13 @@ const words = [
     "Personal Assistants",
     "influencers",
     "Fitness Instructors",
-    "TV hosts",
     "Game Characters",
     "Pop singers",
     "Virtual Companions",
-    "customer support agents",
     "Event Hosts",
     "Brand Ambassadors",
+    "TV hosts",
+    "customer support agents",
 ];
 
 const PlatformToReplace = () => {
@@ -42,9 +42,9 @@ const PlatformToReplace = () => {
                     slidesPerView={3}
                     loop={true}
                     centeredSlides={true}
-                    autoplay={{ delay: 3000, disableOnInteraction: false }}
+                    autoplay={{ delay: 2000, disableOnInteraction: false }}
                     modules={[Autoplay]}
-                    // allowTouchMove={false}
+                    allowTouchMove={false}
                     className={styles.carousel}
                 >
                     {words.map((word) => (

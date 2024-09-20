@@ -5,15 +5,51 @@
 export const links = [
   {
     title: "Team",
-    href: "Advisors",
+    href: "Team",
   },
   {
     title: "Whitepaper",
-    href: "/",
+    href: "AboutTokens",
   },
   {
     title: "Contacts",
     href: "Footer",
+  },
+];
+
+
+export const burgerLinks = [
+  {
+    title: "About",
+    href: "AboutProject",
+  },
+  {
+    title: "Roadmap",
+    href: "RoadMap",
+  },
+  {
+    title: "Whitepaper",
+    href: "AboutTokens",
+  },
+  {
+    title: "Tokenomics",
+    href: "Tokenomics",
+  },
+  {
+    title: "Team",
+    href: "Advisors",
+  },
+  {
+    title: "Advisors",
+    href: "Advisors",
+  },
+  {
+    title: "FAQ",
+    href: "FAQ",
+  },
+  {
+    title: "Community",
+    href: "Community",
   },
 ];
 

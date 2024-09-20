@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
 import styles from "./Header.module.scss";
-import { links } from "./mocdata";
+import { burgerLinks, links } from "./mocdata";
 import { BurgerButton } from "./ui/BurgerButton/BurgerButton";
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isBlur, setIsBlur] = useState(false);
+
+    const [link] = useState(window.innerWidth < 786 ? burgerLinks : links) 
 
     useEffect(() => {
         const handleScroll = () => {
@@ -26,7 +28,8 @@ const Header = () => {
     const handleClick = (id: string) => {
         const el = document.getElementById(id)
         if (el) {
-            el.scrollIntoView({ behavior: "smooth" });
+            el.scrollIntoView({ behavior: "smooth", block: "center" });
+            setIsOpen(false)
         }
     }
 
@@ -62,7 +65,7 @@ const Header = () => {
           ))}
         </div> */}
                 <div className={styles.linksContainer}>
-                    {links.map((link) => (
+                    {link.map((link) => (
                         <button
                             className={styles.link}
                             key={link.title}

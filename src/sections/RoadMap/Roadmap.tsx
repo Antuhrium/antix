@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import styles from './RoadMap.module.scss';
+import FadeIn from '../../components/FadeIn/FadeIn';
 
 const circleIcon = (<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 12 12" fill="none">
   <circle cx="6" cy="6" r="5.5" stroke="#12FFF1"/>
@@ -86,7 +87,9 @@ const RoadMap = () => {
 
   return (
     <div className={styles.roadMap} id='RoadMap'>
-      <h1 className={styles.title}>Road Map</h1>
+      <FadeIn direction='up' distance={"50%"}>
+        <h1 className={styles.title}>Road Map</h1>
+      </FadeIn>
       <div className={styles.roadMapContent}>
         <div className={styles.test}>
           <div

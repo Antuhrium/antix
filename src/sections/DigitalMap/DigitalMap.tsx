@@ -7,6 +7,7 @@ import Point4 from "../../assets/svg/map/location-4.svg";
 import Point5 from "../../assets/svg/map/location-5.svg";
 
 import VideoImg from "../../assets/images/map-avatar.png";
+import FadeIn from "../../components/FadeIn/FadeIn";
 
 const PlayIcon = () => {
     return (
@@ -50,22 +51,28 @@ const DigitalMap = () => {
                 href="https://www.youtube.com/watch?v=lYHnSGHx4ig"
                 target="_blank"
             >
-                <img src={Point1} alt="" draggable={false} />
+                <FadeIn delay={0} direction="right" distance={"50%"}>
+                    <img src={Point1} alt="" draggable={false} />
 
-                <div className={styles.videoWrapper}>
-                    <img src={VideoImg} alt="" draggable={false} />
-                    <div className={styles.play}>
-                        <PlayIcon />
+                    <div className={styles.videoWrapper}>
+                        <img src={VideoImg} alt="" draggable={false} />
+                        <div className={styles.play}>
+                            <PlayIcon />
+                        </div>
                     </div>
-                </div>
+                </FadeIn>
             </a>
 
             <div className={styles.point2}>
-                <img src={Point2} alt="" draggable={false} />
+                <FadeIn delay={0} direction="up" distance={"50%"}>
+                    <img src={Point2} alt="" draggable={false} />
+                </FadeIn>
             </div>
 
             <div className={styles.point3}>
-                <img src={Point3} alt="" draggable={false} />
+                <FadeIn delay={0} direction="up" distance={"50%"}>
+                    <img src={Point3} alt="" draggable={false} />
+                </FadeIn>
             </div>
 
             <a
@@ -73,14 +80,16 @@ const DigitalMap = () => {
                 href="https://www.youtube.com/watch?v=lYHnSGHx4ig"
                 target="_blank"
             >
-                <img src={Point4} alt="" draggable={false} />
+                <FadeIn delay={0} direction="right" distance={"50%"}>
+                    <img src={Point4} alt="" draggable={false} />
 
-                <div className={styles.videoWrapper}>
-                    <img src={VideoImg} alt="" draggable={false} />
-                    <div className={styles.play}>
-                        <PlayIcon />
+                    <div className={styles.videoWrapper}>
+                        <img src={VideoImg} alt="" draggable={false} />
+                        <div className={styles.play}>
+                            <PlayIcon />
+                        </div>
                     </div>
-                </div>
+                </FadeIn>
             </a>
 
             <a
@@ -88,14 +97,16 @@ const DigitalMap = () => {
                 href="https://www.youtube.com/watch?v=lYHnSGHx4ig"
                 target="_blank"
             >
-                <img src={Point5} alt="" draggable={false} />
+                <FadeIn delay={0} direction="left" distance={"50%"}>
+                    <img src={Point5} alt="" draggable={false} />
 
-                <div className={styles.videoWrapper}>
-                    <img src={VideoImg} alt="" draggable={false} />
-                    <div className={styles.play}>
-                        <PlayIcon />
+                    <div className={styles.videoWrapper}>
+                        <img src={VideoImg} alt="" draggable={false} />
+                        <div className={styles.play}>
+                            <PlayIcon />
+                        </div>
                     </div>
-                </div>
+                </FadeIn>
             </a>
         </section>
     );

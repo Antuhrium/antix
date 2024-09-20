@@ -49,7 +49,7 @@ const MarketLeader = () => {
           { scale: 0.9 },
           {
             scale: 1,
-            duration: 0.2,
+            duration: 0.6,
             onComplete: () => {
               if (logoRef) {
                 logoRef.src = newLogo;
@@ -58,7 +58,7 @@ const MarketLeader = () => {
           }
         );
       }
-    }, 1000);
+    }, 1500);
 
     return () => clearInterval(interval);
   }, [shownLogos, displayedLogos]);

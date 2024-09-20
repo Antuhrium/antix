@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './TokenInfo.module.scss';
+import FadeIn from '../../components/FadeIn/FadeIn';
 
 interface PersonProps {
     backgroundImage: string;
@@ -103,11 +104,13 @@ const TokenInfo = () => {
 
     return (
         <div className={styles.container} id='AboutTokens'>
-            <div className={styles.containerLeft}>
-                {TokenInfosLeft.map((tokenInfo, index) => (
-                    <TokenInfoCard key={index} {...tokenInfo} />
-                ))}
-            </div>
+            <FadeIn direction='right' distance={"50%"}>
+                <div className={styles.containerLeft}>
+                    {TokenInfosLeft.map((tokenInfo, index) => (
+                        <TokenInfoCard key={index} {...tokenInfo} />
+                    ))}
+                </div>
+            </FadeIn>
 
             <div className={styles.containerCenter}>
                 <div className={styles.mark}>
@@ -131,11 +134,13 @@ const TokenInfo = () => {
                 </div>
             </div>
 
-            <div className={styles.containerRight}>
-                {TokenInfosRight.map((tokenInfo, index) => (
-                    <TokenInfoCard key={index} {...tokenInfo} />
-                ))}
-            </div>
+            <FadeIn direction='left' distance={"50%"}>
+                <div className={styles.containerRight}>
+                    {TokenInfosRight.map((tokenInfo, index) => (
+                        <TokenInfoCard key={index} {...tokenInfo} />
+                    ))}
+                </div>
+            </FadeIn>
         </div>
     );
 };

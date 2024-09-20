@@ -3,6 +3,7 @@ import styles from "./Markets.module.scss";
 
 import HeadImg from "../../assets/images/markets-img.png";
 import ArrowIcon from "../../assets/svg/markets/arrow-icon.svg";
+import FadeIn from "../../components/FadeIn/FadeIn";
 
 const leftList = [
     {
@@ -78,9 +79,11 @@ const Markets = () => {
     return (
         <section className={styles.container}>
             <div className={styles.content}>
-                <h3 className={styles.title}>
-                    Antix digital people are replacing humans in
-                </h3>
+                <FadeIn direction="up" distance={"100%"}>
+                    <h3 className={styles.title}>
+                        Antix digital people are replacing humans in
+                    </h3>
+                </FadeIn>
                 <div className={styles.wrapper}>
                     <div className={styles.list}>
                         {leftList.map((item) => (

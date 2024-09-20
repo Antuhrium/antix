@@ -100,11 +100,13 @@
 .textWrapper {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    // align-items: center;
     gap: 8px;
 }
 
 .itemName {
+    margin-left: 5px;
+    
     width: fit-content;
     font-family: "Space Groteskin", sans-serif;
     font-size: 40px;
