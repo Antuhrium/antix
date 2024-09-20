@@ -63,15 +63,15 @@ const HeroSection = () => {
             </a> */}
             <a className={styles.socialLink} href="https://x.com/antix_in" target="_blank">
               <div className={styles.socialIcon}><img src={Xlogo} alt="X" /></div>
-              <span>43К</span>
+              <span>40.9К</span>
             </a>
             <a className={styles.socialLink} href="https://t.me/antix_in" target="_blank">
               <div className={styles.socialIcon}><img src={Tglogo} alt="Telegram" /></div>
-              <span>75К</span>
+              <span>65.8К</span>
             </a>
             <a className={styles.socialLink} href="https://discord.com/invite/bKcMXChRRT" target="_blank">
               <div className={styles.socialIcon}><img src={Discordlogo} alt="Discord" /></div>
-              <span>12К</span>
+              <span>2К</span>
             </a>
 
           </div>
