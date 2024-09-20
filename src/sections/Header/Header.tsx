@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import styles from "./Header.module.scss";
 import { burgerLinks, links } from "./mocdata";
 import { BurgerButton } from "./ui/BurgerButton/BurgerButton";
@@ -7,7 +7,33 @@ const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isBlur, setIsBlur] = useState(false);
 
-    const [link] = useState(window.innerWidth < 786 ? burgerLinks : links) 
+    const getLinks = useCallback(() => {
+        return window.innerWidth < 992 ? burgerLinks : links;
+    }, []);
+
+    const [link, setLink] = useState(getLinks);
+
+    useEffect(() => {
+        const handleResize = () => {
+            const updatedLinks = getLinks();
+            setLink((prevLink) => {
+                if (prevLink !== updatedLinks) {
+                    return updatedLinks;
+                }
+                return prevLink;
+            });
+        };
+
+        window.addEventListener("resize", handleResize);
+
+        handleResize();
+
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, [getLinks]);
+
+    useEffect(() => {}, []);
 
     useEffect(() => {
         const handleScroll = () => {

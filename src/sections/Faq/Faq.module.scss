@@ -63,6 +63,8 @@
     padding: 20px;
     width: 100%;
 
+    transition: all 0.3s ease, padding 0.3s ease;
+
     @media (max-width: 768px) {
         padding: 0;
     }

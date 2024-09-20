@@ -27,6 +27,8 @@
     &.isOpen {
       height: 100vh;
       transition: all 1s;
+      backdrop-filter: blur(22px);
+      background-color: rgba(0, 0, 0, 0.3);
     }
     .burgerBtn {
       position: absolute;

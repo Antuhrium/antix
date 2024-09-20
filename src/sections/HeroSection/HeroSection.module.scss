@@ -375,6 +375,7 @@
 @media (min-width: 992px) {
   .wrapper {
     background: none;
+
     .videoWrapper {
       position: absolute;
       top: 0;
@@ -383,6 +384,8 @@
       height: 100vh;
       z-index: 0;
       overflow: hidden;
+
+      opacity: 0.2;
     
       &::after {
         content: "";

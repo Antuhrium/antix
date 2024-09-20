@@ -11,7 +11,7 @@ export const whyData: WhyItemType[] = [
     index: 1,
   },
   {
-    boldText: "Secure ownership via blockchain",
+    boldText: "True IP ownership with a blockchain",
     text: "Your avatars are protected and owned through NFTs, fully tradable and secure.",
     index: 2,
   },
