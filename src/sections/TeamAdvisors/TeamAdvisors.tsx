@@ -210,7 +210,7 @@ const TeamAdvisors = () => {
                     <h2 className={styles.sectionTitle}>Advisors</h2>
                 </FadeIn>
                 <p className={styles.sectionDescription}>
-                    Antix advisory team has a proven <span>ten-year track record</span> of successful investing, bringing significant business experience and exceptional knowledge of Web3 sector.
+                    The Antix advisory team brings <span>80 years of combined experience</span> in successful investing, offering deep business expertise and exceptional knowledge of the Web3 sector.
                 </p>
                 <div className={styles.advisor}>
                     {advisors.map((advisor, index) => (

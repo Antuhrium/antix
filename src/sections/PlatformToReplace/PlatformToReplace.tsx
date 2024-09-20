@@ -10,13 +10,13 @@ const words = [
     "Personal Assistants",
     "influencers",
     "Fitness Instructors",
+    "TV hosts",
     "Game Characters",
     "Pop singers",
     "Virtual Companions",
+    "support agents",
     "Event Hosts",
     "Brand Ambassadors",
-    "TV hosts",
-    "customer support agents",
 ];
 
 const PlatformToReplace = () => {

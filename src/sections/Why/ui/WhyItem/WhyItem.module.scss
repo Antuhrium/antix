@@ -9,8 +9,10 @@
   backdrop-filter: blur(10px);
   display: flex;
   flex-direction: column;
+  // align-items: center;
+  justify-content: center;
   gap: 12px;
-  padding: 24px 30px;
+  padding: 0 30px;
   &:nth-child(2) {
     // margin-top: 80px;
     align-self: flex-end;
@@ -20,13 +22,15 @@
   }
 
   .title {
+    max-width: 296px;
+
     font-family: "Inter Tight", sans-serif;
     font-size: 18px;
     font-weight: 700;
     line-height: 25.2px;
     text-align: left;
     color: #f0f0f0;
-    text-wrap: nowrap;
+    // text-wrap: nowrap;
   }
   .desc {
     max-width: 260px;
@@ -130,6 +134,7 @@
     }
 
     .title {
+      max-width: 396px;
       text-wrap: wrap;
       font-size: 26.5px;
       font-weight: 700;
