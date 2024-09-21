@@ -1,11 +1,12 @@
-import { useCallback } from "react";
-import { Mobile } from "./ui/Mobile/Mobile";
-import { Desktop } from "./ui/Desktop/Desktop";
+// import { useCallback } from "react";
+// import { Mobile } from "./ui/Mobile/Mobile";
+import { DesktopNew } from "./ui/DesktopNew/DesktopNew";
 
 const Statistics = () => {
-  const isMobile = useCallback(() => window.innerWidth <= 992, []);
-  if (isMobile()) return <Mobile />;
-  return <Desktop />;
+  // const isMobile = useCallback(() => window.innerWidth <= 992, []);
+  return <DesktopNew />;
+  // if (isMobile()) return <Mobile />;
+  // return <DesktopNew />;
 };
 
 export default Statistics;
