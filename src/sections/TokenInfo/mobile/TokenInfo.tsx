@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './TokenInfo.module.scss';
 
 interface PersonProps {
@@ -38,7 +38,9 @@ const TokenInfoCard: React.FC<PersonProps> = ({ backgroundImage, image, title, b
 );
 
 const TokenInfo = () => {
-    const TokenInfosLeft = [
+
+    const [showAll, setShowAll] = useState(false);
+    const allTokenInfos = [
         {
             backgroundImage: '/tokeninfo/bg.png',
             image: '/tokeninfo/sub.png',
@@ -63,9 +65,6 @@ const TokenInfo = () => {
             description: 'Shape the future with ANTIX.',
             boldFirst: false,
         },
-    ];
-
-    const TokenInfosRight = [
         {
             backgroundImage: '/tokeninfo/bg.png',
             image: '/tokeninfo/asset.png',
@@ -90,7 +89,7 @@ const TokenInfo = () => {
             description: 'your digital assets in the marketplace.',
             boldFirst: true,
         },
-    ]
+    ];
 
     const handleWhitepaper = () => {
         window.open('https://docs.google.com/document/d/1MUKsG4wRnH_TPJUsxytRzHjXMu0DKzNU/edit?rtpof=true&sd=true');
@@ -98,6 +97,10 @@ const TokenInfo = () => {
 
     const handleAudit = () => {
         window.open('https://antix.io/audit.pdf', '_blank');
+    }
+
+    const handleShowAll = () => {
+        setShowAll(!showAll);
     }
 
     return (
@@ -120,12 +123,25 @@ const TokenInfo = () => {
             </div>
 
             <div className={styles.gridWrapper}>
-                <div className={styles.infosGrid}>
-                    {[...TokenInfosLeft, ...TokenInfosRight].map((tokenInfo, index) => (
-                        <TokenInfoCard key={index} {...tokenInfo} />
-                    ))}
+                <div className={`${styles.infosGrid} ${showAll ? styles.showAll : ''}`}>
+                    {showAll
+                        ? allTokenInfos.map((tokenInfo, index) => (
+                            <TokenInfoCard key={index} {...tokenInfo} />
+                        ))
+                        : <TokenInfoCard {...allTokenInfos[0]} />
+                    }
                 </div>
             </div>
+
+            {!showAll ? (
+                <button className={styles.showAllButton} onClick={handleShowAll}>
+                    Show All
+                </button>
+            ) : (
+                <button className={styles.showAllButton} onClick={handleShowAll}>
+                    Show Less
+                </button>
+            )}
         </div>
     );
 };
