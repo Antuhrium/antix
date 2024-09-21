@@ -2,6 +2,10 @@
     position: relative;
     width: 100%;
     background: var(--white-head-text, rgba(240, 240, 240, 1));
+    background-image: url("/tokenomics-bg.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
 }
 
 .container {

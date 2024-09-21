@@ -1,7 +1,4 @@
 import styles from "./TokenomicsSection.module.scss";
-
-// import RightBg from "../../../assets/svg/tokenomics-right-bg.svg";
-// import LeftBg from "../../../assets/svg/tokenomics-left-bg.svg";
 import PieChartComponent from "../../../components/PieChart/mobile/PieChart";
 
 const TokenomicsSection = () => {
@@ -18,18 +15,6 @@ const TokenomicsSection = () => {
                     <PieChartComponent />
                 </div>
             </div>
-            {/* <img
-                src={RightBg}
-                alt=""
-                className={styles.rightBg}
-                draggable={false}
-            />
-            <img
-                src={LeftBg}
-                alt=""
-                className={styles.leftBg}
-                draggable={false}
-            /> */}
         </section>
     );
 };
