@@ -1,13 +1,17 @@
-import { AllHTMLAttributes } from "react";
+import { AllHTMLAttributes, forwardRef } from "react";
 import styles from "./ImgBox.module.scss";
 
-export const ImgBox = (props: AllHTMLAttributes<HTMLDivElement>) => {
+export const ImgBox = forwardRef<
+  HTMLDivElement,
+  AllHTMLAttributes<HTMLDivElement>
+>((props, ref) => {
   const { src, style, className, ...otherProps } = props;
   return (
     <div
-      className={`${styles.wrapper} ${className}`}
       {...otherProps}
+      ref={ref}
+      className={`${styles.wrapper} ${className}`}
       style={{ ...style, backgroundImage: `url(${src})` }}
     />
   );
-};
+});

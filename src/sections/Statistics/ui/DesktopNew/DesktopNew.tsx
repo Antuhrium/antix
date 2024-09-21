@@ -18,6 +18,7 @@ import Icon15m from "../../../../assets/svg/statistics/15m.svg";
 import ArrovButtom from "../../../../assets/svg/statistics/arrovButtom.svg";
 import { ImgBox } from "../Mobile/ui/ImgBox/ImgBox";
 import { useRef, useState } from "react";
+import { FadeInNew } from "../../../../components/FadeInNew/FadeInNew";
 
 export const DesktopNew = () => {
   // Состояние для управления высотой элемента
@@ -46,29 +47,12 @@ export const DesktopNew = () => {
     <>
       <section className={styles.wrapperNew}>
         <div className={styles.vitrin}>
-          <div>
-            <ImgBox src={img2} className={styles.imgBox} />
-          </div>
-          <div>
-            <div>
-              <span>100M+</span>
-              <p>
-                <b>Antix digital humans:</b> Seen by 100M+ viewers globally
-                across films, marketing, and games.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div
-          ref={collapsedRef}
-          className={`${styles.hiddenWrapper} ${
-            isCollapsed ? styles.collapsed : ""
-          }`}
-        >
-          <div ref={contentRef} className={styles.content}>
+          <FadeInNew direction="left" distance={"50%"}>
             <div>
               <ImgBox src={img2} className={styles.imgBox} />
             </div>
+          </FadeInNew>
+          <FadeInNew direction="right" distance={"50%"}>
             <div>
               <div>
                 <span>100M+</span>
@@ -78,83 +62,135 @@ export const DesktopNew = () => {
                 </p>
               </div>
             </div>
-            <div>
-              <ImgBox src={img5} className={styles.imgBox} />
-            </div>
-            <div>
-              <ImgBox src={img8} className={styles.imgBox} />
-            </div>
-            <div>
+          </FadeInNew>
+        </div>
+        <div
+          ref={collapsedRef}
+          className={`${styles.hiddenWrapper} ${
+            isCollapsed ? styles.collapsed : ""
+          }`}
+        >
+          <div ref={contentRef} className={styles.content}>
+            <FadeInNew direction="right" distance={"50%"}>
+              <div>
+                <ImgBox src={img2} className={styles.imgBox} />
+              </div>
+            </FadeInNew>
+            <FadeInNew direction="left" distance={"50%"}>
               <div>
                 <div>
-                  <span>$100K</span>
-                  <img src={StickIcon} alt="" />
-                  <span>$500K</span>
+                  <span>100M+</span>
+                  <p>
+                    <b>Antix digital humans:</b> Seen by 100M+ viewers globally
+                    across films, marketing, and games.
+                  </p>
                 </div>
-                <p>
-                  <b>Cost of Pre-Antix digital characters:</b> Ultra-realistic
-                  digital characters cost $100K-$500K, weeks of production time.
-                </p>
               </div>
-            </div>
-            <div>
+            </FadeInNew>
+            <FadeInNew direction="right" distance={"50%"}>
               <div>
-                <img src={Percent50} alt="50%" />
-                <p>
-                  <b>Adoption in Gaming and VR/AR Industries:</b> 40% of new
-                  games and 50% of VR content to feature digital humans by 2025.
-                </p>
+                <ImgBox src={img5} className={styles.imgBox} />
               </div>
-            </div>
-            <div>
-              <ImgBox src={img1} className={styles.imgBox} />
-            </div>
-            <div>
-              <ImgBox src={img3} className={styles.imgBox} />
-            </div>
-            <div>
+            </FadeInNew>
+            <FadeInNew direction="left" distance={"50%"}>
               <div>
-                <p>
-                  <b>Yearly market growth:</b> $10B in 2023, projected to $30B
-                  by 2030, 20% CAGR.
-                </p>
-                <img src={Percent20} alt="20%" />
+                <ImgBox src={img8} className={styles.imgBox} />
               </div>
-            </div>
-            <div>
+            </FadeInNew>
+            <FadeInNew direction="right" distance={"50%"}>
               <div>
-                <img src={Icon15m} alt="" />
-                <p>
-                  <b>Virtual influencers market growth:</b> $15B market by 2025,
-                  triple the engagement of human.
-                </p>
+                <div>
+                  <div>
+                    <span>$100K</span>
+                    <img src={StickIcon} alt="" />
+                    <span>$500K</span>
+                  </div>
+                  <p>
+                    <b>Cost of Pre-Antix digital characters:</b> Ultra-realistic
+                    digital characters cost $100K-$500K, weeks of production
+                    time.
+                  </p>
+                </div>
               </div>
+            </FadeInNew>
+            <FadeInNew direction="left" distance={"50%"}>
               <div>
-                <ImgBox
-                  src={DollarIcon}
-                  className={styles.imgBox}
-                  style={{ backgroundSize: "contain" }}
-                />
+                <div>
+                  <img src={Percent50} alt="50%" />
+                  <p>
+                    <b>Adoption in Gaming and VR/AR Industries:</b> 40% of new
+                    games and 50% of VR content to feature digital humans by
+                    2025.
+                  </p>
+                </div>
               </div>
-            </div>
-            <div>
+            </FadeInNew>
+            <FadeInNew direction="right" distance={"50%"}>
               <div>
-                <img src={Percent90} alt="90%" />
-                <p>
-                  <b>Production cost and time reduction:</b> Antix cuts digital
-                  human creation time from weeks to hours, costs down by 90%.
-                </p>
+                <ImgBox src={img1} className={styles.imgBox} />
               </div>
-            </div>
-            <div>
-              <ImgBox src={img4} className={styles.imgBox} />
-            </div>
-            <div>
-              <ImgBox src={img6} className={styles.imgBox} />
-            </div>
-            <div>
-              <ImgBox src={img7} className={styles.imgBox} />
-            </div>
+            </FadeInNew>
+            <FadeInNew direction="left" distance={"50%"}>
+              <div>
+                <ImgBox src={img3} className={styles.imgBox} />
+              </div>
+            </FadeInNew>
+            <FadeInNew direction="right" distance={"50%"}>
+              <div>
+                <div>
+                  <p>
+                    <b>Yearly market growth:</b> $10B in 2023, projected to $30B
+                    by 2030, 20% CAGR.
+                  </p>
+                  <img src={Percent20} alt="20%" />
+                </div>
+              </div>
+            </FadeInNew>
+            <FadeInNew direction="left" distance={"50%"}>
+              <div>
+                <div>
+                  <img src={Icon15m} alt="" />
+                  <p>
+                    <b>Virtual influencers market growth:</b> $15B market by
+                    2025, triple the engagement of human.
+                  </p>
+                </div>
+                <div>
+                  <ImgBox
+                    src={DollarIcon}
+                    className={styles.imgBox}
+                    style={{ backgroundSize: "contain" }}
+                  />
+                </div>
+              </div>
+            </FadeInNew>
+            <FadeInNew direction="right" distance={"50%"}>
+              <div>
+                <div>
+                  <img src={Percent90} alt="90%" />
+                  <p>
+                    <b>Production cost and time reduction:</b> Antix cuts
+                    digital human creation time from weeks to hours, costs down
+                    by 90%.
+                  </p>
+                </div>
+              </div>
+            </FadeInNew>
+            <FadeInNew direction="left" distance={"50%"}>
+              <div>
+                <ImgBox src={img4} className={styles.imgBox} />
+              </div>
+            </FadeInNew>
+            <FadeInNew direction="right" distance={"50%"}>
+              <div>
+                <ImgBox src={img6} className={styles.imgBox} />
+              </div>
+            </FadeInNew>
+            <FadeInNew direction="left" distance={"50%"}>
+              <div>
+                <ImgBox src={img7} className={styles.imgBox} />
+              </div>
+            </FadeInNew>
           </div>
         </div>
         <div className={styles.action}>
