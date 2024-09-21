@@ -71,7 +71,7 @@ export const FadeInNew = (props: FadeInProps) => {
         },
       }
     );
-  }, [direction, duration, distance, delay, cloneElement.props]);
+  }, [direction, duration, distance, delay]);
 
   return <>{cloneElement}</>;
 };
