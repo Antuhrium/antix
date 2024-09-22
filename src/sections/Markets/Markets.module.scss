@@ -115,9 +115,11 @@
     display: flex;
     gap: 12px;
 
-    width: 460px;
+    width: 500px;
 
     .itemTextWrapper {
+        width: 100%;
+
         backdrop-filter: blur(56px);
         padding: 11px 0 15px 36px;
         width: 100%;
@@ -125,7 +127,7 @@
         border: 1.66px solid rgba(237, 255, 254, 0.48);
         background: #ffffff0a;
         border-radius: 6px 4px 6px 6px;
-        max-width: 386px;
+        // max-width: 386px;
         transition: all 0.3s ease;
 
         .itemTitle {
@@ -176,8 +178,8 @@
     }
 
     .itemArrow {
-        width: 60px;
-        height: 60px;
+        min-width: 60px;
+        min-height: 60px;
         border-radius: 9px;
         display: flex;
         align-items: center;
@@ -196,7 +198,7 @@
 
     @media screen and (max-width: 1024px) {
         width: 313px;
-        height: 166px;
+        height: 190px;
 
         .itemTextWrapper,
         .activeItemTextWrapper {
@@ -212,7 +214,8 @@
             border: 1px solid rgba(237, 255, 254, 0.48);
             border-radius: 12px;
 
-            .itemTitle {
+            .itemTitle, .itemActiveTitle {
+                margin: 0;
                 font-size: 20px;
                 line-height: 22px;
                 color: #12fff1;

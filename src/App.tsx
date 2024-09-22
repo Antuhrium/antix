@@ -11,7 +11,7 @@ import Quote from "./sections/Quote/Quote";
 import Statistics from "./sections/Statistics/Statistics";
 import Markets from "./sections/Markets/Markets";
 import Amazon from "./sections/Amazon/Amazon";
-import Revolutionizing from "./sections/Revolutionizing/Revolutionizing";
+// import Revolutionizing from "./sections/Revolutionizing/Revolutionizing";
 import DigitalMap from "./sections/DigitalMap/DigitalMap";
 import TokenInfo from "./sections/TokenInfo/TokenInfo";
 import UserFlow from "./sections/UserFlow/UserFlow";
@@ -72,7 +72,7 @@ function App() {
       <Statistics />
       <Markets />
       <Amazon />
-      <Revolutionizing />
+      {/* <Revolutionizing /> */}
       <DigitalMap />
       <Top10Responsive />
       <TokenInfoResponsive />
