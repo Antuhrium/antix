@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./App.module.scss";
 
-// Import all components directly
 import Header from "./sections/Header/Header";
 import HeroSection from "./sections/HeroSection/HeroSection";
 import FeaturedIn from "./sections/FeaturedIn/FeaturedIn";
@@ -23,7 +22,6 @@ import JoinUs from "./sections/JoinUs/JoinUs";
 import FAQ from "./sections/Faq/Faq";
 import Footer from "./sections/Footer/Footer";
 
-// Import mobile versions
 import TeamAdvisorsMobile from "./sections/TeamAdvisors/mobile/TeamAdvisors";
 import TokenomicsSectionMobile from "./sections/TokenomicsSection/mobile/TokenomicsSection";
 import TokenInfoMobile from "./sections/TokenInfo/mobile/TokenInfo";
@@ -32,7 +30,6 @@ import Top10 from './sections/Top10/Top10';
 import Top10Mobile from './sections/Top10/mobile/Top10';
 import FooterMobile from './sections/Footer/mobile/Footer';
 
-// Import necessary hooks
 import { useState, useEffect } from 'react';
 
 // Update the useResponsiveComponent hook
