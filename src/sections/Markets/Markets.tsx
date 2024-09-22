@@ -11,6 +11,10 @@ const leftList = [
         text: "Personalized and dynamic ad campaigns, where brands interact with customers in innovative ways",
     },
     {
+        title: "Fashion and modeling",
+        text: "AI-driven avatars will transform fashion with customizable, always-available digital models. No more costly shoots or limits—adapt to any style instantly, making fashion faster and more innovative than ever.",
+    },
+    {
         title: "E-commerce",
         text: "Virtual sales assistants and online fitting rooms",
     },

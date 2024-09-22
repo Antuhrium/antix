@@ -46,6 +46,10 @@ const DigitalMap = () => {
                 <h4 className={styles.title}>Digital humans everywhere</h4>
             </div>
 
+            <div className={styles.mobileMap}>
+                <img src="/digital-map-mobile.png" alt="Digital Map" />
+            </div>
+
             <a
                 className={styles.point1}
                 href="https://www.youtube.com/watch?v=lYHnSGHx4ig"
