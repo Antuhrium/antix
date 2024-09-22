@@ -63,7 +63,7 @@
     padding: 20px;
     width: 100%;
 
-    transition: all 0.3s ease, padding 0.3s ease;
+    transition: border-color 0.3s ease, background 0.3s ease;
 
     @media (max-width: 768px) {
         padding: 0;
@@ -82,7 +82,7 @@
     font-size: 1.1rem;
     text-align: left;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: color 0.3s ease;
 
     .question {
         font-family: "Space Grotesk";
@@ -156,13 +156,13 @@
 .answerContainer {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease, padding 0.3s ease;
+    transition: max-height 0.3s ease-out;
 }
 
 .answer {
     padding: 0 2rem;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.2s ease-out;
 
     @media (max-width: 768px) {
         padding: 0 2rem;
@@ -177,10 +177,11 @@
 }
 
 .faqItem.open .answerContainer {
-    max-height: 500px;
-    padding-bottom: 2rem;
+    max-height: 2000px; // Increase this value further if needed
+    transition: max-height 0.5s ease-in;
 }
 
 .faqItem.open .answer {
     opacity: 1;
+    transition: opacity 0.3s ease-in 0.1s; // Add a small delay
 }

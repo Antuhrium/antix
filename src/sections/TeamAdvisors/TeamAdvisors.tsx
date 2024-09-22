@@ -187,22 +187,21 @@ const TeamAdvisors = () => {
                         ))}
                     </div>
                 </div>
-                {canScrollLeft || canScrollRight && (
-                    <div className={styles.buttons}>
-                        <img
-                            src="/team/left.png"
-                            onClick={() => scrollCarousel('left')}
-                            alt="Scroll left"
-                            style={{ opacity: canScrollLeft ? 1 : 0.5, cursor: canScrollLeft ? 'pointer' : 'default' }}
-                        />
-                        <img
-                            src="/team/right.png"
-                            onClick={() => scrollCarousel('right')}
-                            alt="Scroll right"
-                            style={{ opacity: canScrollRight ? 1 : 0.5, cursor: canScrollRight ? 'pointer' : 'default' }}
-                        />
-                    </div>
-                )}
+
+                <div className={styles.buttons}>
+                    <img
+                        src="/team/left.png"
+                        onClick={() => scrollCarousel('left')}
+                        alt="Scroll left"
+                        style={{ opacity: canScrollLeft ? 1 : 0.5, cursor: canScrollLeft ? 'pointer' : 'default' }}
+                    />
+                    <img
+                        src="/team/right.png"
+                        onClick={() => scrollCarousel('right')}
+                        alt="Scroll right"
+                        style={{ opacity: canScrollRight ? 1 : 0.5, cursor: canScrollRight ? 'pointer' : 'default' }}
+                    />
+                </div>
             </section>
 
             <section className={styles.advisors} id='Advisors'>

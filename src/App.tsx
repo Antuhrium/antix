@@ -1,7 +1,7 @@
-import React, { lazy, Suspense, useEffect, useState } from "react";
+import React from "react";
 import styles from "./App.module.scss";
 
-// Import initial components directly
+// Import all components directly
 import Header from "./sections/Header/Header";
 import HeroSection from "./sections/HeroSection/HeroSection";
 import FeaturedIn from "./sections/FeaturedIn/FeaturedIn";
@@ -10,68 +10,50 @@ import MarketLeader from "./sections/MarketLeader/MarketLeader";
 import Why from "./sections/Why/Why";
 import Quote from "./sections/Quote/Quote";
 import Statistics from "./sections/Statistics/Statistics";
+import Markets from "./sections/Markets/Markets";
+import Amazon from "./sections/Amazon/Amazon";
+import Revolutionizing from "./sections/Revolutionizing/Revolutionizing";
+import DigitalMap from "./sections/DigitalMap/DigitalMap";
+import TokenInfo from "./sections/TokenInfo/TokenInfo";
+import UserFlow from "./sections/UserFlow/UserFlow";
+import TokenomicsSection from "./sections/TokenomicsSection/TokenomicsSection";
+import TeamAdvisors from "./sections/TeamAdvisors/TeamAdvisors";
+import RoadMap from "./sections/RoadMap/Roadmap";
+import JoinUs from "./sections/JoinUs/JoinUs";
+import FAQ from "./sections/Faq/Faq";
+import Footer from "./sections/Footer/Footer";
 
+// Import mobile versions
+import TeamAdvisorsMobile from "./sections/TeamAdvisors/mobile/TeamAdvisors";
+import TokenomicsSectionMobile from "./sections/TokenomicsSection/mobile/TokenomicsSection";
+import TokenInfoMobile from "./sections/TokenInfo/mobile/TokenInfo";
+import RoadMapMobile from "./sections/RoadMap/mobile/Roadmap";
+import Top10 from './sections/Top10/Top10';
+import Top10Mobile from './sections/Top10/mobile/Top10';
+import FooterMobile from './sections/Footer/mobile/Footer';
+
+// Import necessary hooks
+import { useState, useEffect } from 'react';
+
+// Update the useResponsiveComponent hook
 const useResponsiveComponent = <Props,>(
   mobileBreakpoint: number,
-  DesktopComponent: React.LazyExoticComponent<React.ComponentType<Props>>,
-  MobileComponent: React.LazyExoticComponent<React.ComponentType<Props>>
-) => {
-  const [Component, setComponent] = useState<
-    React.LazyExoticComponent<React.ComponentType<Props>>
-  >(() => DesktopComponent);
+  DesktopComponent: React.ComponentType<Props>,
+  MobileComponent: React.ComponentType<Props>
+): React.ComponentType<Props> => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < mobileBreakpoint);
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth <= mobileBreakpoint) {
-        setComponent(MobileComponent);
-      } else {
-        setComponent(DesktopComponent);
-      }
+      setIsMobile(window.innerWidth < mobileBreakpoint);
     };
 
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, [mobileBreakpoint, DesktopComponent, MobileComponent]);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [mobileBreakpoint]);
 
-  return Component; // Return the component itself, not JSX
+  return isMobile ? MobileComponent : DesktopComponent;
 };
-
-// Dynamically imported components
-const Markets = lazy(() => import("./sections/Markets/Markets"));
-const Amazon = lazy(() => import("./sections/Amazon/Amazon"));
-const Revolutionizing = lazy(
-  () => import("./sections/Revolutionizing/Revolutionizing")
-);
-const DigitalMap = lazy(() => import("./sections/DigitalMap/DigitalMap"));
-const TokenInfo = lazy(() => import("./sections/TokenInfo/TokenInfo"));
-const UserFlow = lazy(() => import("./sections/UserFlow/UserFlow"));
-const TokenomicsSection = lazy(
-  () => import("./sections/TokenomicsSection/TokenomicsSection")
-);
-const TeamAdvisors = lazy(() => import("./sections/TeamAdvisors/TeamAdvisors"));
-const RoadMap = lazy(() => import("./sections/RoadMap/Roadmap"));
-const JoinUs = lazy(() => import("./sections/JoinUs/JoinUs"));
-const FAQ = lazy(() => import("./sections/Faq/Faq"));
-const Footer = lazy(() => import("./sections/Footer/Footer"));
-// const PreDepositStage = lazy(() => import("./sections/PreDepositStage/PreDepositStage"));
-
-// Mobile versions (example for TokenInfo)
-// const TokenInfoMobile = lazy(() => import("./sections/TokenInfo/TokenInfoMobile"));
-const TeamAdvisorsMobile = lazy(
-  () => import("./sections/TeamAdvisors/mobile/TeamAdvisors")
-);
-const TokenomicsSectionMobile = lazy(
-  () => import("./sections/TokenomicsSection/mobile/TokenomicsSection")
-);
-const TokenInfoMobile = lazy(
-  () => import("./sections/TokenInfo/mobile/TokenInfo")
-);
-const RoadMapMobile = lazy(() => import("./sections/RoadMap/mobile/Roadmap"));
-
-const Top10 = lazy(() => import('./sections/Top10/Top10'));
-const Top10Mobile = lazy(() => import('./sections/Top10/mobile/Top10'));
-const FooterMobile = lazy(() => import('./sections/Footer/mobile/Footer'));
 
 function App() {
   const TeamAdvisorsResponsive = useResponsiveComponent(768, TeamAdvisors, TeamAdvisorsMobile);
@@ -83,7 +65,6 @@ function App() {
 
   return (
     <main className={styles.container}>
-      {/* Initial components loaded without Suspense */}
       <Header />
       <HeroSection />
       <FeaturedIn />
@@ -92,23 +73,19 @@ function App() {
       <Why />
       <Quote />
       <Statistics />
-
-      {/* Remaining components wrapped in Suspense */}
-      <Suspense fallback={<div>Loading...</div>}>
-        <Markets />
-        <Amazon />
-        <Revolutionizing />
-        <DigitalMap />
-        <Top10Responsive />
-        <TokenInfoResponsive />
-        <UserFlow />
-        <TokenomicsSectionResponsive />
-        <TeamAdvisorsResponsive />
-        <RoadMapResponsive />
-        <JoinUs />
-        <FAQ />
-        <FooterResponsive />
-      </Suspense>
+      <Markets />
+      <Amazon />
+      <Revolutionizing />
+      <DigitalMap />
+      <Top10Responsive />
+      <TokenInfoResponsive />
+      <UserFlow />
+      <TokenomicsSectionResponsive />
+      <TeamAdvisorsResponsive />
+      <RoadMapResponsive />
+      <JoinUs />
+      <FAQ />
+      <FooterResponsive />
     </main>
   );
 }
