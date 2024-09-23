@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import styles from "./TeamAdvisors.module.scss";
 import FadeIn from "../../components/FadeIn/FadeIn";
-import { advisors, team } from "./mocdata";
 
 interface PersonProps {
   image: string;
@@ -77,6 +76,74 @@ const Person: React.FC<PersonProps> = ({
 );
 
 const TeamAdvisors = () => {
+  const team = [
+    {
+      image: "/team/roman.png",
+      icon: "/team/icon.png",
+      name: "Roman",
+      role: "Top-10 Global Talents",
+      subRole: "Founder, CEO",
+      linkedin: "https://www.linkedin.com/in/cyganovroman/",
+      hasReadMore: true,
+      isBigIcon: false,
+    },
+    {
+      image: "/team/marina.png",
+      icon: "/team/icon.png",
+      name: "Marina",
+      role: "Ex-regional director at Disney",
+      subRole: "Co-founder, President",
+      linkedin: "https://www.linkedin.com/in/marina-jigalova/",
+      hasReadMore: true,
+      isBigIcon: false,
+    },
+    {
+      image: "/team/anton.png",
+      icon: "/team/icon.png",
+      name: "Anton",
+      role: "Ex-Big 4 Professional",
+      subRole: "CFO",
+      linkedin: "https://www.linkedin.com/in/anton-galkin-finance/",
+      isBigIcon: false,
+    },
+    {
+      image: "/team/yulia.png",
+      icon: "/team/icon.png",
+      name: "Yulia",
+      role: "Head of Family Office",
+      subRole: "TBC",
+      linkedin: "https://www.linkedin.com/in/yulia-tbc/",
+      isBigIcon: false,
+    },
+    {
+      image: "/team/kacper.png",
+      icon: "/team/icon.png",
+      name: "Kacper",
+      role: "Senior Social Media Manager",
+      subRole: "Community Manager",
+      linkedin: "https://www.linkedin.com/in/hoffmannk96/",
+      isBigIcon: false,
+    },
+    {
+      image: "/team/rafal.png",
+      icon: "/team/icon.png",
+      name: "Rafal",
+      role: "Technological Startup Expert",
+      subRole: "Project Manager",
+      linkedin: "https://www.linkedin.com/in/yulia-unal-1a976415/",
+      isBigIcon: false,
+    },
+    {
+      image: "/team/dmitry.png",
+      icon: "/team/icon.png",
+      name: "Dmitry",
+      role: "Developed an AAA title",
+      subRole: "Software Engineer",
+      linkedin: "https://www.linkedin.com/in/rafal-project-manager/",
+      isBigIcon: false,
+    },
+  ];
+
   const gridRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
@@ -108,6 +175,33 @@ const TeamAdvisors = () => {
     return () => window.removeEventListener("resize", checkScrollability);
   }, []);
 
+  const advisors = [
+    {
+      image: "/team/marcello.png",
+      icon: "/team/bigicon.png",
+      name: "Marcello Mari",
+      role: "SingularityDAO Founder & CEO",
+      linkedin: "https://www.linkedin.com/in/marcellomari/",
+      isBigIcon: true,
+    },
+    {
+      image: "/team/juwan.png",
+      icon: "/team/bigicon.png",
+      name: "Juwan Lee",
+      role: "Co-founder of Hong Kong Blockchain Center",
+      linkedin: "https://www.linkedin.com/in/juwanlee/",
+      isBigIcon: true,
+    },
+    {
+      image: "/team/alexander.png",
+      icon: "/team/bigicon.png",
+      name: "Alexander Filatov",
+      role: "10+ AI Patents Holder",
+      linkedin: "https://www.linkedin.com/in/alexanderfilatov/",
+      isBigIcon: true,
+    },
+  ];
+
   return (
     <div className={styles.teamContainer}>
       <section className={styles.team} id="Team">
@@ -131,29 +225,27 @@ const TeamAdvisors = () => {
             ))}
           </div>
         </div>
-        {canScrollLeft ||
-          (canScrollRight && (
-            <div className={styles.buttons}>
-              <img
-                src="/team/left.png"
-                onClick={() => scrollCarousel("left")}
-                alt="Scroll left"
-                style={{
-                  opacity: canScrollLeft ? 1 : 0.5,
-                  cursor: canScrollLeft ? "pointer" : "default",
-                }}
-              />
-              <img
-                src="/team/right.png"
-                onClick={() => scrollCarousel("right")}
-                alt="Scroll right"
-                style={{
-                  opacity: canScrollRight ? 1 : 0.5,
-                  cursor: canScrollRight ? "pointer" : "default",
-                }}
-              />
-            </div>
-          ))}
+
+        <div className={styles.buttons}>
+          <img
+            src="/team/left.png"
+            onClick={() => scrollCarousel("left")}
+            alt="Scroll left"
+            style={{
+              opacity: canScrollLeft ? 1 : 0.5,
+              cursor: canScrollLeft ? "pointer" : "default",
+            }}
+          />
+          <img
+            src="/team/right.png"
+            onClick={() => scrollCarousel("right")}
+            alt="Scroll right"
+            style={{
+              opacity: canScrollRight ? 1 : 0.5,
+              cursor: canScrollRight ? "pointer" : "default",
+            }}
+          />
+        </div>
       </section>
 
       <section className={styles.advisors} id="Advisors">
