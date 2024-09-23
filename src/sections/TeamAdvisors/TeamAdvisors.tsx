@@ -202,6 +202,7 @@ const TeamAdvisors = () => {
     },
   ];
 
+<<<<<<< HEAD
   return (
     <div className={styles.teamContainer}>
       <section className={styles.team} id="Team">
@@ -224,6 +225,86 @@ const TeamAdvisors = () => {
               <Person key={index} {...member} />
             ))}
           </div>
+=======
+    const advisors = [
+        {
+            image: '/team/marcello.png',
+            icon: '/team/bigicon.png',
+            name: 'Marcello Mari',
+            role: 'SingularityDAO Founder & CEO',
+            linkedin: 'https://www.linkedin.com/in/marcellomari/',
+            isBigIcon: true
+        },
+        {
+            image: '/team/juwan.png',
+            icon: '/team/bigicon.png',
+            name: 'Juwan Lee',
+            role: 'Co-founder of Hong Kong Blockchain Center',
+            linkedin: 'https://www.linkedin.com/in/juwanlee/',
+            isBigIcon: true
+        },
+        {
+            image: '/team/alexander.png',
+            icon: '/team/bigicon.png',
+            name: 'Alexander Filatov',
+            role: '10+ AI Patents Holder',
+            linkedin: 'https://www.linkedin.com/in/alexanderfilatov/',
+            isBigIcon: true
+        }
+    ];
+
+
+    return (
+        <div className={styles.teamContainer}>
+            <section className={styles.team} id='Team'>
+                <FadeIn direction='up' distance={"50%"}>
+                    <h2 className={styles.sectionTitle}>Team</h2>
+                </FadeIn>
+                <p className={styles.sectionDescription}>
+                    The team has a proven track record of <span>successfully managing business projects.</span> They bring significant experience and exceptional knowledge regarding digital humans & Web3 ventures at scale.
+                </p>
+                <div className={styles.gridWrapper}>
+                    <div
+                        className={styles.grid}
+                        ref={gridRef}
+                        onScroll={checkScrollability}
+                    >
+                        {team.map((member, index) => (
+                            <Person key={index} {...member} />
+                        ))}
+                    </div>
+                </div>
+
+                <div className={styles.buttons}>
+                    <img
+                        src="/team/left.png"
+                        onClick={() => scrollCarousel('left')}
+                        alt="Scroll left"
+                        style={{ opacity: canScrollLeft ? 1 : 0.5, cursor: canScrollLeft ? 'pointer' : 'default' }}
+                    />
+                    <img
+                        src="/team/right.png"
+                        onClick={() => scrollCarousel('right')}
+                        alt="Scroll right"
+                        style={{ opacity: canScrollRight ? 1 : 0.5, cursor: canScrollRight ? 'pointer' : 'default' }}
+                    />
+                </div>
+            </section>
+
+            <section className={styles.advisors} id='Advisors'>
+                <FadeIn direction='up' distance={"50%"}>
+                    <h2 className={styles.sectionTitle}>Advisors</h2>
+                </FadeIn>
+                <p className={styles.sectionDescription}>
+                    The Antix advisory team brings <span>80 years of combined experience</span> in successful investing, offering deep business expertise and exceptional knowledge of the Web3 sector.
+                </p>
+                <div className={styles.advisor}>
+                    {advisors.map((advisor, index) => (
+                        <Person key={index} {...advisor} isAdvisor />
+                    ))}
+                </div>
+            </section>
+>>>>>>> main
         </div>
 
         <div className={styles.buttons}>
