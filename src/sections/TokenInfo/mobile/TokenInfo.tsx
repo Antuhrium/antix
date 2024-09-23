@@ -95,9 +95,9 @@ const TokenInfo = () => {
         window.open('https://docs.google.com/document/d/1MUKsG4wRnH_TPJUsxytRzHjXMu0DKzNU/edit?rtpof=true&sd=true');
     }
 
-    const handleAudit = () => {
-        window.open('https://antix.io/audit.pdf', '_blank');
-    }
+    // const handleAudit = () => {
+    //     window.open('https://antix.io/audit.pdf', '_blank');
+    // }
 
     const handleShowAll = () => {
         setShowAll(!showAll);
@@ -119,7 +119,7 @@ const TokenInfo = () => {
 
             <div className={styles.buttons}>
                 <button onClick={handleWhitepaper}>Whitepaper</button>
-                <button onClick={handleAudit}>Audit report</button>
+                {/* <button onClick={handleAudit}>Audit report</button> */}
             </div>
 
             <div className={styles.gridWrapper}>
