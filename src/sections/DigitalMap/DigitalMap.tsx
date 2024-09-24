@@ -8,6 +8,8 @@ import Point5 from "../../assets/svg/map/location-5.svg";
 
 import VideoImg from "../../assets/images/map-avatar.png";
 import FadeIn from "../../components/FadeIn/FadeIn";
+import { useState } from "react";
+import VideoModal from "../../components/VideoModal/VideoModal";
 
 const PlayIcon = () => {
     return (
@@ -28,91 +30,99 @@ const PlayIcon = () => {
 };
 
 const DigitalMap = () => {
+    const [openVideo, setOpenVideo] = useState("");
+
     return (
-        <section className={styles.container}>
-            <div className={styles.content}>
-                <a
-                    href="https://www.youtube.com/watch?v=lYHnSGHx4ig"
-                    target="_blank"
-                    className={styles.contentButton}
+        <>
+            {openVideo && <VideoModal videoUrl={openVideo} onClose={setOpenVideo} />}
+            <section className={styles.container}>
+                <div className={styles.content}>
+                    <a
+                        href="https://www.youtube.com/watch?v=lYHnSGHx4ig"
+                        target="_blank"
+                        className={styles.contentButton}
+                    >
+                        Watch Preview
+                    </a>
+                    <p className={styles.subTitle}>
+                        Antix makes <span>Hollywood-quality</span> digital humans
+                        accessible to all without the need for big teams, long
+                        timelines, or massive costs.
+                    </p>
+                    <h4 className={styles.title}>Digital humans everywhere</h4>
+                </div>
+
+                <div className={styles.mobileMap}>
+                    <img src="/digital-map-mobile.png" alt="Digital Map" />
+                </div>
+
+                <button
+                    className={styles.point1}
+                    onClick={() => setOpenVideo("https://www.youtube.com/embed/lYHnSGHx4ig")}
+                    // href="https://www.youtube.com/watch?v=lYHnSGHx4ig"
+                    // target="_blank"
                 >
-                    Watch Preview
+                    <FadeIn delay={0} direction="down" distance={"50%"}>
+                        <img src={Point1} alt="" draggable={false} />
+
+                        <div className={styles.videoWrapper}>
+                            <img src={VideoImg} alt="" draggable={false} />
+                            <div className={styles.play}>
+                                <PlayIcon />
+                            </div>
+                        </div>
+                    </FadeIn>
+                </button>
+
+                <div className={styles.point2}>
+                    <FadeIn delay={0} direction="down" distance={"50%"}>
+                        <img src={Point2} alt="" draggable={false} />
+                    </FadeIn>
+                </div>
+
+                <div className={styles.point3}>
+                    <FadeIn delay={0} direction="down" distance={"50%"}>
+                        <img src={Point3} alt="" draggable={false} />
+                    </FadeIn>
+                </div>
+
+                <button
+                    className={styles.point4}
+                    onClick={() => setOpenVideo("https://www.youtube.com/embed/lYHnSGHx4ig")}
+                    // href="https://www.youtube.com/watch?v=lYHnSGHx4ig"
+                    // target="_blank"
+                >
+                    <FadeIn delay={0} direction="down" distance={"50%"}>
+                        <img src={Point4} alt="" draggable={false} />
+
+                        <div className={styles.videoWrapper}>
+                            <img src={VideoImg} alt="" draggable={false} />
+                            <div className={styles.play}>
+                                <PlayIcon />
+                            </div>
+                        </div>
+                    </FadeIn>
+                </button>
+
+                <a
+                    className={styles.point5}
+                    onClick={() => setOpenVideo("https://www.youtube.com/embed/lYHnSGHx4ig")}
+                    // href="https://www.youtube.com/watch?v=lYHnSGHx4ig"
+                    // target="_blank"
+                >
+                    <FadeIn delay={0} direction="down" distance={"50%"}>
+                        <img src={Point5} alt="" draggable={false} />
+
+                        <div className={styles.videoWrapper}>
+                            <img src={VideoImg} alt="" draggable={false} />
+                            <div className={styles.play}>
+                                <PlayIcon />
+                            </div>
+                        </div>
+                    </FadeIn>
                 </a>
-                <p className={styles.subTitle}>
-                    Antix makes <span>Hollywood-quality</span> digital humans
-                    accessible to all without the need for big teams, long
-                    timelines, or massive costs.
-                </p>
-                <h4 className={styles.title}>Digital humans everywhere</h4>
-            </div>
-
-            <div className={styles.mobileMap}>
-                <img src="/digital-map-mobile.png" alt="Digital Map" />
-            </div>
-
-            <a
-                className={styles.point1}
-                href="https://www.youtube.com/watch?v=lYHnSGHx4ig"
-                target="_blank"
-            >
-                <FadeIn delay={0} direction="down" distance={"50%"}>
-                    <img src={Point1} alt="" draggable={false} />
-
-                    <div className={styles.videoWrapper}>
-                        <img src={VideoImg} alt="" draggable={false} />
-                        <div className={styles.play}>
-                            <PlayIcon />
-                        </div>
-                    </div>
-                </FadeIn>
-            </a>
-
-            <div className={styles.point2}>
-                <FadeIn delay={0} direction="down" distance={"50%"}>
-                    <img src={Point2} alt="" draggable={false} />
-                </FadeIn>
-            </div>
-
-            <div className={styles.point3}>
-                <FadeIn delay={0} direction="down" distance={"50%"}>
-                    <img src={Point3} alt="" draggable={false} />
-                </FadeIn>
-            </div>
-
-            <a
-                className={styles.point4}
-                href="https://www.youtube.com/watch?v=lYHnSGHx4ig"
-                target="_blank"
-            >
-                <FadeIn delay={0} direction="down" distance={"50%"}>
-                    <img src={Point4} alt="" draggable={false} />
-
-                    <div className={styles.videoWrapper}>
-                        <img src={VideoImg} alt="" draggable={false} />
-                        <div className={styles.play}>
-                            <PlayIcon />
-                        </div>
-                    </div>
-                </FadeIn>
-            </a>
-
-            <a
-                className={styles.point5}
-                href="https://www.youtube.com/watch?v=lYHnSGHx4ig"
-                target="_blank"
-            >
-                <FadeIn delay={0} direction="down" distance={"50%"}>
-                    <img src={Point5} alt="" draggable={false} />
-
-                    <div className={styles.videoWrapper}>
-                        <img src={VideoImg} alt="" draggable={false} />
-                        <div className={styles.play}>
-                            <PlayIcon />
-                        </div>
-                    </div>
-                </FadeIn>
-            </a>
-        </section>
+            </section>
+        </>
     );
 };
 

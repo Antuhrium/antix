@@ -10,7 +10,7 @@
     justify-content: center;
     align-items: center;
     gap: 50px;
-    max-width: 1600px;
+    max-width: 1325px;
     margin: 0 auto;
     padding: 0 1rem;
     .item {
@@ -76,12 +76,14 @@
 /* Сверхбольшие устройства (≥1400px) */
 @media (min-width: 1400px) {
   .wrapper {
-    padding: 200px 0 200px;
+    padding: 100px 0;
+    margin-bottom: 100px;
     .container {
       .item {
         &:nth-child(2) {
         }
         &:nth-child(3) {
+          margin-top: -50px;
         }
       }
     }

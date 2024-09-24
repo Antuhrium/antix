@@ -29,7 +29,6 @@ const TeamModal: React.FC<TeamModalProps> = ({
         };
     }, []);
 
-    console.log("jkgsda")
     return (
         <>
             <div className={styles.blurBg} onClick={() => setOpenModal("")} />
@@ -44,7 +43,7 @@ const TeamModal: React.FC<TeamModalProps> = ({
                 <div className={styles.header}>
                     <img src={image} alt={name} />
                     <div className={styles.headerName}>
-                        <h3>Roman</h3>
+                        <h3>{name}</h3>
                         <span>{subRole}</span>
                     </div>
                 </div>

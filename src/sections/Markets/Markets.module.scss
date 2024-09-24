@@ -1,6 +1,6 @@
 .container {
     margin-top: 140px;
-    padding: 130px 0 100px;
+    padding-top: 130px;
 
     background-image: url("../../assets/images/markets-bg.png");
     background-repeat: no-repeat;
@@ -31,17 +31,17 @@
 
 .content {
     position: relative;
-    max-width: 1600px;
-    height: 110vh;
+    max-width: 1325px;
+    height: 100vh;
     margin: 0 auto;
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
-    @media screen and (max-width: 1220px) {
-        height: 130vh;
-    }
+    // @media screen and (max-width: 1220px) {
+    //     height: 130vh;
+    // }
 
     @media screen and (max-width: 1024px) {
         height: fit-content;
@@ -55,9 +55,9 @@
     z-index: 1;
 
     font-family: "Space Grotesk", sans-serif;
-    font-size: 120px;
+    font-size: 99.38px;
     font-weight: 400;
-    line-height: 104px;
+    line-height: 86.13px;
     letter-spacing: -0.04em;
     text-align: center;
     color: #f0f0f0;
@@ -101,6 +101,7 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
+    margin-right: 70px;
 
     @media screen and (max-width: 1024px) {
         flex-direction: row;
@@ -115,13 +116,14 @@
     display: flex;
     gap: 12px;
 
-    width: 500px;
+    width: 380px;
+    cursor: pointer;
 
     .itemTextWrapper {
         width: 100%;
 
         backdrop-filter: blur(56px);
-        padding: 11px 0 15px 36px;
+        padding: 11px 30px;
         width: 100%;
         height: fit-content;
         border: 1.66px solid rgba(237, 255, 254, 0.48);
@@ -133,9 +135,9 @@
         .itemTitle {
             transition: all 0.1s linear;
             font-family: "Space Grotesk", sans-serif;
-            font-size: 28px;
+            font-size: 23.19px;
             font-weight: 400;
-            line-height: 33.6px;
+            line-height: 27.83px;
             text-align: left;
             color: #f0f0f0;
         }
@@ -145,12 +147,12 @@
         }
 
         .itemActiveTitle {
-            margin-top: 15px;
+            margin-top: 25px;
             transition: all 0.3s ease;
             font-family: "Space Grotesk", sans-serif;
-            font-size: 32px;
+            font-size: 23px;
             font-weight: 400;
-            line-height: 38.4px;
+            line-height: 27.83px;
             text-align: left;
             color: #12fff1;
         }
@@ -159,9 +161,9 @@
             margin: 0;
             width: 330px;
             font-family: "Inter Tight", sans-serif;
-            font-size: 24px;
+            font-size: 19.88px;
             font-weight: 400;
-            line-height: 33.6px;
+            line-height: 27.82px;
             text-align: left;
             color: #afafaf;
             max-height: 0;
@@ -178,8 +180,8 @@
     }
 
     .itemArrow {
-        min-width: 60px;
-        min-height: 60px;
+        min-width: 52px;
+        min-height: 52px;
         border-radius: 9px;
         display: flex;
         align-items: center;
@@ -244,9 +246,9 @@
     display: block;
     margin: auto auto 0;
 
-    font-size: 20px;
+    font-size: 16.56px;
     font-weight: 400;
-    line-height: 24.2px;
+    line-height: 20.04px;
     text-align: center;
     color: #575757;
 

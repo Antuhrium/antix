@@ -140,6 +140,14 @@
     }
 }
 
+.point1,
+.point2,
+.point3,
+.point4,
+.point5 {
+    background: transparent;
+}
+
 .point1 {
     animation: fade 0.3s ease-in-out;
     position: absolute;

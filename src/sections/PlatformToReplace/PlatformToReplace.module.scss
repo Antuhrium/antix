@@ -11,7 +11,7 @@
     justify-content: center;
     flex-direction: column;
     gap: 40px;
-    max-width: 1400px;
+    max-width: 1325px;
     padding: 0 1rem;
     margin: 0 auto;
     padding-bottom: 130px;
@@ -98,7 +98,10 @@
     background-size: contain;
     .container {
       flex-direction: row;
-      height: 400px;
+      align-items: baseline;
+      margin: 100px auto;
+
+      height: 300px;
       .description {
         span {
         }
@@ -153,17 +156,19 @@
     .container {
       padding-bottom: 0;
       gap: 40px;
-      height: 470px;
+      // height: 470px;
       .description {
         text-align: left;
         width: 72%;
         span {
-          font-size: 32px;
+          font-size: 26.24px;
           font-weight: 300;
+          line-height: 36.74px;
         }
         h4 {
-          font-size: 54px;
-          line-height: 64.8px;
+          font-size: 44.29px;
+          font-weight: 400;
+          line-height: 53.14px;
         }
       }
       .carousel {

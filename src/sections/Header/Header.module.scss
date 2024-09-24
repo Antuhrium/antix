@@ -17,7 +17,7 @@
     flex-direction: column;
     align-items: baseline;
     gap: 2rem;
-    max-width: 1600px;
+    max-width: 1325px;
     height: 80px;
     padding: 1rem;
     margin: auto;
@@ -135,7 +135,7 @@
         display: none;
       }
       .logo {
-        flex: 20%;
+        flex: 35%;
         img {
           order: 1;
           height: 70px;
@@ -161,6 +161,7 @@
         flex: 35%;
         gap: 0;
         border-radius: 70px;
+
         .link {
           width: 100%;
           font-size: 18px;
