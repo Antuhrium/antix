@@ -82,7 +82,7 @@ const HeroSection = () => {
           </FadeIn>
         </div>
         <div className={styles.rightColumn}>
-          <FadeIn direction="left" distance="50%" delay={0.8}>
+          {/* <FadeIn direction="left" distance="50%" delay={0.8}> */}
             <div className={styles.timerWrapper}>
               <div className={styles.timerWrapperTitle}>
                 <img src="/logo-small.svg" alt="Logo" />
@@ -96,7 +96,7 @@ const HeroSection = () => {
                 <HeroTimer targetDate={new Date("2024-12-31T23:59:59")} />
               </div>
             </div>
-          </FadeIn>
+          {/* </FadeIn> */}
         </div>
       </div>
     </section>

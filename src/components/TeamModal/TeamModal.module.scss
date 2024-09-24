@@ -1,0 +1,149 @@
+.blurBg {
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+
+    background: #080808c7;
+    backdrop-filter: blur(18px);
+}
+
+.container {
+    position: fixed;
+    z-index: 2101;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    padding: 36px 100px 36px 32px;
+    border-radius: 12px;
+    border: 1px solid rgba(237, 255, 254, 0.48);
+
+    &::after {
+        content: url("../../assets/images/team-star-bg.png");
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 0;
+    }
+
+    @media screen and (max-width: 768px) {
+        padding: 36px 24px 72px;
+        width: calc(100% - 64px);
+    }
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    & > img {
+        width: 104px;
+        height: 104px;
+
+        border: 1px solid rgba(18, 255, 241, 0.6);
+        border-radius: 100%;
+
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .headerName {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+        & > h3 {
+            font-family: "Space Grotesk", sans-serif;
+            letter-spacing: -0.04em;
+            font-weight: 400;
+            font-size: 40px;
+            line-height: 48px;
+            color: #12fff1;
+        }
+        & > span {
+            font-family: "Space Grotesk", sans-serif;
+            letter-spacing: -0.04em;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 28px;
+            color: #f0f0f0;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        gap: 16px;
+
+        .headerName {
+            & > h3 {
+                font-size: 20px;
+                line-height: 24px;
+            }
+            & > span {
+                font-size: 16px;
+                line-height: 19.2px;
+            }
+        }
+    }
+}
+
+.main {
+    width: 620px;
+    margin-top: 29px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .mainItem {
+        display: flex;
+        gap: 12px;
+
+        font-family: "Inter Tight", sans-serif;
+        font-size: 19.88px;
+        font-weight: 400;
+        line-height: 27.82px;
+        color: #afafaf;
+
+        & > div {
+            margin-top: 6px;
+            min-width: 16px;
+            max-width: 16px;
+            height: 16px;
+            border-radius: 100%;
+            border: 1px solid rgba(18, 255, 241, 0.6);
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        margin-top: 20px;
+
+        .mainItem {
+            font-size: 14px;
+            line-height: 20.44px;
+        }
+    }
+}
+
+.linkedInLink {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+
+    width: 67px;
+    height: 67px;
+
+    cursor: pointer;
+}
+
+.close {
+    position: absolute;
+    z-index: 1;
+    top: 15px;
+    right: 15px;
+
+    background: none;
+    cursor: pointer;
+}

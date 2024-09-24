@@ -1,5 +1,5 @@
-import { PieChart, Pie, Cell, Tooltip, TooltipProps } from "recharts";
-import { NameType, ValueType } from "recharts/types/component/DefaultTooltipContent";
+import { PieChart, Pie, Cell } from "recharts";
+// import { NameType, ValueType } from "recharts/types/component/DefaultTooltipContent";
 import styles from "./PieChart.module.scss";
 
 // Interface for data structure
@@ -70,28 +70,28 @@ const renderCustomizedLabel = ({
 };
 
 
-const CustomTooltip = ({ active, payload }: TooltipProps<ValueType, NameType>) => {
-    if (active && payload && payload.length) {
-        const data = payload[0].payload;
-        return (
-            <div className={styles.customTooltip}>
-                <p>{`${data.name}: ${data.value}%`}</p>
-            </div>
-        );
-    }
-    return null;
-};
+// const CustomTooltip = ({ active, payload }: TooltipProps<ValueType, NameType>) => {
+//     if (active && payload && payload.length) {
+//         const data = payload[0].payload;
+//         return (
+//             <div className={styles.customTooltip}>
+//                 <p>{`${data.name}: ${data.value}%`}</p>
+//             </div>
+//         );
+//     }
+//     return null;
+// };
 
 const PieChartComponent: React.FC = () => {
     return (
         <div className={styles.chartWrapper}>
-                <PieChart width={1300} height={1000}>
+                <PieChart width={540} height={540}>
                     <Pie
                         data={data}
                         cx="50%"
                         cy="50%"
-                        innerRadius={130}
-                        outerRadius={280}
+                        innerRadius={120}
+                        outerRadius={270}
                         dataKey="value"
                         stroke="none"
                         label={renderCustomizedLabel}
@@ -105,7 +105,7 @@ const PieChartComponent: React.FC = () => {
                             />
                         ))}
                     </Pie>
-                    <Tooltip content={<CustomTooltip />} />
+                    {/* <Tooltip content={<CustomTooltip />} /> */}
                 </PieChart>
         </div>
     );
