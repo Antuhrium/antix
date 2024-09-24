@@ -2,8 +2,8 @@ import { memo, useEffect, useRef, useState } from 'react';
 import styles from "./TokenomicsSection.module.scss";
 import PieChartComponent from "../../components/PieChart/PieChart";
 
-import RightBg from "../../assets/svg/tokenomics-right-bg.svg";
-import LeftBg from "../../assets/svg/tokenomics-left-bg.svg";
+// import RightBg from "../../assets/svg/tokenomics-right-bg.svg";
+// import LeftBg from "../../assets/svg/tokenomics-left-bg.svg";
 
 const TokenomicsSection = memo(() => {
     const [inView, setInView] = useState(false); 
@@ -66,7 +66,7 @@ const TokenomicsSection = memo(() => {
                     </div>
                 </div>
             </div>
-            <img
+            {/* <img
                 src={RightBg}
                 alt=""
                 className={styles.rightBg}
@@ -79,7 +79,7 @@ const TokenomicsSection = memo(() => {
                 className={styles.leftBg}
                 draggable={false}
                 loading="lazy"
-            />
+            /> */}
         </section>
     );
 });
