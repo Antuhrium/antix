@@ -35,7 +35,7 @@ const PlatformToReplace = () => {
             <div className={styles.container}>
                 <div className={styles.description}>
                     <span>Reshaping a $300 billion industry.</span>
-                    <h4>Platform to create, train and monetize AI-powered digital characters to replace:</h4>
+                    <h4>Platform to create, train and monetize <br /> AI-powered digital characters to replace:</h4>
                 </div>
                 <Swiper
                     direction={window.innerWidth > 1400 ? "vertical" : "horizontal"}

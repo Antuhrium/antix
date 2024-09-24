@@ -6,4 +6,4 @@ import Logo5 from "../../assets/svg/featuredIn/5.svg";
 import Logo6 from "../../assets/svg/featuredIn/6.svg";
 import Logo7 from "../../assets/svg/featuredIn/7.svg";
 
-export const logos = [Logo1, Logo2, Logo3, Logo4, Logo5, Logo6, Logo7];
+export const logos = [Logo1, Logo2, Logo3, Logo4, Logo5, Logo6, Logo7, Logo1, Logo2, Logo3, Logo4, Logo5, Logo6, Logo7, Logo1, Logo2, Logo3, Logo4, Logo5, Logo6, Logo7];

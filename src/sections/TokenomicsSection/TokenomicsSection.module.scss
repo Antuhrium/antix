@@ -10,7 +10,7 @@
 
 .container {
     margin: 0 auto;
-    padding: 112px 0;
+    padding: 56px 0 220px;
 
     display: flex;
     flex-direction: column;
@@ -20,6 +20,8 @@
 }
 
 .title {
+    margin-bottom: 90px;
+
     color: rgba(87, 87, 87, 1);
     font-family: "Space Grotesk", sans-serif;
     font-size: 94px;
@@ -43,8 +45,9 @@
 
 .bgLines {
     position: absolute;
-    top: 23.8%;
-    left: 8.5%;
+    top: 59%;
+    left: 51%;
+    transform: translate(-50%, -50%);
     z-index: 0;
 
     opacity: 0;

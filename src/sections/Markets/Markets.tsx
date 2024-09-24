@@ -68,7 +68,7 @@ const ListItem = ({ item, isOpen, setIsOpen }: ListItemProps) => {
       </div>
       <div className={styles.itemArrow}>
         <img
-            className={isActive ? styles.openArrow : ""}
+            className={!isActive ? styles.openArrow : ""}
           src={ArrowIcon}
           alt="Arrow Down"
         />

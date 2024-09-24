@@ -6,6 +6,10 @@
 
     height: 100%;
     width: 100%;
+
+    @media screen and (max-width: 768px) {
+        margin-top: 64px;
+    }
 }
 
 .userFlowContainer {

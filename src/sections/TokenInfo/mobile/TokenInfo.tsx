@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import styles from './TokenInfo.module.scss';
 
+import ArrowButton from "../../../assets/svg/statistics/arrovButtom.svg";
+
 interface PersonProps {
     backgroundImage: string;
     image: string;
@@ -133,7 +135,29 @@ const TokenInfo = () => {
                 </div>
             </div>
 
-            {!showAll ? (
+                <button className={styles.btn} onClick={handleShowAll}>
+                    {!showAll ? (
+                        <>
+                            {"See more"}
+                            <span>
+                                <img src={ArrowButton} alt="" />
+                            </span>
+                        </>
+                    ) : (
+                        <>
+                            {"Hide Details "}
+                            <span>
+                                <img
+                                    src={ArrowButton}
+                                    alt=""
+                                    style={{ transform: "rotate(180deg)" }}
+                                />
+                            </span>
+                        </>
+                    )}
+                </button>
+
+            {/* {!showAll ? (
                 <button className={styles.showAllButton} onClick={handleShowAll}>
                     Show All
                 </button>
@@ -141,7 +165,7 @@ const TokenInfo = () => {
                 <button className={styles.showAllButton} onClick={handleShowAll}>
                     Show Less
                 </button>
-            )}
+            )} */}
         </div>
     );
 };

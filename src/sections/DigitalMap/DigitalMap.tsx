@@ -55,7 +55,7 @@ const DigitalMap = () => {
                 href="https://www.youtube.com/watch?v=lYHnSGHx4ig"
                 target="_blank"
             >
-                <FadeIn delay={0} direction="right" distance={"50%"}>
+                <FadeIn delay={0} direction="down" distance={"50%"}>
                     <img src={Point1} alt="" draggable={false} />
 
                     <div className={styles.videoWrapper}>
@@ -68,13 +68,13 @@ const DigitalMap = () => {
             </a>
 
             <div className={styles.point2}>
-                <FadeIn delay={0} direction="up" distance={"50%"}>
+                <FadeIn delay={0} direction="down" distance={"50%"}>
                     <img src={Point2} alt="" draggable={false} />
                 </FadeIn>
             </div>
 
             <div className={styles.point3}>
-                <FadeIn delay={0} direction="up" distance={"50%"}>
+                <FadeIn delay={0} direction="down" distance={"50%"}>
                     <img src={Point3} alt="" draggable={false} />
                 </FadeIn>
             </div>
@@ -84,7 +84,7 @@ const DigitalMap = () => {
                 href="https://www.youtube.com/watch?v=lYHnSGHx4ig"
                 target="_blank"
             >
-                <FadeIn delay={0} direction="right" distance={"50%"}>
+                <FadeIn delay={0} direction="down" distance={"50%"}>
                     <img src={Point4} alt="" draggable={false} />
 
                     <div className={styles.videoWrapper}>
@@ -101,7 +101,7 @@ const DigitalMap = () => {
                 href="https://www.youtube.com/watch?v=lYHnSGHx4ig"
                 target="_blank"
             >
-                <FadeIn delay={0} direction="left" distance={"50%"}>
+                <FadeIn delay={0} direction="down" distance={"50%"}>
                     <img src={Point5} alt="" draggable={false} />
 
                     <div className={styles.videoWrapper}>
