@@ -4,27 +4,27 @@
     text-align: center;
     margin-top: 5rem;
 
-    &::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 50%;
-        background: linear-gradient(to top, #000, transparent);
-        z-index: 1;
-    }
+    // &::after {
+    //     content: "";
+    //     position: absolute;
+    //     bottom: 0;
+    //     left: 0;
+    //     right: 0;
+    //     height: 50%;
+    //     background: linear-gradient(to top, #000, transparent);
+    //     z-index: 1;
+    // }
 
-    &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 110%;
-        background: linear-gradient(to bottom, #000, transparent);
-        z-index: 1;
-    }
+    // &::before {
+    //     content: "";
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     right: 0;
+    //     height: 110%;
+    //     background: linear-gradient(to bottom, #000, transparent);
+    //     z-index: 1;
+    // }
 
     @media (max-width: 768px) {
         margin-top: 1rem;

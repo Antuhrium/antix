@@ -66,32 +66,32 @@ const TeamAdvisors = () => {
     const [canScrollRight, setCanScrollRight] = useState(true);
     const [openModal, setOpenModal] = useState<string>("");
 
-    const itemWidth = 233;
-    const gap = 16;
+  const itemWidth = 233;
+  const gap = 16;
 
-    const scrollCarousel = (direction: 'left' | 'right') => {
-        if (!gridRef.current) return;
+  const scrollCarousel = (direction: "left" | "right") => {
+    if (!gridRef.current) return;
 
-        const scrollAmount = (itemWidth + gap) * 3; // Scroll by 3 items at a time
-        gridRef.current.scrollBy({
-            left: direction === 'left' ? -scrollAmount : scrollAmount,
-            behavior: 'smooth'
-        });
-    };
+    const scrollAmount = (itemWidth + gap) * 3; // Scroll by 3 items at a time
+    gridRef.current.scrollBy({
+      left: direction === "left" ? -scrollAmount : scrollAmount,
+      behavior: "smooth",
+    });
+  };
 
-    const checkScrollability = () => {
-        if (!gridRef.current) return;
+  const checkScrollability = () => {
+    if (!gridRef.current) return;
 
-        const { scrollLeft, scrollWidth, clientWidth } = gridRef.current;
-        setCanScrollLeft(scrollLeft > 0);
-        setCanScrollRight(scrollLeft < scrollWidth - clientWidth);
-    };
-
-    useEffect(() => {
-        checkScrollability();
-        window.addEventListener('resize', checkScrollability);
-        return () => window.removeEventListener('resize', checkScrollability);
-    }, []);
+    const { scrollLeft, scrollWidth, clientWidth } = gridRef.current;
+    setCanScrollLeft(scrollLeft > 0);
+    setCanScrollRight(scrollLeft < scrollWidth - clientWidth);
+  };
+  
+  useEffect(() => {
+    checkScrollability();
+    window.addEventListener("resize", checkScrollability);
+    return () => window.removeEventListener("resize", checkScrollability);
+  }, []);
 
     return (
         <div className={styles.teamContainer}>
@@ -113,22 +113,27 @@ const TeamAdvisors = () => {
                         ))}
                     </div>
                 </div>
-
-                <div className={styles.buttons}>
-                    <img
-                        src="/team/left.png"
-                        onClick={() => scrollCarousel('left')}
-                        alt="Scroll left"
-                        style={{ opacity: canScrollLeft ? 1 : 0.5, cursor: canScrollLeft ? 'pointer' : 'default' }}
-                    />
-                    <img
-                        src="/team/right.png"
-                        onClick={() => scrollCarousel('right')}
-                        alt="Scroll right"
-                        style={{ opacity: canScrollRight ? 1 : 0.5, cursor: canScrollRight ? 'pointer' : 'default' }}
-                    />
-                </div>
-            </section>
+        <div className={styles.buttons}>
+          <img
+            src="/team/left.png"
+            onClick={() => scrollCarousel("left")}
+            alt="Scroll left"
+            style={{
+              opacity: canScrollLeft ? 1 : 0.5,
+              cursor: canScrollLeft ? "pointer" : "default",
+            }}
+          />
+          <img
+            src="/team/right.png"
+            onClick={() => scrollCarousel("right")}
+            alt="Scroll right"
+            style={{
+              opacity: canScrollRight ? 1 : 0.5,
+              cursor: canScrollRight ? "pointer" : "default",
+            }}
+          />
+        </div>
+      </section>
 
             <section className={styles.advisors} id='Advisors'>
                 <FadeIn direction='up' distance={"50%"}>
@@ -143,8 +148,9 @@ const TeamAdvisors = () => {
                     ))}
                 </div>
             </section>
-        </div>
-    );
+
+    </div>
+  );
 };
 
 export default TeamAdvisors;

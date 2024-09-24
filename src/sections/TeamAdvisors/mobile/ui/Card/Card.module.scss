@@ -1,0 +1,66 @@
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  height: 183px;
+  max-width: 329px;
+  width: 100%;
+  color: #fff;
+  border-radius: 15px; /* Закругленные углы основного элемента */
+  margin: auto;
+  overflow: hidden;
+  backdrop-filter: blur(22px);
+  background-color: rgb(49 49 49 / 30%);
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(162deg, #5a5a5a, #191919);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .image {
+    flex: 0 0 132px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  .info {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5rem;
+    .role {
+      font-size: 20px;
+      line-height: 22px;
+      font-weight: 500;
+    }
+    .disc {
+      height: 63px;
+      max-width: 100px;
+      p {
+        font-size: 12px;
+        line-height: 14px;
+        font-weight: 400;
+        margin-bottom: 0px;
+        margin-top: 0.5rem;
+      }
+    }
+    .icon {
+      display: inline-block;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+  }
+}

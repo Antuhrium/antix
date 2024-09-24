@@ -13,9 +13,9 @@ const JoinUs: React.FC = () => {
                 <FadeIn direction='up' distance={"50%"}>
                     <h1 className={styles.title}>Join Us on Our Journey</h1>
                 </FadeIn>
-                <p className={styles.subtitle}>
+                {/* <p className={styles.subtitle}>
                     <span>Join our communities</span> and stay informed about Antix project progress
-                </p>
+                </p> */}
             </div>
             <div className={styles.cardsContainer}>
                 <div className={styles.cardTopLeft}>
