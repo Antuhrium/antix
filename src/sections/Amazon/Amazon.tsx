@@ -1,6 +1,6 @@
 import styles from "./Amazon.module.scss";
 
-import RightImg from "../../assets/images/amazon-img.png";
+import RightImg from "../../assets/images/amazon-img-right.png";
 import MobileImg from "../../assets/images/mobile-amazon-img.png";
 
 import { Swiper, SwiperSlide } from "swiper/react";
