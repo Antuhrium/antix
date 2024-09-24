@@ -1,5 +1,5 @@
-import { PieChart, Pie, Cell, Tooltip, TooltipProps } from "recharts";
-import { NameType, ValueType } from "recharts/types/component/DefaultTooltipContent";
+import { PieChart, Pie, Cell } from "recharts";
+// import { NameType, ValueType } from "recharts/types/component/DefaultTooltipContent";
 import styles from "./PieChart.module.scss";
 
 // Interface for data structure
