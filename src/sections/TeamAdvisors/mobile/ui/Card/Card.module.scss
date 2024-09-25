@@ -30,8 +30,9 @@
   }
   .image {
     flex: 0 0 132px;
+    height: 115%;
     background-size: cover;
-    background-position: center center;
+    background-position: top center;
     background-repeat: no-repeat;
   }
   .info {
