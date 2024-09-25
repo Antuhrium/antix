@@ -56,23 +56,22 @@ const DigitalMap = () => {
                     <img src="/digital-map-mobile.png" alt="Digital Map" />
                 </div>
 
-                <button
+                <div
                     className={styles.point1}
-                    onClick={() => setOpenVideo("https://www.youtube.com/embed/lYHnSGHx4ig")}
                     // href="https://www.youtube.com/watch?v=lYHnSGHx4ig"
                     // target="_blank"
                 >
                     <FadeIn delay={0} direction="down" distance={"50%"}>
                         <img src={Point1} alt="" draggable={false} />
 
-                        <div className={styles.videoWrapper}>
+                        <div className={styles.videoWrapper} onClick={() => setOpenVideo("https://www.youtube.com/embed/3FxZYSKfcE0")}>
                             <img src={VideoImg} alt="" draggable={false} />
                             <div className={styles.play}>
                                 <PlayIcon />
                             </div>
                         </div>
                     </FadeIn>
-                </button>
+                </div>
 
                 <div className={styles.point2}>
                     <FadeIn delay={0} direction="down" distance={"50%"}>
@@ -86,41 +85,39 @@ const DigitalMap = () => {
                     </FadeIn>
                 </div>
 
-                <button
+                <div
                     className={styles.point4}
-                    onClick={() => setOpenVideo("https://www.youtube.com/embed/lYHnSGHx4ig")}
                     // href="https://www.youtube.com/watch?v=lYHnSGHx4ig"
                     // target="_blank"
                 >
                     <FadeIn delay={0} direction="down" distance={"50%"}>
                         <img src={Point4} alt="" draggable={false} />
 
-                        <div className={styles.videoWrapper}>
+                        <div className={styles.videoWrapper} onClick={() => setOpenVideo("https://www.youtube.com/embed/FBzkC5uFZLg")}>
                             <img src={VideoImg} alt="" draggable={false} />
                             <div className={styles.play}>
                                 <PlayIcon />
                             </div>
                         </div>
                     </FadeIn>
-                </button>
+                </div>
 
-                <a
+                <div
                     className={styles.point5}
-                    onClick={() => setOpenVideo("https://www.youtube.com/embed/lYHnSGHx4ig")}
                     // href="https://www.youtube.com/watch?v=lYHnSGHx4ig"
                     // target="_blank"
                 >
                     <FadeIn delay={0} direction="down" distance={"50%"}>
                         <img src={Point5} alt="" draggable={false} />
 
-                        <div className={styles.videoWrapper}>
+                        <div className={styles.videoWrapper} onClick={() => setOpenVideo("https://www.youtube.com/embed/F1YDHYELweI")}>
                             <img src={VideoImg} alt="" draggable={false} />
                             <div className={styles.play}>
                                 <PlayIcon />
                             </div>
                         </div>
                     </FadeIn>
-                </a>
+                </div>
             </section>
         </>
     );
