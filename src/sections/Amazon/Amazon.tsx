@@ -70,7 +70,7 @@ const Amazon = () => {
                         centeredSlides={true}
                         autoplay={{ delay: 2000, disableOnInteraction: false }}
                         modules={[Autoplay]}
-                        // allowTouchMove={false}
+                        allowTouchMove={false}
                         className={styles.carousel}
                     >
                         {words.map((word) => (

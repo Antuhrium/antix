@@ -5,9 +5,9 @@
     background-repeat: no-repeat;
 
     position: relative;
-    height: 1600px;
+    height: 1400px;
 
-    margin-top: 48px;
+    // margin-top: 48px;
     // padding-top: 150px;
 
     .mobileMap {
@@ -148,44 +148,6 @@
     background: transparent;
 }
 
-.point1 {
-    animation: fade 0.3s ease-in-out;
-    position: absolute;
-    left: 106px;
-    bottom: 290px;
-}
-.point2 {
-    position: absolute;
-    bottom: 570px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-.point3 {
-    position: absolute;
-    right: 240px;
-    bottom: 420px;
-}
-.point4 {
-    position: absolute;
-    z-index: 1;
-    bottom: 73px;
-    right: 170px;
-
-    .videoWrapper {
-        left: 0;
-        transform: translateX(-20%);
-    }
-}
-.point5 {
-    position: absolute;
-    bottom: 290px;
-    right: 130px;
-
-    .videoWrapper {
-        left: 0;
-        transform: translateX(50%);
-    }
-}
 .videoWrapper {
     position: absolute;
     bottom: 160px;
@@ -208,3 +170,43 @@
         }
     }
 }
+
+.point1 {
+    animation: fade 0.3s ease-in-out;
+    position: absolute;
+    left: 106px;
+    bottom: 290px;
+}
+.point2 {
+    position: absolute;
+    bottom: 560px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.point3 {
+    position: absolute;
+    right: 240px;
+    bottom: 420px;
+}
+.point4 {
+    position: absolute;
+    z-index: 1;
+    bottom: 43px;
+    right: 180px;
+
+    .videoWrapper {
+        left: 0;
+        transform: translateX(-20%);
+    }
+}
+.point5 {
+    position: absolute;
+    bottom: 220px;
+    right: 100px;
+
+    .videoWrapper {
+        left: 0;
+        transform: translateX(50%);
+    }
+}
+

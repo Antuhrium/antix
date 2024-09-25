@@ -5,6 +5,7 @@
   background-image: url("../../assets/images/amazon-bg.png");
   background-repeat: no-repeat;
   background-position: bottom;
+  background-size: contain;
 
   @media screen and (max-width: 1600px) {
     padding: 120px 0;
