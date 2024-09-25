@@ -51,6 +51,16 @@ const Header = () => {
         };
     }, []);
 
+    useEffect(() => {
+        if(isOpen) {
+            document.body.style.overflow = "hidden";
+        }
+
+        return () => {
+            document.body.style.overflow = "auto";
+        };
+    }, [isOpen]);
+
     const handleClick = (id: string) => {
         const el = document.getElementById(id)
         if (el) {

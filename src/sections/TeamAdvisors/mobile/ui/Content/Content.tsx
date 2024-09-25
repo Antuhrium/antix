@@ -39,7 +39,7 @@ export const Content = (props: ContentProps) => {
         className={styles.actionBtn}
         onClick={() => setIsCollapsed((prevState) => !prevState)}
       >
-        {isCollapsed ? <span>See more</span> : <span>Hidden Details</span>}
+        {isCollapsed ? <span>See more</span> : <span>Hide Details</span>}
         <svg
           width="32"
           height="33"
