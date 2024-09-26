@@ -38,7 +38,7 @@ const PlatformToReplace = () => {
                     <h4>Platform to create, train and monetize <br /> AI-powered digital characters to replace:</h4>
                 </div>
                 <Swiper
-                    direction={window.innerWidth > 1400 ? "vertical" : "horizontal"}
+                    direction={window.innerWidth > 1200 ? "vertical" : "horizontal"}
                     slidesPerView={3}
                     loop={true}
                     centeredSlides={true}

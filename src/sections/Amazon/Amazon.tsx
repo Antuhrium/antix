@@ -64,7 +64,7 @@ const Amazon = () => {
                         or sell
                     </h4>
                     <Swiper
-                        direction={window.innerWidth > 1600 ? "vertical" : "horizontal"}
+                        direction={window.innerWidth > 1300 ? "vertical" : "horizontal"}
                         slidesPerView={3}
                         loop={true}
                         centeredSlides={true}
