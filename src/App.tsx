@@ -10,6 +10,7 @@ import Why from "./sections/Why/Why";
 import Quote from "./sections/Quote/Quote";
 import Statistics from "./sections/Statistics/Statistics";
 import Markets from "./sections/Markets/Markets";
+import { DesignOwnProfit } from "./sections/DesignOwnProfit/DesignOwnProfit";
 import Amazon from "./sections/Amazon/Amazon";
 // import Revolutionizing from "./sections/Revolutionizing/Revolutionizing";
 import DigitalMap from "./sections/DigitalMap/DigitalMap";
@@ -26,11 +27,11 @@ import TeamAdvisorsMobile from "./sections/TeamAdvisors/mobile/TeamAdvisors";
 import TokenomicsSectionMobile from "./sections/TokenomicsSection/mobile/TokenomicsSection";
 import TokenInfoMobile from "./sections/TokenInfo/mobile/TokenInfo";
 import RoadMapMobile from "./sections/RoadMap/mobile/Roadmap";
-import Top10 from './sections/Top10/Top10';
-import Top10Mobile from './sections/Top10/mobile/Top10';
-import FooterMobile from './sections/Footer/mobile/Footer';
+import Top10 from "./sections/Top10/Top10";
+import Top10Mobile from "./sections/Top10/mobile/Top10";
+import FooterMobile from "./sections/Footer/mobile/Footer";
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 // Update the useResponsiveComponent hook
 const useResponsiveComponent = <Props,>(
@@ -38,24 +39,38 @@ const useResponsiveComponent = <Props,>(
   DesktopComponent: React.ComponentType<Props>,
   MobileComponent: React.ComponentType<Props>
 ): React.ComponentType<Props> => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < mobileBreakpoint);
+  const [isMobile, setIsMobile] = useState(
+    window.innerWidth < mobileBreakpoint
+  );
 
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < mobileBreakpoint);
     };
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, [mobileBreakpoint]);
 
   return isMobile ? MobileComponent : DesktopComponent;
 };
 
 function App() {
-  const TeamAdvisorsResponsive = useResponsiveComponent(768, TeamAdvisors, TeamAdvisorsMobile);
-  const TokenomicsSectionResponsive = useResponsiveComponent(768, TokenomicsSection, TokenomicsSectionMobile);
-  const TokenInfoResponsive = useResponsiveComponent(768, TokenInfo, TokenInfoMobile);
+  const TeamAdvisorsResponsive = useResponsiveComponent(
+    768,
+    TeamAdvisors,
+    TeamAdvisorsMobile
+  );
+  const TokenomicsSectionResponsive = useResponsiveComponent(
+    768,
+    TokenomicsSection,
+    TokenomicsSectionMobile
+  );
+  const TokenInfoResponsive = useResponsiveComponent(
+    768,
+    TokenInfo,
+    TokenInfoMobile
+  );
   const RoadMapResponsive = useResponsiveComponent(768, RoadMap, RoadMapMobile);
   const Top10Responsive = useResponsiveComponent(768, Top10, Top10Mobile);
   const FooterResponsive = useResponsiveComponent(768, Footer, FooterMobile);
@@ -71,6 +86,7 @@ function App() {
       <Quote />
       <Statistics />
       <Markets />
+      <DesignOwnProfit />
       <Amazon />
       {/* <Revolutionizing /> */}
       <DigitalMap />
