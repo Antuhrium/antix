@@ -1,4 +1,5 @@
 import styles from "./DesignOwnProfit.module.scss";
+import { AABT } from "./ui/AABT/AABT";
 import { DOP } from "./ui/DOP/DOP";
 
 export const DesignOwnProfit = () => {
@@ -10,6 +11,8 @@ export const DesignOwnProfit = () => {
         <br /> from hyper-realistic digital humans
       </p>
       <DOP />
+      <h4 className={styles.smallTitle}>Advanced AI & Blockchain Technology</h4>
+      <AABT />
     </section>
   );
 };
