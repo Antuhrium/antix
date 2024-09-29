@@ -1,0 +1,87 @@
+.wrapper {
+  padding: 5rem 1rem;
+  .title {
+    font-family: "Space Grotesk";
+    font-size: 44px;
+    font-weight: 400;
+    line-height: 42px;
+    letter-spacing: -0.04em;
+    text-align: center;
+    color: #f0f0f0;
+    margin-bottom: 10px;
+  }
+  .description {
+    font-family: "Inter";
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 23px;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: rgba(175, 175, 175, 1);
+  }
+  .smallTitle {
+    font-family: "Space Grotesk";
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 31px;
+    letter-spacing: -0.04em;
+    text-align: center;
+    color: #f0f0f0;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+/* Малые устройства (≥576px) */
+@media (min-width: 393px) {
+}
+
+/* Малые устройства (≥576px) */
+@media (min-width: 576px) {
+}
+
+/* Средние устройства (≥768px) */
+@media (min-width: 768px) {
+}
+
+/* Большие устройства (≥992px) */
+@media (min-width: 992px) {
+}
+
+/* Очень большие устройства (≥1200px) */
+@media (min-width: 1200px) {
+  .wrapper {
+    .title {
+      font-family: "Space Grotesk";
+      font-size: 99.38px;
+      font-weight: 400;
+      line-height: 86.13px;
+      letter-spacing: -0.04em;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .description {
+      font-family: "Inter";
+      font-size: 16.56px;
+      font-weight: 300;
+      line-height: 23.19px;
+      text-align: center;
+      margin-bottom: 3rem;
+      > br {
+        display: none;
+      }
+    }
+    .smallTitle {
+      font-size: 44.29px;
+      font-weight: 400;
+      line-height: 53.14px;
+      letter-spacing: -0.04em;
+      margin-top: 3rem;
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+/* Сверхбольшие устройства (≥1400px) */
+@media (min-width: 1400px) {
+}
