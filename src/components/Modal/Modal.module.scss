@@ -1,0 +1,11 @@
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(49, 49, 49, 0.3);
+  backdrop-filter: blur(28.349994659423828px);
+  overflow: auto;
+  z-index: 999;
+}
