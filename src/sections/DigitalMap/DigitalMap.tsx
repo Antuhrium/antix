@@ -53,7 +53,7 @@ const DigitalMap = () => {
                 </div>
 
                 <div className={styles.mobileMap}>
-                    <img src="/digital-map-mobile.png" alt="Digital Map" />
+                    <img src="/digital-map-mobile.png" alt="Digital Map" width={904} height={496} />
                 </div>
 
                 <div

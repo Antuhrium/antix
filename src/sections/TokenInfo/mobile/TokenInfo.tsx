@@ -94,7 +94,7 @@ const TokenInfo = () => {
     ];
 
     const handleWhitepaper = () => {
-        window.open('https://docs.google.com/document/d/1MUKsG4wRnH_TPJUsxytRzHjXMu0DKzNU/edit?rtpof=true&sd=true');
+        window.open('https://antix.gitbook.io/antix-white-paper');   
     }
 
     // const handleAudit = () => {

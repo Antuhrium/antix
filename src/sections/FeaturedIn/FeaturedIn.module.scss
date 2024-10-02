@@ -18,11 +18,27 @@
   }
 }
 
-.item {
-  height: 60px;
-  padding: 0 20px;
-
+.container {
+  min-width: 600px;
   display: flex;
   align-items: center;
+}
+
+.item {
+  height: 60px;
+  padding: 20px;
+
+  display: flex !important;
+  align-items: center;
   justify-content: center;
+
+  @media screen and (max-width: 1000px) {
+    height: 40px;
+    padding: 7px 13px;
+
+    img {
+      width: 150px;
+      height: 30px;
+    }
+  }
 }
