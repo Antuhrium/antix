@@ -1,5 +1,5 @@
 import { FadeInNew } from "../../../components/FadeInNew/FadeInNew";
-import { tabs } from "../mocdata";
+import { tabs } from "./mocdata";
 import styles from "./TeamAdvisors.module.scss";
 import { Tabs } from "./ui/Tabs/Tabs";
 
