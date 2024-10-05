@@ -52,19 +52,6 @@ const HeroSection = () => {
           </FadeIn>
           <FadeIn direction="right" distance="50%" delay={0.4}>
             <div className={styles.actions}>
-              {/* <button className={styles.button}>How it works?</button>
-              <a className={styles.linkButton} onClick={goToRoadmap}>
-                <span>Roadmap</span>
-                <svg
-                  width="63"
-                  height="16"
-                  viewBox="0 0 63 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  {svgPath}
-                </svg>
-              </a> */}
               <a className={styles.socialLink} href="https://x.com/antix_in" target="_blank">
                 <div className={styles.socialIcon}><img src={Xlogo} alt="X" /></div>
                 <span>40.9К</span>
