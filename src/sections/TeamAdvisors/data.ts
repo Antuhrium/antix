@@ -131,7 +131,7 @@ export const advisors = [
         isBigIcon: true
     },
     {
-        image: '/team/alexander.png',
+        image: '/alexander.jpg',
         icon: '/team/bigicon.png',
         name: 'Alexander Filatov',
         role: '10+ AI Patents Holder',

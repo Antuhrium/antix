@@ -34,7 +34,7 @@ const Person: React.FC<PersonProps> = ({image, name, role, isBigIcon, subRole, i
                 />
             )}
             
-            <div className={styles.person} style={{ backgroundImage: `url(${image})` }} onClick={() => setOpenModal(name)}>
+            <div className={`${styles.person} ${name === "Roman" || name === "Marina" ? styles.lightPerson : ""}`} style={{ backgroundImage: `url(${image})` }} onClick={() => setOpenModal(name)}>
                 <div className={styles.inner}>
                     <p className={isAdvisor ? styles.roleAdvisor : styles.role}>{role}</p>
                     <div className={styles.bottom}>

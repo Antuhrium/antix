@@ -33,8 +33,8 @@
 
             & > img {
                 display: inline-block;
-                // height: auto;
-                // width: 904.91px;
+                height: auto;
+                width: 100%;
             }
         }
 
@@ -44,6 +44,16 @@
         .point4,
         .point5 {
             display: none;
+        }
+    }
+    @media screen and (max-width: 1000px) {
+
+        .mobileMap {
+            & > img {
+                display: inline-block;
+                height: auto;
+                width: 1000px;
+            }
         }
     }
 }
@@ -177,36 +187,26 @@
     left: 106px;
     bottom: 290px;
 }
-.point2 {
-    position: absolute;
-    bottom: 560px;
-    left: 50%;
-    transform: translateX(-50%);
-}
+
 .point3 {
     position: absolute;
-    right: 240px;
-    bottom: 420px;
-}
-.point4 {
-    position: absolute;
-    z-index: 1;
-    bottom: 43px;
-    right: 180px;
+    right: 280px;
+    bottom: 350px;
 
     .videoWrapper {
         left: 0;
         transform: translateX(-20%);
     }
 }
+
 .point5 {
     position: absolute;
-    bottom: 220px;
-    right: 100px;
+    bottom: 300px;
+    right: 120px;
 
     .videoWrapper {
         left: 0;
-        transform: translateX(50%);
+        transform: translateX(40%);
     }
 }
 
