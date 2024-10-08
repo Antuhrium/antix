@@ -135,7 +135,7 @@ export const advisors: AdvisorPerson[] = [
     isBigIcon: true,
   },
   {
-    image: "/team/alexandermobile.png",
+    image: "/alexander.jpg",
     icon: "/team/icon.png",
     name: "Alexander Filatov",
     role: "10+ AI Patents Holder",

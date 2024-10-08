@@ -85,7 +85,7 @@ const Markets = () => {
             <div className={styles.content}>
                 <FadeIn direction="up" distance={"100%"}>
                     <h3 className={styles.title}>
-                        Antix avatars are replacing humans in
+                        Antix Avatars <span>are Replacing</span> <span>Humans in</span>
                     </h3>
                 </FadeIn>
                 <div className={styles.wrapper}>

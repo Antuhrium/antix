@@ -1,9 +1,7 @@
 import styles from "./DigitalMap.module.scss";
 
 import Point1 from "../../assets/svg/map/location-1.svg";
-import Point2 from "../../assets/svg/map/location-2.svg";
 import Point3 from "../../assets/svg/map/location-3.svg";
-import Point4 from "../../assets/svg/map/location-4.svg";
 import Point5 from "../../assets/svg/map/location-5.svg";
 
 import VideoImg from "../../assets/images/map-avatar.png";
@@ -53,13 +51,11 @@ const DigitalMap = () => {
                 </div>
 
                 <div className={styles.mobileMap}>
-                    <img src="/digital-map-mobile.png" alt="Digital Map" width={904} height={496} />
+                    <img src="/digital-map-mobile.png" alt="Digital Map"  />
                 </div>
 
                 <div
                     className={styles.point1}
-                    // href="https://www.youtube.com/watch?v=lYHnSGHx4ig"
-                    // target="_blank"
                 >
                     <FadeIn delay={0} direction="down" distance={"50%"}>
                         <img src={Point1} alt="" draggable={false} />
@@ -73,26 +69,9 @@ const DigitalMap = () => {
                     </FadeIn>
                 </div>
 
-                <div className={styles.point2}>
-                    <FadeIn delay={0} direction="down" distance={"50%"}>
-                        <img src={Point2} alt="" draggable={false} />
-                    </FadeIn>
-                </div>
-
                 <div className={styles.point3}>
                     <FadeIn delay={0} direction="down" distance={"50%"}>
                         <img src={Point3} alt="" draggable={false} />
-                    </FadeIn>
-                </div>
-
-                <div
-                    className={styles.point4}
-                    // href="https://www.youtube.com/watch?v=lYHnSGHx4ig"
-                    // target="_blank"
-                >
-                    <FadeIn delay={0} direction="down" distance={"50%"}>
-                        <img src={Point4} alt="" draggable={false} />
-
                         <div className={styles.videoWrapper} onClick={() => setOpenVideo("https://www.youtube.com/embed/FBzkC5uFZLg")}>
                             <img src={VideoImg} alt="" draggable={false} />
                             <div className={styles.play}>
@@ -104,8 +83,6 @@ const DigitalMap = () => {
 
                 <div
                     className={styles.point5}
-                    // href="https://www.youtube.com/watch?v=lYHnSGHx4ig"
-                    // target="_blank"
                 >
                     <FadeIn delay={0} direction="down" distance={"50%"}>
                         <img src={Point5} alt="" draggable={false} />
