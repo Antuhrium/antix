@@ -18,9 +18,9 @@ const FeaturedIn: React.FC = () => {
           ref={swiperRef} 
           modules={[Autoplay]}
           spaceBetween={0} 
-          slidesPerView={window.innerWidth > 1200 ? 4 : 3} 
+          slidesPerView={window.innerWidth > 1200 ? 6 : 3} 
           loop={true}
-          speed={window.innerWidth > 1200 ? 2000 : 1500} 
+          speed={window.innerWidth > 1100 ? 500 : 1500} 
           autoplay={{
             delay: 0,
             disableOnInteraction: false, 
