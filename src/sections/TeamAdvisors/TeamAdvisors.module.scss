@@ -130,6 +130,10 @@
             opacity: 0.7;
         }
     }
+
+    @media screen and (min-width: 1600px) {
+        display: none;
+    }
 }
 
 .advisor {
@@ -166,7 +170,7 @@
 }
 
 .lightPerson {
-    box-shadow: inset 3em 3em 5em 3em rgba(0, 0, 0, 0.7), 0px 0px 15px 5px rgba(14, 118, 168, 0.3);
+    box-shadow: inset 3em 3em 5em 3em rgba(0, 0, 0, 0.7);
 }
 
 .bigIcon {
@@ -229,10 +233,10 @@
 .name {
     color: var(--white-head-text, #F0F0F0);
     font-family: "Inter Tight";
-    font-size: 12px;
+    font-size: 10px;
     font-style: normal;
     font-weight: 400;
-    line-height: 120%;
+    line-height: 11.93px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }
 

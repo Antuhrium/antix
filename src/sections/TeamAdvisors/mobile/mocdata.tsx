@@ -64,28 +64,14 @@ export const team: TeamPerson[] = [
     icon: "/team/icon.png",
     name: "Yulia",
     role: "Head of Family Office",
-    subRole: "TBC",
+    subRole: 'Chief Operations Officer',
     linkedin: "https://www.linkedin.com/in/yulia-tbc/",
     isBigIcon: false,
     info: [
-      "Yulia is currently the Head of a Family Office, managing investments across media, technology, and FMCG sectors, based in Dubai.",
-      "As Deputy CFO at EuroChem, she managed cross-functional projects that attracted over $50 million annually and achieved savings of approximately $90 million.",
-      "At T1 Group, she built a tax and risk management function from scratch, helping save over $100 million in taxes.",
-    ],
-  },
-  {
-    image: "/team/kacper.png",
-    icon: "/team/icon.png",
-    name: "Kacper",
-    role: "Senior Social Media Manager",
-    subRole: "Community Manager",
-    linkedin: "https://www.linkedin.com/in/hoffmannk96/",
-    isBigIcon: false,
-    info: [
-      "Kacper is currently a Senior Social Media Manager at One Agency Media, leading a team and developing strategies for various platforms, including Twitter, Instagram, and LinkedIn.",
-      "He has extensive experience managing teams, including overseeing 8 Social Media Executives and guiding their work to boost engagement and visibility for brands.",
-      'Kacper holds a verified certificate in "Blockchain and Web3" and actively applies his knowledge to help brands within the crypto space boost their digital presence and engage with blockchain-focused communities.',
-    ],
+      "A financial executive with 18+ years of experience, specializing in financial transformation, tax strategy, and risk management.",
+      "As Deputy CFO at EuroChem and several technological companies, she led projects across 50+ international companies, securing up to $50M in financing annually and achieving $100M in savings.",
+      "During her 16 years at Deloitte, Yulia built strategic partnerships with major clients like Yandex and Coca-Cola, driving financial efficiency and growth across global markets."
+  ],
   },
   {
     image: "/team/rafal.png",
