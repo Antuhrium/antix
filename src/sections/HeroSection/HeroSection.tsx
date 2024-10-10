@@ -80,7 +80,21 @@ const HeroSection = () => {
                 <div className={styles.loader}>
                   <LoaderSvg percent={percents} />
                 </div>
-                <HeroTimer targetDate={new Date("2024-12-31T23:59:59")} />
+                {/* <HeroTimer targetDate={new Date("2024-12-31T23:59:59")} /> */}
+                <div className={styles.timerBottom}>
+                  <p>Stay informed! Follow us on social media for the latest real-time updates.</p>
+                  <div>
+                    <a className={styles.socialLink} href="https://x.com/antix_in" target="_blank">
+                      <img src={Xlogo} alt="X" />
+                    </a>
+                    <a className={styles.socialLink} href="https://t.me/antix_in" target="_blank">
+                      <img src={Tglogo} alt="Telegram" />
+                    </a>
+                    <a className={styles.socialLink} href="https://discord.com/invite/bKcMXChRRT" target="_blank">
+                      <img src={Discordlogo} alt="Discord" />
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           {/* </FadeIn> */}

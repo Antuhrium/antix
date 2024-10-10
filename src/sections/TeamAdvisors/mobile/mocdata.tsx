@@ -63,7 +63,7 @@ export const team: TeamPerson[] = [
     image: "/team/yulia.png",
     icon: "/team/icon.png",
     name: "Yulia",
-    role: "Head of Family Office",
+    role: "Saved $100M in costs",
     subRole: 'Chief Operations Officer',
     linkedin: "https://www.linkedin.com/in/yulia-tbc/",
     isBigIcon: false,
