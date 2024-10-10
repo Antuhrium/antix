@@ -6,7 +6,7 @@ import Tglogo from "../../assets/svg/social-telegram.svg"
 import Discordlogo from "../../assets/svg/social-discord.svg"
 
 import { LoaderSvg } from "./ui/LoaderSvg/LoaderSvg";
-import { HeroTimer } from "./ui/HeroTimer/HeroTimer";
+// import { HeroTimer } from "./ui/HeroTimer/HeroTimer";
 import FadeIn from "../../components/FadeIn/FadeIn";
 // import PreDepositStage from "../PreDepositStage/PreDepositStage";
 
